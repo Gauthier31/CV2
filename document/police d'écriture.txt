@@ -1,0 +1,68 @@
+Code :
+Abel
+IBM Plex Mono
+Overpass Mono
+Oxygen Mono
+Sometype Mono
+Source Code Pro
+Courier Prime
+
+
+Italian / Grec :
+Advent pro
+Cinzel
+Julius Sans One
+Ligconsolata
+Sedan SC
+
+
+Jumanji :
+Aldrich
+Trade Winds
+
+
+Jeu ancien :
+Iceland
+Michroma
+Nico Moji
+Sarpanch
+Press Start 2P
+
+
+Pirate :
+Almendra
+
+
+Hippie :
+Asset
+
+
+Moyen Age :
+Fondamento
+Germania One
+Marcellus SC
+Mate SC
+Pirata One
+
+
+Neon Futuriste :
+Goldman
+Jura
+Orbitron
+
+
+Far west :
+Sancreek
+Smokum
+
+
+Null :
+Flow Block
+Major Mono Display
+Redacted Script
+
+
+Autre :
+Adamina
+Nosifer Caps
+

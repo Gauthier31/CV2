@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" lang="fr" content="Gauthier GUIROLA--BOË">
+
+    <title>Gauthier GUIROLA--BOË</title>
+
+    <link href="style/style.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/814ded4c7d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav id="AnimNav">
+        <div>
+            <p onmouseover="navInfoAdd()" onmouseout="navInfoRemove()">Gauthier BOË-GUIROLA</p>
+            <p class="navInfo" id="navInfoBloc"><code>&ensp;/&ensp;Etudiant Master MIAGE option IDA</p></code>
+        </div>
+
+        <ul>
+            <li><a class="animation" id="navApropos" href="#aPropos">À propos</a></li>
+            <li><a class="animation" id="navFormation" href="#formation">Formation</a></li>
+            <li><a class="animation" id="navExpPro" href="#expPro">Experience</a></li>
+            <li><a class="animation" id="navCompetence" href="#competence">Compétences</a></li>
+            <li><a class="animation" id="navProjet" href="#projet">Projet</a></li>
+        </ul>
+    </nav>
+
+    <div class="animation" id="AnimBouchonInfo"></div>
+
+    <div class="animation vertical-div v-Gauche" id="AnimInfoGauche">
+        <img class="reseau" src="image/LinkedIn.webp" />
+        <img class="reseau" src="image/GitHub.png" />
+        <div class="vertical-ligne"></div>
+    </div>
+
+    <div class="animation vertical-div v-Droite" id="AnimInfoDroite">
+        <p>boegauthier@gmail.com</p>
+        <div class="vertical-ligne"></div>
+    </div>
+
+    <!-- Présentation -->
+    <section class="row jc-center animation" id="aPropos">
+        <div class="divPhoto bottom"></div>
+        <div class="col-1"></div>
+        <div class="divTxt bottom">
+
+            <p><span class="h1">Bonjour je suis
+                    <mark class="surligne-h1">
+                        Gauthier BOË--GUIROLA,
+                    </mark>
+                    Gauthier BOË--GUIROLA,</span>
+                étudiant en 1ère année de Master MIAGE option IDA</p>
+
+            <p><br />
+                à <a href="#"><b>l’Université Toulouse Capitole</b></a> en alternance dans
+                l’ESN <a href="#"><b>SOPRA STERIA</b></a> en tant que développeur full stack.
+                <br /><br />
+
+                Le développement des domaines informatiques et l'objectif d'anticiper leurs futures synergies,
+                suscitent un fort intérêt pour moi.
+                <br /><br />
+
+                De plus, travailler sur les nouvelles technologies dans des secteurs tels que : la conception et/ou
+                le développement Web, logiciels ou encore dans le
+                <span><mark class="surligne-p">Conseil,</mark>Conseil,</span> la
+
+                <span><mark class="surligne-p">Cybersécurité,</mark>Cybersécurité,</span> la
+
+                <span><mark class="surligne-p">Data</mark>Data </span>
+                sont en adéquation avec mon cursus universitaire et mon ambition professionnelle.
+                <br /><br />
+            </p>
+
+            <div class="row jc-evenly">
+                <div class="interet">
+                    Développement
+                </div>
+                <div class="interet">Volley-Ball</div>
+                <div class="interet">Piano</div>
+                <div class="interet">Lecture</div>
+                <div class="interet">Musculation</div>
+                <div class="interet">Film</div>
+                <div class="interet">Dessin</div>
+                <div class="interet">Bricolage</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bgBleu animation" id="bgBleu">
+
+        <!-- Formations -->
+        <section class="bloc animation" id="formation">
+            <h2>formations</h2>
+
+            <div class="po-relative">
+                <img class="dessin" id="bonhomme" src="image/bonhomme.JPG" />
+                <img class="dessin" id="mouette" src="image/mouette.JPG" />
+                <img class="dessin" id="bonhomme2" src="image/bonhomme.JPG" />
+                <div>
+                    <div class="animation cacheDessin" id="AnimCacheDessin"></div>
+                    <img class="parcours" src="image/parcours.JPG" />
+                </div>
+            </div>
+
+            <div class="animation row" id="AnimFormation">
+
+                <div class="formationBloc" id="rond1">
+                    <div class="rondBlanc" onmouseover="formationAffiche(0)" onclick="formationAffiche(0)"></div>
+                    <div class="formation">
+                        <div class="hrWhite"></div>
+                        <h3>Lycée Stéphanne Hessel</h3>
+                        <p>
+                            BAC S, option Sience de l’ingénieur.
+                            <br /><br />
+                            Cet enseignement aborde les grands domaines techniques de la mécanique, l’automatisme,
+                            l’informatique l’électronique, l’électrotechnique et .
+                            <br /><br />
+                            La formation s’adresse à des élèves souhaitant acquérir une formation scientifique et
+                            des compétences technologiques. Elle lui permettra aussi de maitriser les nouvelles
+                            technologies.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="formationBloc" id="rond2">
+                    <div class="rondBlanc" onmouseover="formationAffiche(1)" onclick="formationAffiche(1)"></div>
+                    <div class="formation">
+                        <div class="hrWhite"></div>
+                        <h3>DUT Informatique</h3>
+                        <p>
+                            Diplôme Universitaire de Technologie à l’Université Toulouse Capitole dispensé a Rodez.
+                            <br /><br />
+                            Ce DUT m’a permis d’acquérir de nombreuses compétences en matière informatique: les
+                            langages informatiques tels que java, css, php, javascript et sql pour le développement et
+                            la gestion de base de données.
+                            <br /><br />
+                            Mais aussi des compétences en mathématique et en statistique qui sont utiles pour les
+                            branches techniques de l’informatique (IA, GPS, Moteur de recherche…).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="formationBloc" id="rond3">
+                    <div class="rondBlanc" onmouseover="formationAffiche(2)" onclick="formationAffiche(2)"></div>
+                    <div class="formation">
+                        <div class="hrWhite"></div>
+                        <h3>3ème année de Licence professionnelle</h3>
+                        <p>
+                            Licence MIASHS parcours MIAGE en alternance à l’Université Toulouse Capitole.
+                            <br /><br />
+                            Cette formation est centrée sur la modélisation, l’analyse de données, la programmation et
+                            le traitement de données permettant de modéliser les systèmes d’information et de développer
+                            des solutions d’informatisation adaptées.
+                            <br /><br />
+                            Consolidation des compétences informatiques et Mathématiques apprise durant mon DUT
+                            Informatique
+                        </p>
+                    </div>
+                </div>
+
+                <div class="formationBloc" id="rond4">
+                    <div class="rondBlanc" onmouseover="formationAffiche(3)" onclick="formationAffiche(3)"></div>
+                    <div class="formation">
+                        <div class="hrWhite"></div>
+                        <h3><a>1ère année de Master</a></h3>
+                        <p>
+                            Master MIAGE option IDA en alternance toujours à l’Université Toulouse Capitole.
+                            <br /><br />
+                            Licence centrée sur la gestion des données
+                            <br /><br />
+                            En cours ...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ExpPro -->
+        <section class="bloc animation" id="expPro">
+            <h2>Expériences professionnelles</h2>
+
+            <div class="row">
+                <div class="expPro">
+                    <p class="date txtGauche"><code>Septembre 2023 - En cours</code></p>
+                </div>
+
+                <div class="exProligne">
+                    <div class="rondNoir"></div>
+                    <div class="hrBlack"></div>
+                </div>
+
+                <div class="expPro detail animation" id="AnimExpPro1">
+                    <code>
+                        <h3 class="expTitre">Data Ingénieur</h3>
+                        <p class="txtBlancSecond mb20">Sopra Steria en alternance, Colomier, 31770</p>
+                        <p class="txtBlancSecond mb20">Extern à Airbus, Blagnac, 31500</p>
+                        <p>Gestion des données des pièces d'avions</p>
+                        <p class="txtBlancSecond mt20">
+                            <a href="">#BD</a>
+                            <a href="">#SQL</a>
+                        </p>
+                    </code>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="expPro detail animation" id="AnimExpPro2">
+                    <code>
+                        <h3 class="expTitre">Développeur Full Stack</h3>
+                        <p class="txtBlancSecond mb20">Sopra Steria en alternance, Colomier, 31770</p>
+                        <p>Développement d’une application pour gérer et assister les techniciens d’Orange
+                            lorsqu’ils sont
+                            en intervention chez les clients.</p>
+                        <p class="txtBlancSecond mt20">
+                            <a href="">#Angular CLI</a>
+                            <a href="">#Spring Boot</a>
+                            <a href="">#Maven</a>
+                        </p>
+                    </code>
+                </div>
+
+                <div class="exProligne">
+                    <div class="rondNoir"></div>
+                    <div class="hrBlack"></div>
+                </div>
+
+                <div class="expPro">
+                    <p class="date"><code>Septembre 2022 - Aout 2023</code></p>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="expPro">
+                    <p class="date txtGauche"><code>Juin 2022 - Aout 2022</code></p>
+                </div>
+
+                <div class="exProligne">
+                    <div class="rondNoir"></div>
+                    <div class="hrBlack"></div>
+                </div>
+
+                <div class="expPro detail animation" id="AnimExpPro3">
+                    <code>
+                        <h3 class="expTitre">Jardinier</h3>
+                        <p class="txtBlancSecond mb20">Camping Eurosol, Vielle-Saint-Girons, 40560</p>
+                        <p>Emploi saisonnier en tant que agent d’entretient des espaces verts et
+                            aquatique.</p>
+                    </code>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="expPro detail mb0 animation" id="AnimExpPro4">
+                    <code>
+                    <h3 class="expTitre">Développeur Full Stack</h3>
+                    <p class="txtBlancSecond mb20">Les Comptoirs du Monde, Saint-Alban, 31140</p>
+                    <p>Développement d’une application pour gérer et assister les techniciens d’Orange
+                        lorsqu’ils sont
+                        en intervention chez les clients.</p>
+                    <p class="txtBlancSecond mt20">#Laravel</p>
+                </code>
+                </div>
+
+                <div class="exProligne">
+                    <div class="rondNoir"></div>
+                    <div class="hrBlack"></div>
+                </div>
+
+                <div class="expPro">
+                    <p class="date"><code>Juin 2022 - Aout 2022</code></p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Competence -->
+        <section class="bloc animation" id="competence">
+            <h2>Compétences</h2>
+
+            <div class="row mb20">
+                <div class="competence jc-center bgDevHover">
+                    <img class="competenceImg" src="image/java.jpg" />
+                    <p class="competenceTxt">Java</p>
+                </div>
+
+                <div class="competence jc-center bgDevHover bgWebHover">
+                    <img class="competenceImg" src="image/javascript.jpg" />
+                    <p class="competenceTxt">Javascript</p>
+                </div>
+
+                <div class="competence jc-center bgWebHover">
+                    <img class="competenceImg" src="image/HTML.jpg" />
+                    <p class="competenceTxt">HTML</p>
+                </div>
+
+                <div class="competence jc-center bgWebHover">
+                    <img class="competenceImg" src="image/css.jpg" />
+                    <p class="competenceTxt">CSS</p>
+                </div>
+
+                <div class="competence jc-center bgWebHover">
+                    <img class="competenceImg" src="image/php.png" />
+                    <p class="competenceTxt">PHP</p>
+                </div>
+
+                <div class="competence jc-center">
+                    <img class="competenceImg" src="image/shell.jpg" />
+                    <p class="competenceTxt">Shell</p>
+                </div>
+
+                <div class="competence jc-center">
+                    <img class="competenceImg" src="image/c.png" />
+                    <p class="competenceTxt">C</p>
+                </div>
+
+                <div class="competence jc-center bgBDHover">
+                    <img class="competenceImg" src="image/c++.jpg" />
+                    <p class="competenceTxt">C++</p>
+                </div>
+
+                <div class="competence jc-center bgBDHover">
+                    <img class="competenceImg" src="image/sql.jpg" />
+                    <p class="competenceTxt">Sql</p>
+                </div>
+
+                <div class="competence jc-center bgWebHover">
+                    <img class="competenceImg" src="image/bootstrap.jpg" />
+                    <p class="competenceTxt">bootstrap</p>
+                </div>
+            </div>
+
+            <div class="row mb100 jc-evenly">
+                <div class="competenceCategorie" onmouseover="bgCompetenceCategorieAdd('bgDev')"
+                    onmouseout="bgCompetenceCategorieRemove('bgDev')">
+                    <p class="bgDev">Développement</p>
+                </div>
+                <div class="competenceCategorie" onmouseover="bgCompetenceCategorieAdd('bgWeb')"
+                    onmouseout="bgCompetenceCategorieRemove('bgWeb')">
+                    <p class="bgWeb">Web</p>
+                </div>
+                <div class="competenceCategorie" onmouseover="bgCompetenceCategorieAdd('bgBD')"
+                    onmouseout="bgCompetenceCategorieRemove('bgBD')">
+                    <p class="bgBD">Base de données</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="langue jc-center">
+                    <img class="langueImg" src="image/France.png" />
+                    <p class="langueTxt">Français</p>
+                </div>
+
+                <div class="langue jc-center">
+                    <img class="langueImg" src="image/Angleterre.png" />
+                    <p class="langueTxt">Anglais</p>
+                </div>
+
+                <div class="langue jc-center">
+                    <img class="langueImg" src="image/Espagne.jpg" />
+                    <p class="langueTxt">Espagnol</p>
+                </div>
+
+                <div class="langue jc-center">
+                    <img class="langueImg" src="image/Japon.png" />
+                    <p class="langueTxt">Japonais</p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="bgBlanc">
+
+        <!-- Projet -->
+        <section class="bloc" id="projet">
+            <h2 class="noir">Projets</h2>
+
+            <h3 class="animation" id="projPerso">Projets persos</h3>
+
+            <div class="animation" id="AnimProjetEtude">
+
+                <div class="row mb50">
+                    <div class="col-1"></div>
+                    <div class="col-7 verticalAlign">
+                        <div>
+                            <p class="">GauMuscu</h4>
+                            <p>Application de remise en forme</p>
+                            <p>Exercice, programme, nutrition</p>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="iphone">
+                            <div class="iphoneIsland"></div>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+
+                <div class="row mb50">
+                    <div class="col-8">
+                        <div class="ordi">
+                            <div class="ordiEcran"></div>
+                        </div>
+
+                        <div class="ordi">
+                            <div class="ordiCou"></div>
+                        </div>
+
+                        <div class="ordi">
+                            <div class="ordiPied"></div>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-3 verticalAlign">
+                        GauMode
+                    </div>
+                </div>
+
+
+                <h3 class="animation" id="projEtude">Projets d'études</h3>
+
+                <div class="row">
+                    <div class="projImg">
+                        <img class="centerImg" src="image/projet.JPG">
+                        <p class="legend">Projet SkyWise</p>
+                    </div>
+                    <div class="projImg">
+                        <img class="centerImg" src="image/projet.JPG">
+                        <p class="legend">Projet MOBI</p>
+                    </div>
+                    <div class="projImg">
+                        <img class="centerImg" src="image/projet.JPG">
+                        <p class="legend">Site Web de gestion des congés des employés de l'entreprise</p>
+                    </div>
+
+                    <div class="projImg">
+                        <img class="centerImg" src="image/Syndic.PNG">
+                        <p class="legend">Site Web de gestion de syndic de copropriété</p>
+                    </div>
+                    <div class="projImg">
+                        <img class="centerImg" src="image/Flyer.PNG">
+                        <p class="legend">Flyer de présentation de l'IUT</p>
+                    </div>
+                    <div class="projImg">
+                        <img class="centerImg" src="image/Demineur.PNG">
+                        <p class="legend">Jeu Le Démineur</p>
+                    </div>
+
+                    <div class="projImg">
+                        <img class="centerImg" src="image/LGCSK.PNG">
+                        <p class="legend">Site Xeb de vente de materielle informatique</p>
+                    </div>
+                    <div class="projImg">
+                        <img class="centerImg" src="image/horaireBus.PNG">
+                        <p class="legend">Application d'horaire de bus</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>@Gauthier BOË-GUIROLA</p>
+        </footer>
+
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
