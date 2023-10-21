@@ -67,12 +67,10 @@
                 <br /><br />
 
                 De plus, travailler sur les nouvelles technologies dans des secteurs tels que : la conception et/ou
-                le développement Web, logiciels ou encore dans le
-                <span><mark class="surligne-p">Conseil,</mark>Conseil,</span> la
-
-                <span><mark class="surligne-p">Cybersécurité,</mark>Cybersécurité,</span> la
-
-                <span><mark class="surligne-p">Data</mark>Data </span>
+                le développement Web, logiciels ou encore dans
+                le <a href="#"><b>Conseil</b></a>,
+                la <a href="#"><b>Cybersécurité</b></a>,
+                la <a href="#"><b>Data</b></a>
                 sont en adéquation avec mon cursus universitaire et mon ambition professionnelle.
                 <br /><br />
             </p>
@@ -98,6 +96,23 @@
         <section class="bloc animation" id="formation">
             <h2>formations</h2>
 
+
+            <div class="ProgInfo">
+                <p onclick="progression(-1)">avant</p>
+                <p onclick="progression(1)">après</p>
+                <p id="pourcentageTxt">30%</p>
+            </div>
+            <div class="barreProg">
+                <div id="progression"></div>
+            </div>
+
+            <code>
+                <div id="terminal">
+                    
+                </div>
+            </code>
+
+            <!--
             <div class="po-relative">
                 <img class="dessin" id="bonhomme" src="image/bonhomme.JPG" />
                 <img class="dessin" id="mouette" src="image/mouette.JPG" />
@@ -168,7 +183,7 @@
                     <div class="rondBlanc" onmouseover="formationAffiche(3)" onclick="formationAffiche(3)"></div>
                     <div class="formation">
                         <div class="hrWhite"></div>
-                        <h3><a>1ère année de Master</a></h3>
+                        <h3>1ère année de Master</h3>
                         <p>
                             Master MIAGE option IDA en alternance toujours à l’Université Toulouse Capitole.
                             <br /><br />
@@ -179,6 +194,7 @@
                     </div>
                 </div>
             </div>
+            -->
         </section>
 
         <!-- ExpPro -->
@@ -204,6 +220,7 @@
                         <p class="txtBlancSecond mt20">
                             <a href="">#BD</a>
                             <a href="">#SQL</a>
+                            <a href="">#Python</a>
                         </p>
                     </code>
                 </div>
@@ -474,6 +491,7 @@
     </section>
 
     <script src="js/script.js"></script>
+    <script src="js/animation.js"></script>
 </body>
 
 </html>

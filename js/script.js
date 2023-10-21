@@ -1,128 +1,81 @@
-const animation = document.querySelectorAll('.animation');
+const FORMATION = [
+    [
+        "Lycée Stéphanne Hessel",
+        "BAC S, option Sience de l'ingénieur.",
+        "Cet enseignement aborde les grands domaines techniques de la mécanique, l'automatisme, l'informatique l'électronique et l'électrotechnique.",
+        "La formation s'adresse à des élèves souhaitant acquérir une formation scientifique et des compétences technologiques. Elle lui permettra aussi de maitriser les nouvelles technologies.",
+        "10%",
+    ],
+    [
+        "DUT Informatique",
+        "Diplôme Universitaire de Technologie à l'Université Toulouse Capitole dispensé a Rodez.",
+        "Ce DUT m'a permis d'acquérir de nombreuses compétences en matière informatique: les langages informatiques tels que java, css, php, javascript et sql pour le développement et la gestion de base de données",
+        "Mais aussi des compétences en mathématique et en statistique qui sont utiles pour les branches techniques de l'informatique (IA, GPS, Moteur de recherche…).",
+        "40%",
+    ],
+    [
+        "3ème année de Licence professionnelle",
+        "Licence MIASHS parcours MIAGE en alternance à l'Université Toulouse Capitole.",
+        "Cette formation est centrée sur la modélisation, l'analyse de données, la programmation et le traitement de données permettant de modéliser les systèmes d'information et de développer des solutions d'informatisation adaptées.",
+        "Consolidation des compétences informatiques et Mathématiques apprise durant mon DUT Informatique",
+        "60%",
+    ],
+    [
+        "1ère année de Master",
+        "Master MIAGE option IDA en alternance toujours à l'Université Toulouse Capitole.",
+        "Licence centrée sur la gestion des données",
+        "En cours ...",
+        "80%",
+    ],
+]
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            add(entry.target.id, ANIMATION_ADD_IN);
-            remove(entry.target.id, ANIMATION_REMOVE_IN);
-        } else {
-            add(entry.target.id, ANIMATION_ADD_OUT);
-            remove(entry.target.id, ANIMATION_REMOVE_OUT);
+var numFormation = -1
+
+function progression(val) {
+
+    // Arrêtez toutes les minuteries en cours
+    var id = window.setTimeout(function () { }, 0);
+    while (id--) {
+        window.clearTimeout(id);
+    }
+
+
+    const terminalElement = document.getElementById("terminal");
+    numFormation += val
+
+    console.log(FORMATION[numFormation][FORMATION[numFormation].length - 1])
+    document.getElementById("progression").style.width = FORMATION[numFormation][FORMATION[numFormation].length - 1];
+    document.getElementById("pourcentageTxt").innerHTML = FORMATION[numFormation][FORMATION[numFormation].length - 1];
+
+    const formation = FORMATION[numFormation];
+    terminalElement.innerHTML = "";
+
+    let progress = 0;
+    let speed = 15; // Vitesse de frappe (en millisecondes par caractère)
+
+    function typeText() {
+        if (progress < formation.length - 1) {
+            const sentence = formation[progress];
+            let i = 0;
+
+            function typeSentence() {
+
+                if (i < sentence.length) {
+                    terminalElement.innerHTML += sentence.charAt(i);
+                    i++;
+                    setTimeout(typeSentence, speed);
+                } else {
+                    // Ajoute un saut de ligne <br> entre les phrases
+                    terminalElement.innerHTML += "<br/><br/>";
+                    progress++;
+                    setTimeout(typeText, speed);
+                }
+            }
+            typeSentence();
         }
-    });
-}, { treshold: 0 });
-
-animation.forEach(element => {
-    observer.observe(element);
-})
-
-// Ajout quand il apparait
-const ANIMATION_ADD_IN = {
-    "AnimFormation": [
-        ["AnimCacheDessin", "anim"]
-    ],
-    "AnimExpPro2": [
-        ["AnimExpPro1", "anim"]
-    ],
-    "AnimExpPro3": [
-        ["AnimExpPro2", "anim"],
-        ["AnimInfoGauche", "blanc"],
-        ["AnimInfoDroite", "blanc"],
-    ],
-    "AnimExpPro4": [
-        ["AnimExpPro3", "anim"]
-    ],
-
-    "formation": [
-        ["AnimInfoGauche", "blanc"],
-        ["AnimInfoDroite", "blanc"]
-    ],
-    "expPro": [
-        ["AnimInfoGauche", "blanc"],
-        ["AnimInfoDroite", "blanc"]
-    ],
-    "competence": [
-        ["AnimExpPro4", "anim"]
-    ],
-    "AnimCacheDessin": [
-        ["AnimInfoGauche", "blanc"],
-        ["AnimInfoDroite", "blanc"]
-    ],
-    "bgBleu": [
-        ["AnimNav", "blanc"],
-    ]
-};
-
-// Ajout quand il sort
-const ANIMATION_ADD_OUT = {
-    "aPropos": [
-        ["AnimNav", "blanc"]
-    ],
-    "projPerso": [
-        ["AnimInfoGauche", "blanc"],
-        ["AnimInfoDroite", "blanc"]
-    ],
-    "projPerso": [
-        ["AnimInfoGauche", "blanc"],
-        ["AnimInfoDroite", "blanc"]
-    ]
-};
-
-// Enleve quand il apparait
-const ANIMATION_REMOVE_IN = {
-    "aPropos": [
-        ["AnimNav", "blanc"]
-    ],
-    "projPerso": [
-        ["AnimInfoGauche", "blanc"],
-        ["AnimInfoDroite", "blanc"]
-    ],
-    "projEtude": [
-        ["AnimInfoGauche", "blanc"],
-        ["AnimInfoDroite", "blanc"]
-    ],
-};
-
-// Enleve quand il sort
-const ANIMATION_REMOVE_OUT = {
-    "bgBleu": [
-        ["AnimNav", "blanc"]
-    ],
-    "AnimCacheDessin": [
-        ["AnimInfoGauche", "blanc"],
-        ["AnimInfoDroite", "blanc"]
-    ]
-};
-
-function add(id, tab) {
-
-    if (typeof tab[id] === 'undefined') {
-        return false;
     }
-
-    listTab = tab[id];
-
-    listTab.forEach(tabIn => {
-        console.log(tabIn)
-        document.getElementById(tabIn[0]).classList.add(tabIn[1]);
-    });
+    typeText();
 }
-
-function remove(id, tab) {
-
-    if (typeof tab[id] === 'undefined') {
-        return false;
-    }
-
-    listTab = tab[id];
-
-    listTab.forEach(tabIn => {
-        document.getElementById(tabIn[0]).classList.remove(tabIn[1]);
-    });
-}
-
-
-
 
 
 /////////////////////////////////////////////////////////////////////////////////////////
