@@ -11,7 +11,7 @@
 
     <link href="style/style.css" rel="stylesheet">
 
-    <script src="https://kit.fontawesome.com/814ded4c7d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -75,10 +75,9 @@
                 <br /><br />
             </p>
 
+
             <div class="row jc-evenly">
-                <div class="interet">
-                    Développement
-                </div>
+                <div class="interet">Développement</div>
                 <div class="interet">Volley-Ball</div>
                 <div class="interet">Piano</div>
                 <div class="interet">Lecture</div>
@@ -97,10 +96,13 @@
             <h2>formations</h2>
 
 
-            <div class="ProgInfo">
-                <p onclick="progression(-1)">avant</p>
-                <p onclick="progression(1)">après</p>
-                <p id="pourcentageTxt">30%</p>
+            <div class="ProgInfo jc-between">
+                <div>
+                    <p>Progression en cours ...</p>
+                    <i onclick="progression(-1)" id="progLeft" class="fa fa-chevron-left"></i>
+                    <i onclick="progression(1)" id="progRight" class="fa fa-chevron-right"></i>
+                </div>
+                <p id="pourcentageTxt">0%</p>
             </div>
             <div class="barreProg">
                 <div id="progression"></div>
@@ -111,90 +113,6 @@
                     
                 </div>
             </code>
-
-            <!--
-            <div class="po-relative">
-                <img class="dessin" id="bonhomme" src="image/bonhomme.JPG" />
-                <img class="dessin" id="mouette" src="image/mouette.JPG" />
-                <img class="dessin" id="bonhomme2" src="image/bonhomme.JPG" />
-                <div>
-                    <div class="animation cacheDessin" id="AnimCacheDessin"></div>
-                    <img class="parcours" src="image/parcours.JPG" />
-                </div>
-            </div>
-
-            <div class="animation row" id="AnimFormation">
-
-                <div class="formationBloc" id="rond1">
-                    <div class="rondBlanc" onmouseover="formationAffiche(0)" onclick="formationAffiche(0)"></div>
-                    <div class="formation">
-                        <div class="hrWhite"></div>
-                        <h3>Lycée Stéphanne Hessel</h3>
-                        <p>
-                            BAC S, option Sience de l’ingénieur.
-                            <br /><br />
-                            Cet enseignement aborde les grands domaines techniques de la mécanique, l’automatisme,
-                            l’informatique l’électronique, l’électrotechnique et .
-                            <br /><br />
-                            La formation s’adresse à des élèves souhaitant acquérir une formation scientifique et
-                            des compétences technologiques. Elle lui permettra aussi de maitriser les nouvelles
-                            technologies.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="formationBloc" id="rond2">
-                    <div class="rondBlanc" onmouseover="formationAffiche(1)" onclick="formationAffiche(1)"></div>
-                    <div class="formation">
-                        <div class="hrWhite"></div>
-                        <h3>DUT Informatique</h3>
-                        <p>
-                            Diplôme Universitaire de Technologie à l’Université Toulouse Capitole dispensé a Rodez.
-                            <br /><br />
-                            Ce DUT m’a permis d’acquérir de nombreuses compétences en matière informatique: les
-                            langages informatiques tels que java, css, php, javascript et sql pour le développement et
-                            la gestion de base de données.
-                            <br /><br />
-                            Mais aussi des compétences en mathématique et en statistique qui sont utiles pour les
-                            branches techniques de l’informatique (IA, GPS, Moteur de recherche…).
-                        </p>
-                    </div>
-                </div>
-
-                <div class="formationBloc" id="rond3">
-                    <div class="rondBlanc" onmouseover="formationAffiche(2)" onclick="formationAffiche(2)"></div>
-                    <div class="formation">
-                        <div class="hrWhite"></div>
-                        <h3>3ème année de Licence professionnelle</h3>
-                        <p>
-                            Licence MIASHS parcours MIAGE en alternance à l’Université Toulouse Capitole.
-                            <br /><br />
-                            Cette formation est centrée sur la modélisation, l’analyse de données, la programmation et
-                            le traitement de données permettant de modéliser les systèmes d’information et de développer
-                            des solutions d’informatisation adaptées.
-                            <br /><br />
-                            Consolidation des compétences informatiques et Mathématiques apprise durant mon DUT
-                            Informatique
-                        </p>
-                    </div>
-                </div>
-
-                <div class="formationBloc" id="rond4">
-                    <div class="rondBlanc" onmouseover="formationAffiche(3)" onclick="formationAffiche(3)"></div>
-                    <div class="formation">
-                        <div class="hrWhite"></div>
-                        <h3>1ère année de Master</h3>
-                        <p>
-                            Master MIAGE option IDA en alternance toujours à l’Université Toulouse Capitole.
-                            <br /><br />
-                            Licence centrée sur la gestion des données
-                            <br /><br />
-                            En cours ...
-                        </p>
-                    </div>
-                </div>
-            </div>
-            -->
         </section>
 
         <!-- ExpPro -->
@@ -416,6 +334,11 @@
                     <div class="col-3">
                         <div class="iphone">
                             <div class="iphoneIsland"></div>
+                            <!--
+                            <iframe src="https://muscu-app.vercel.app/" width="200" height="400"
+                                frameborder="0"></iframe>
+                            -->
+
                         </div>
                     </div>
                     <div class="col-1"></div>

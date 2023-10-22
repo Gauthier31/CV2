@@ -33,17 +33,25 @@ var numFormation = -1
 
 function progression(val) {
 
+    numFormation = (numFormation + val < 0 || numFormation + val > FORMATION.length) ? numFormation : numFormation + val;
+
+    if (numFormation == 0) {
+        document.getElementById("progLeft").style.visibility = "hidden"
+    } else if (numFormation == FORMATION.length - 1) {
+        document.getElementById("progRight").style.visibility = "hidden"
+    } else {
+        document.getElementById("progLeft").style.visibility = "visible"
+        document.getElementById("progRight").style.visibility = "visible"
+    }
+
     // Arrêtez toutes les minuteries en cours
     var id = window.setTimeout(function () { }, 0);
     while (id--) {
         window.clearTimeout(id);
     }
 
-
     const terminalElement = document.getElementById("terminal");
-    numFormation += val
 
-    console.log(FORMATION[numFormation][FORMATION[numFormation].length - 1])
     document.getElementById("progression").style.width = FORMATION[numFormation][FORMATION[numFormation].length - 1];
     document.getElementById("pourcentageTxt").innerHTML = FORMATION[numFormation][FORMATION[numFormation].length - 1];
 
@@ -65,8 +73,10 @@ function progression(val) {
                     i++;
                     setTimeout(typeSentence, speed);
                 } else {
-                    // Ajoute un saut de ligne <br> entre les phrases
-                    terminalElement.innerHTML += "<br/><br/>";
+
+                    if (progress < formation.length - 2) {
+                        terminalElement.innerHTML += "<br/><br/>";
+                    }
                     progress++;
                     setTimeout(typeText, speed);
                 }

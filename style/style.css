@@ -274,7 +274,7 @@ a:hover::before {
 .surligne-h1 {
     color: rgba(0, 0, 0, 0);
     position: absolute;
-    height: 20px;
+    height: 1.5dvw;
     z-index: -1;
     transform: translate(-5px, 12px);
     padding: 0 5px;
@@ -295,7 +295,7 @@ a:hover::before {
 /* ---------------- Texte ------------------ */
 
 .h1 {
-    font-size: 1.5rem;
+    font-size: 2.3dvw;
     font-weight: bold;
     margin: 0;
     margin-bottom: 5px;
@@ -318,16 +318,17 @@ h3 {
 .divPhoto {
     width: calc(100% / 12 * 3);
     border: 3px solid black;
-    height: -webkit-fill-available;
+    max-height: -webkit-fill-available;
+    height: 35dvw;
 }
 
 .divTxt {
     width: calc(100% / 12 * 6);
-    font-size: 2.6dvh;
+    font-size: 1.3dvw;
 }
 
 .interet {
-    padding: 7px 40px;
+    padding: 5px 30px;
     margin: 5px;
     border: 1px solid black;
     border-radius: 100px;
@@ -485,7 +486,6 @@ h3 {
 
 
 #AnimFormation {
-    height: 200px;
     transition: height .5s ease-in-out;
     position: relative;
     transform: translate(0, -15dvw);
@@ -503,18 +503,13 @@ h3 {
 
 /* ----------- Formation -------- */
 
-.ProgInfo {
+.ProgInfo,
+.ProgInfo>div {
     display: flex;
 }
 
-.ProgInfo>p {
-    margin-left: 10px;
-}
-
-#pourcentageTxt {
-    width: -webkit-fill-available;
-    text-align: right;
-    margin: 0;
+.ProgInfo>div>* {
+    margin-right: 10px;
 }
 
 .barreProg {
@@ -538,14 +533,16 @@ h3 {
 }
 
 #terminal {
-    background-color: black;
+    background-color: #1E1E1E;
     color: white;
     padding: 15px;
     border-radius: 10px;
     min-height: 100px;
-    margin-bottom: 50px;
 }
 
+#progLeft {
+    visibility: hidden;
+}
 
 
 .expPro {
@@ -580,14 +577,14 @@ h3 {
 
 .anim#AnimExpPro2,
 .anim#AnimExpPro4 {
-    transition: left 1.5s ease-in-out 0.5s, opacity 1s linear 0.5s !important;
+    transition: left 1s ease-in-out 0.5s, opacity 1s linear 0.5s !important;
     left: 0 !important;
     opacity: 1 !important;
 }
 
 .anim#AnimExpPro1,
 .anim#AnimExpPro3 {
-    transition: right 1.5s ease-in-out 0.5s, opacity 1s linear 0.5s !important;
+    transition: right 1s ease-in-out 0.5s, opacity 1s linear 0.5s !important;
     right: 0 !important;
     opacity: 1 !important;
 }
@@ -736,11 +733,19 @@ h3 {
     width: 200px;
 }
 
+.iphone>iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
 .iphoneIsland {
     background-color: black;
     border-radius: 0 0 20px 20px;
     height: 20px;
     width: 100px;
+    z-index: 10;
+    position: absolute;
 }
 
 .ordi {
