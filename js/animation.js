@@ -6,7 +6,7 @@ function reveal() {
         var elementTop = reveals[i].getBoundingClientRect().top;
 
         //console.log(i, Math.round(elementTop), windowHeight * 0.8, windowHeight)
-        if (elementTop < windowHeight * 0.8) {
+        if (elementTop < windowHeight * 0.9) {
             reveals[i].classList.add("anim");
         } else if (elementTop > windowHeight) {
             reveals[i].classList.remove("anim");

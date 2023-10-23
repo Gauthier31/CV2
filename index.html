@@ -50,12 +50,22 @@
         <div class="col-1"></div>
         <div class="divTxt bottom">
 
+            <!--
             <p><span class="h1">Bonjour je suis
                     <mark class="surligne-h1">
                         Gauthier BOË--GUIROLA,
                     </mark>
-                    Gauthier BOË--GUIROLA,</span>
-                étudiant en 1ère année de Master MIAGE option IDA</p>
+                    Gauthier BOË--GUIROLA,
+                </span>
+                étudiant en 1ère année de Master MIAGE option IDA
+            </p>
+            -->
+
+            <p><span class="h1">Bonjour je suis
+                    <a class="nom" id="nom">Gauthier BOË--GUIROLA,</a>
+                </span>
+                étudiant en 1ère année de Master MIAGE option IDA
+            </p>
 
             <p><br />
                 à <a href="#"><b>l’Université Toulouse Capitole</b></a> en alternance dans
@@ -98,10 +108,10 @@
 
             <div class="ProgInfo jc-between">
                 <div>
-                    <p>Progression en cours ...</p>
                     <i onclick="progression(-1)" id="progLeft" class="fa fa-chevron-left"></i>
                     <i onclick="progression(1)" id="progRight" class="fa fa-chevron-right"></i>
                 </div>
+                <p id="progTitre">Progression en cours ...</p>
                 <p id="pourcentageTxt">0%</p>
             </div>
             <div class="barreProg">
@@ -365,7 +375,11 @@
                 </div>
 
 
-                <h3 class="animation" id="projEtude">Projets d'études</h3>
+                <div class="row ai-center">
+                    <div class="line"></div>
+                    <h3 class="animation" id="projEtude">Projets d'études</h3>
+                    <div class="line"></div>
+                </div>
 
                 <div class="row">
                     <div class="projImg">

@@ -1,31 +1,31 @@
 const FORMATION = [
     [
-        "Lycée Stéphanne Hessel",
+        "Lycée Stéphanne Hessel ...",
         "BAC S, option Sience de l'ingénieur.",
         "Cet enseignement aborde les grands domaines techniques de la mécanique, l'automatisme, l'informatique l'électronique et l'électrotechnique.",
         "La formation s'adresse à des élèves souhaitant acquérir une formation scientifique et des compétences technologiques. Elle lui permettra aussi de maitriser les nouvelles technologies.",
-        "10%",
+        10,
     ],
     [
-        "DUT Informatique",
+        "DUT Informatique ...",
         "Diplôme Universitaire de Technologie à l'Université Toulouse Capitole dispensé a Rodez.",
-        "Ce DUT m'a permis d'acquérir de nombreuses compétences en matière informatique: les langages informatiques tels que java, css, php, javascript et sql pour le développement et la gestion de base de données",
+        "Ce DUT m'a permis d'acquérir de nombreuses compétences en matière informatique: les langages informatiques tels que java, css, php, javascript et sql pour le développement et la gestion de base de données.",
         "Mais aussi des compétences en mathématique et en statistique qui sont utiles pour les branches techniques de l'informatique (IA, GPS, Moteur de recherche…).",
-        "40%",
+        40,
     ],
     [
-        "3ème année de Licence professionnelle",
+        "3ème année de Licence professionnelle ...",
         "Licence MIASHS parcours MIAGE en alternance à l'Université Toulouse Capitole.",
         "Cette formation est centrée sur la modélisation, l'analyse de données, la programmation et le traitement de données permettant de modéliser les systèmes d'information et de développer des solutions d'informatisation adaptées.",
-        "Consolidation des compétences informatiques et Mathématiques apprise durant mon DUT Informatique",
-        "60%",
+        "Consolidation des compétences informatiques et Mathématiques apprise durant mon DUT Informatique.",
+        60,
     ],
     [
-        "1ère année de Master",
+        "1ère année de Master ...",
         "Master MIAGE option IDA en alternance toujours à l'Université Toulouse Capitole.",
-        "Licence centrée sur la gestion des données",
+        "Master centrée sur la gestion des données.",
         "En cours ...",
-        "80%",
+        80,
     ],
 ]
 
@@ -50,31 +50,34 @@ function progression(val) {
         window.clearTimeout(id);
     }
 
-    const terminalElement = document.getElementById("terminal");
-
-    document.getElementById("progression").style.width = FORMATION[numFormation][FORMATION[numFormation].length - 1];
-    document.getElementById("pourcentageTxt").innerHTML = FORMATION[numFormation][FORMATION[numFormation].length - 1];
+    progressionBloc.style.width = FORMATION[numFormation][FORMATION[numFormation].length - 1] + "%";
 
     const formation = FORMATION[numFormation];
     terminalElement.innerHTML = "";
+    progTitre.innerHTML = "";
 
     let progress = 0;
     let speed = 15; // Vitesse de frappe (en millisecondes par caractère)
 
     function typeText() {
+
         if (progress < formation.length - 1) {
             const sentence = formation[progress];
             let i = 0;
 
             function typeSentence() {
 
-                if (i < sentence.length) {
+                if (progress == 0 && i < sentence.length) {
+                    progTitre.innerHTML += sentence.charAt(i);
+                    i++;
+                    setTimeout(typeSentence, speed);
+                } else if (i < sentence.length) {
                     terminalElement.innerHTML += sentence.charAt(i);
                     i++;
                     setTimeout(typeSentence, speed);
                 } else {
 
-                    if (progress < formation.length - 2) {
+                    if (progress != 0 && progress < formation.length - 2) {
                         terminalElement.innerHTML += "<br/><br/>";
                     }
                     progress++;
@@ -86,6 +89,22 @@ function progression(val) {
     }
     typeText();
 }
+
+function afficherTailleBloc() {
+    console.log("test")
+    const largeurEnPourcentage = (progressionBloc.offsetWidth / (progressionBloc.parentElement.offsetWidth - 15)) * 100;
+    pourcentageTxt.innerHTML = largeurEnPourcentage.toFixed(0) + "%";
+}
+
+const progTitre = document.getElementById("progTitre");
+const pourcentageTxt = document.getElementById("pourcentageTxt");
+const progressionBloc = document.getElementById("progression");
+const terminalElement = document.getElementById("terminal");
+// Appeler la fonction initiale pour afficher la taille au chargement de la page
+afficherTailleBloc();
+
+const observer = new ResizeObserver(afficherTailleBloc);
+observer.observe(progressionBloc);
 
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -150,3 +169,13 @@ function navInfoAdd() {
 function navInfoRemove() {
     document.getElementById("navInfoBloc").classList.remove("navInfoAffiche");
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+const element = document.getElementById("nom"); // Sélectionnez l'élément par son ID
+
+function toggleNomClass() {
+    element.classList.toggle("nom"); // Ajoute ou supprime la classe "nom"
+}
+
+setInterval(toggleNomClass, 2000); // Appel de la fonction toutes les 5 secondes (5000 millisecondes)
