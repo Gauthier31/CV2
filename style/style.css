@@ -872,14 +872,12 @@ h4 {
 
 footer {
     margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
     text-transform: uppercase;
+    position: relative;
+    z-index: 100;
+    background-color: white;
 }
 
-footer>* {
-    height: fit-content;
-}
 
 /******************************************/
 

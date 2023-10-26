@@ -205,7 +205,7 @@ function etiquette() {
     var hauteur = 0;
     for (i = 0; i < etiquette.length; i++) {
 
-        if ((distance + etiquette[i].offsetWidth - 5) > maxLongueur) {
+        if ((distance + etiquette[i].offsetWidth - 5) > maxLongueur - 20) {
             distance = 0;
             hauteur += 34;
         }
