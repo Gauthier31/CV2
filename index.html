@@ -50,17 +50,6 @@
         <div class="col-1"></div>
         <div class="divTxt bottom">
 
-            <!--
-            <p><span class="h1">Bonjour je suis
-                    <mark class="surligne-h1">
-                        Gauthier BOË--GUIROLA,
-                    </mark>
-                    Gauthier BOË--GUIROLA,
-                </span>
-                étudiant en 1ère année de Master MIAGE option IDA
-            </p>
-            -->
-
             <p><span class="h1">Bonjour je suis
                     <a class="nom" id="nom">Gauthier BOË--GUIROLA,</a>
                 </span>
@@ -105,24 +94,27 @@
         <section class="bloc animation" id="formation">
             <h2>formations</h2>
 
+            <div class="ProgInfo">
+                <i onclick="progression(-1)" id="progLeft" class="fa fa-chevron-left"></i>
+                <i onclick="progression(1)" id="progRight" class="fa fa-chevron-right"></i>
+            </div>
+
+            <code>
+                <div class="terminalHead">Invite de commande</div>
+                <div id="terminal">
+                    GauCV [version 68.2]
+                    <br/>(c) Gau Corporation. Tous droits réservés.                      
+                </div>
+            </code>
 
             <div class="ProgInfo jc-between">
-                <div>
-                    <i onclick="progression(-1)" id="progLeft" class="fa fa-chevron-left"></i>
-                    <i onclick="progression(1)" id="progRight" class="fa fa-chevron-right"></i>
-                </div>
-                <p id="progTitre">Progression en cours ...</p>
+                <p></p>
+                <p id="progEncours"></p>
                 <p id="pourcentageTxt">0%</p>
             </div>
             <div class="barreProg">
                 <div id="progression"></div>
             </div>
-
-            <code>
-                <div id="terminal">
-                    
-                </div>
-            </code>
         </section>
 
         <!-- ExpPro -->
@@ -145,10 +137,10 @@
                         <p class="txtBlancSecond mb20">Sopra Steria en alternance, Colomier, 31770</p>
                         <p class="txtBlancSecond mb20">Extern à Airbus, Blagnac, 31500</p>
                         <p>Gestion des données des pièces d'avions</p>
-                        <p class="txtBlancSecond mt20">
-                            <a href="">#BD</a>
-                            <a href="">#SQL</a>
-                            <a href="">#Python</a>
+                        <p class="txtBlancSecond mt20 ta-left">
+                            <a href="#" class="label">#Base de données</a>
+                            <a href="#" class="label">#SQL</a>
+                            <a href="#" class="label">#Python</a>
                         </p>
                     </code>
                 </div>
@@ -163,10 +155,10 @@
                         <p>Développement d’une application pour gérer et assister les techniciens d’Orange
                             lorsqu’ils sont
                             en intervention chez les clients.</p>
-                        <p class="txtBlancSecond mt20">
-                            <a href="">#Angular CLI</a>
-                            <a href="">#Spring Boot</a>
-                            <a href="">#Maven</a>
+                        <p class="txtBlancSecond mt20 ta-left">
+                            <a href="#" class="label">#Angular CLI</a>
+                            <a href="#" class="label">#Spring Boot</a>
+                            <a href="#" class="label">#Maven</a>
                         </p>
                     </code>
                 </div>
@@ -211,7 +203,10 @@
                     <p>Développement d’une application pour gérer et assister les techniciens d’Orange
                         lorsqu’ils sont
                         en intervention chez les clients.</p>
-                    <p class="txtBlancSecond mt20">#Laravel</p>
+                    <p class="txtBlancSecond mt20 ta-left">
+                        <a href="#" class="label">#Laravel</a>
+                        <a href="#" class="label">#SQL</a>
+                    </p>
                 </code>
                 </div>
 
@@ -328,7 +323,11 @@
         <section class="bloc" id="projet">
             <h2 class="noir">Projets</h2>
 
-            <h3 class="animation" id="projPerso">Projets persos</h3>
+            <div class="row ai-center">
+                <div class="line"></div>
+                <h3 class="animation" id="projPerso">Projets persos</h3>
+                <div class="line"></div>
+            </div>
 
             <div class="animation" id="AnimProjetEtude">
 
@@ -341,7 +340,7 @@
                             <p>Exercice, programme, nutrition</p>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-4">
                         <div class="iphone">
                             <div class="iphoneIsland"></div>
                             <!--
@@ -351,7 +350,6 @@
 
                         </div>
                     </div>
-                    <div class="col-1"></div>
                 </div>
 
                 <div class="row mb50">
@@ -381,49 +379,198 @@
                     <div class="line"></div>
                 </div>
 
-                <div class="row">
-                    <div class="projImg">
-                        <img class="centerImg" src="image/projet.JPG">
-                        <p class="legend">Projet SkyWise</p>
-                    </div>
-                    <div class="projImg">
-                        <img class="centerImg" src="image/projet.JPG">
-                        <p class="legend">Projet MOBI</p>
-                    </div>
-                    <div class="projImg">
-                        <img class="centerImg" src="image/projet.JPG">
-                        <p class="legend">Site Web de gestion des congés des employés de l'entreprise</p>
-                    </div>
+                <div class="row po-relative jc-center mt375">
+                    <div class="pochette jc-center">
+                        <div class="feuille" onclick="afficheProj(this)" id="proj1">
+                            <div class="papier">
+                                <div class="etiquette">SkyWise</div>
+                                <div class="projTexte">
+                                    <img class="projImg" src="image/projet.JPG">
+                                    <h4>Data engeneer</h4>
+                                    Sed (saepe enim redeo ad Scipionem, cuius omnis sermo erat de amicitia) querebatur,
+                                    quod
+                                    omnibus in rebus homines diligentiores essent; capras et oves quot quisque haberet,
+                                    dicere posse, amicos quot haberet, non posse dicere et in illis quidem parandis
+                                    adhibere
+                                    curam, in amicis eligendis neglegentis esse nec habere quasi signa quaedam et notas,
+                                    quibus eos qui ad amicitias essent idonei, iudicarent. Sunt igitur firmi et stabiles
+                                    et
+                                    constantes eligendi; cuius generis est magna penuria. Et iudicare difficile est sane
+                                    nisi expertum; experiendum autem est in ipsa amicitia. Ita praecurrit amicitia
+                                    iudicium
+                                    tollitque experiendi potestatem.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feuille" onclick="afficheProj(this)" id="proj2">
+                            <div class="papier">
+                                <div class="etiquette">MOBI</div>
+                                <div class="projTexte">
+                                    <img class="projImg" src="image/Mobi.png">
+                                    <h4>Data engeneer</h4>
+                                    Sed (saepe enim redeo ad Scipionem, cuius omnis sermo erat de amicitia) querebatur,
+                                    quod
+                                    omnibus in rebus homines diligentiores essent; capras et oves quot quisque haberet,
+                                    dicere posse, amicos quot haberet, non posse dicere et in illis quidem parandis
+                                    adhibere
+                                    curam, in amicis eligendis neglegentis esse nec habere quasi signa quaedam et notas,
+                                    quibus eos qui ad amicitias essent idonei, iudicarent. Sunt igitur firmi et stabiles
+                                    et
+                                    constantes eligendi; cuius generis est magna penuria. Et iudicare difficile est sane
+                                    nisi expertum; experiendum autem est in ipsa amicitia. Ita praecurrit amicitia
+                                    iudicium
+                                    tollitque experiendi potestatem.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feuille" onclick="afficheProj(this)" id="proj3">
+                            <div class="papier">
+                                <div class="etiquette">SIRH</div>
+                                <div class="projTexte">
+                                    <img class="projImg" src="image/projet.JPG">
+                                    <h4>Data engeneer</h4>
+                                    Sed (saepe enim redeo ad Scipionem, cuius omnis sermo erat de amicitia) querebatur,
+                                    quod
+                                    omnibus in rebus homines diligentiores essent; capras et oves quot quisque haberet,
+                                    dicere posse, amicos quot haberet, non posse dicere et in illis quidem parandis
+                                    adhibere
+                                    curam, in amicis eligendis neglegentis esse nec habere quasi signa quaedam et notas,
+                                    quibus eos qui ad amicitias essent idonei, iudicarent. Sunt igitur firmi et stabiles
+                                    et
+                                    constantes eligendi; cuius generis est magna penuria. Et iudicare difficile est sane
+                                    nisi expertum; experiendum autem est in ipsa amicitia. Ita praecurrit amicitia
+                                    iudicium
+                                    tollitque experiendi potestatem.
+                                </div>
+                            </div>
+                        </div>
 
-                    <div class="projImg">
-                        <img class="centerImg" src="image/Syndic.PNG">
-                        <p class="legend">Site Web de gestion de syndic de copropriété</p>
-                    </div>
-                    <div class="projImg">
-                        <img class="centerImg" src="image/Flyer.PNG">
-                        <p class="legend">Flyer de présentation de l'IUT</p>
-                    </div>
-                    <div class="projImg">
-                        <img class="centerImg" src="image/Demineur.PNG">
-                        <p class="legend">Jeu Le Démineur</p>
-                    </div>
+                        <div class="feuille" onclick="afficheProj(this)" id="proj4">
+                            <div class="papier">
+                                <div class="etiquette">SYNDICSAAS</div>
+                                <div class="projTexte">
+                                    <img class="projImg" src="image/Syndic.PNG">
+                                    <h4>Data engeneer</h4>
+                                    Sed (saepe enim redeo ad Scipionem, cuius omnis sermo erat de amicitia) querebatur,
+                                    quod
+                                    omnibus in rebus homines diligentiores essent; capras et oves quot quisque haberet,
+                                    dicere posse, amicos quot haberet, non posse dicere et in illis quidem parandis
+                                    adhibere
+                                    curam, in amicis eligendis neglegentis esse nec habere quasi signa quaedam et notas,
+                                    quibus eos qui ad amicitias essent idonei, iudicarent. Sunt igitur firmi et stabiles
+                                    et
+                                    constantes eligendi; cuius generis est magna penuria. Et iudicare difficile est sane
+                                    nisi expertum; experiendum autem est in ipsa amicitia. Ita praecurrit amicitia
+                                    iudicium
+                                    tollitque experiendi potestatem.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feuille" onclick="afficheProj(this)" id="proj5">
+                            <div class="papier">
+                                <div class="etiquette">Flyer</div>
+                                <div class="projTexte">
+                                    <img class="projImg" src="image/Flyer.PNG">
+                                    <h4>Data engeneer</h4>
+                                    Sed (saepe enim redeo ad Scipionem, cuius omnis sermo erat de amicitia) querebatur,
+                                    quod
+                                    omnibus in rebus homines diligentiores essent; capras et oves quot quisque haberet,
+                                    dicere posse, amicos quot haberet, non posse dicere et in illis quidem parandis
+                                    adhibere
+                                    curam, in amicis eligendis neglegentis esse nec habere quasi signa quaedam et notas,
+                                    quibus eos qui ad amicitias essent idonei, iudicarent. Sunt igitur firmi et stabiles
+                                    et
+                                    constantes eligendi; cuius generis est magna penuria. Et iudicare difficile est sane
+                                    nisi expertum; experiendum autem est in ipsa amicitia. Ita praecurrit amicitia
+                                    iudicium
+                                    tollitque experiendi potestatem.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feuille" onclick="afficheProj(this)" id="proj6">
+                            <div class="papier">
+                                <div class="etiquette">Le Démineur</div>
+                                <div class="projTexte">
+                                    <img class="projImg" src="image/Demineur.PNG">
+                                    <h4>Data engeneer</h4>
+                                    Sed (saepe enim redeo ad Scipionem, cuius omnis sermo erat de amicitia) querebatur,
+                                    quod
+                                    omnibus in rebus homines diligentiores essent; capras et oves quot quisque haberet,
+                                    dicere posse, amicos quot haberet, non posse dicere et in illis quidem parandis
+                                    adhibere
+                                    curam, in amicis eligendis neglegentis esse nec habere quasi signa quaedam et notas,
+                                    quibus eos qui ad amicitias essent idonei, iudicarent. Sunt igitur firmi et stabiles
+                                    et
+                                    constantes eligendi; cuius generis est magna penuria. Et iudicare difficile est sane
+                                    nisi expertum; experiendum autem est in ipsa amicitia. Ita praecurrit amicitia
+                                    iudicium
+                                    tollitque experiendi potestatem.
+                                </div>
+                            </div>
+                        </div>
 
-                    <div class="projImg">
-                        <img class="centerImg" src="image/LGCSK.PNG">
-                        <p class="legend">Site Xeb de vente de materielle informatique</p>
-                    </div>
-                    <div class="projImg">
-                        <img class="centerImg" src="image/horaireBus.PNG">
-                        <p class="legend">Application d'horaire de bus</p>
+                        <div class="feuille" onclick="afficheProj(this)" id="proj7">
+                            <div class="papier">
+                                <div class="etiquette">LGCSK</div>
+                                <div class="projTexte">
+                                    <img class="projImg" src="image/LGCSK.PNG">
+                                    <h4>Data engeneer</h4>
+                                    Sed (saepe enim redeo ad Scipionem, cuius omnis sermo erat de amicitia) querebatur,
+                                    quod omnibus in rebus homines diligentiores essent; capras et oves quot quisque
+                                    haberet,
+                                    dicere posse, amicos quot haberet, non posse dicere et in illis quidem parandis
+                                    adhibere curam, in amicis eligendis neglegentis esse nec habere quasi signa quaedam
+                                    et notas,
+                                    quibus eos qui ad amicitias essent idonei, iudicarent. Sunt igitur firmi et stabiles
+                                    et
+                                    constantes eligendi; cuius generis est magna penuria. Et iudicare difficile est sane
+                                    nisi expertum; experiendum autem est in ipsa amicitia. Ita praecurrit amicitia
+                                    iudicium
+                                    tollitque experiendi potestatem.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feuille" onclick="afficheProj(this)" id="proj8">
+                            <div class="papier">
+                                <div class="etiquette">Bus Time</div>
+                                <div class="projTexte">
+                                    <img class="projImg" src="image/horaireBus.PNG">
+                                    <h4>Data engeneer</h4>
+                                    Sed (saepe enim redeo ad Scipionem, cuius omnis sermo erat de amicitia) querebatur,
+                                    quod
+                                    omnibus in rebus homines diligentiores essent; capras et oves quot quisque haberet,
+                                    dicere posse, amicos quot haberet, non posse dicere et in illis quidem parandis
+                                    adhibere
+                                    curam, in amicis eligendis neglegentis esse nec habere quasi signa quaedam et notas,
+                                    quibus eos qui ad amicitias essent idonei, iudicarent. Sunt igitur firmi et stabiles
+                                    et
+                                    constantes eligendi; cuius generis est magna penuria. Et iudicare difficile est sane
+                                    nisi expertum; experiendum autem est in ipsa amicitia. Ita praecurrit amicitia
+                                    iudicium
+                                    tollitque experiendi potestatem.
+                                </div>
+                            </div>
+                        </div>
+                        <!--
+                        <div class="pochetteDos"></div>
+                        -->
                     </div>
                 </div>
             </div>
         </section>
 
-        <footer>
-            <hr>
-            <p>@Gauthier BOË-GUIROLA</p>
-        </footer>
+        <code>
+            <hr/>
+            <footer>
+                <div>
+                    <p style="font-size: 0.7rem;">Contact</p>
+                    <a href="mailto:boegauthier@gmail.com">boegauthier@gmail.com</a>
+                    <p>06.51.67.44.58</p>
+                </div>
+                <p>Copyright©2023</p>
+                <p><a>GauCV.vercel.app</a></p>
+            </footer>
+        </code>
 
     </section>
 

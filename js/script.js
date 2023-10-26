@@ -1,27 +1,27 @@
 const FORMATION = [
     [
-        "Lycée Stéphanne Hessel ...",
+        "C:\\User\\Étudiant\\Lycée\\Lycée Stéphanne Hessel>",
         "BAC S, option Sience de l'ingénieur.",
         "Cet enseignement aborde les grands domaines techniques de la mécanique, l'automatisme, l'informatique l'électronique et l'électrotechnique.",
         "La formation s'adresse à des élèves souhaitant acquérir une formation scientifique et des compétences technologiques. Elle lui permettra aussi de maitriser les nouvelles technologies.",
         10,
     ],
     [
-        "DUT Informatique ...",
+        "C:\\User\\Étudiant\\IUT\\Informatique>",
         "Diplôme Universitaire de Technologie à l'Université Toulouse Capitole dispensé a Rodez.",
         "Ce DUT m'a permis d'acquérir de nombreuses compétences en matière informatique: les langages informatiques tels que java, css, php, javascript et sql pour le développement et la gestion de base de données.",
         "Mais aussi des compétences en mathématique et en statistique qui sont utiles pour les branches techniques de l'informatique (IA, GPS, Moteur de recherche…).",
         40,
     ],
     [
-        "3ème année de Licence professionnelle ...",
+        "C:\\User\\Alternance\\Licence professionnelle\\MIASHS>",
         "Licence MIASHS parcours MIAGE en alternance à l'Université Toulouse Capitole.",
         "Cette formation est centrée sur la modélisation, l'analyse de données, la programmation et le traitement de données permettant de modéliser les systèmes d'information et de développer des solutions d'informatisation adaptées.",
         "Consolidation des compétences informatiques et Mathématiques apprise durant mon DUT Informatique.",
         60,
     ],
     [
-        "1ère année de Master ...",
+        "C:\\User\\Alternance\\Master professionnelle\\MIAGE>",
         "Master MIAGE option IDA en alternance toujours à l'Université Toulouse Capitole.",
         "Master centrée sur la gestion des données.",
         "En cours ...",
@@ -30,9 +30,17 @@ const FORMATION = [
 ]
 
 var numFormation = -1
+var tabIdTimeOut = [-1]
+var timerId
+
+const pourcentageTxt = document.getElementById("pourcentageTxt");
+const progressionBloc = document.getElementById("progression");
+const progEncours = document.getElementById("progEncours");
+const terminalElement = document.getElementById("terminal");
 
 function progression(val) {
 
+    // Barre de progressio
     numFormation = (numFormation + val < 0 || numFormation + val > FORMATION.length) ? numFormation : numFormation + val;
 
     if (numFormation == 0) {
@@ -43,63 +51,70 @@ function progression(val) {
         document.getElementById("progLeft").style.visibility = "visible"
         document.getElementById("progRight").style.visibility = "visible"
     }
-
-    // Arrêtez toutes les minuteries en cours
-    var id = window.setTimeout(function () { }, 0);
-    while (id--) {
-        window.clearTimeout(id);
-    }
-
     progressionBloc.style.width = FORMATION[numFormation][FORMATION[numFormation].length - 1] + "%";
 
+
+    // Arrêtez toutes les minuteries en cours
+    while (tabIdTimeOut.length > 1) {
+        window.clearTimeout(tabIdTimeOut[tabIdTimeOut.length - 1]);
+        tabIdTimeOut.pop()
+    }
+
+
+    // Ecriture dans le temrinal
     const formation = FORMATION[numFormation];
-    terminalElement.innerHTML = "";
-    progTitre.innerHTML = "";
+    progEncours.innerHTML = "Progression en cours ...";
 
     let progress = 0;
     let speed = 15; // Vitesse de frappe (en millisecondes par caractère)
 
+    var phrase
+
     function typeText() {
 
+        // On écrit le répertoire / titre
+        if (progress == 0) {
+            phrase = formation[progress];
+            terminalElement.innerHTML += "<br/><br/><br/><span class='repertoire'>" + phrase + "</span><br/>"
+            progress++
+        }
+
         if (progress < formation.length - 1) {
-            const sentence = formation[progress];
+
+            phrase = formation[progress];
             let i = 0;
 
-            function typeSentence() {
+            function typePhrase() {
 
-                if (progress == 0 && i < sentence.length) {
-                    progTitre.innerHTML += sentence.charAt(i);
+                if (i < phrase.length) {
+                    terminalElement.innerHTML += phrase.charAt(i);
                     i++;
-                    setTimeout(typeSentence, speed);
-                } else if (i < sentence.length) {
-                    terminalElement.innerHTML += sentence.charAt(i);
-                    i++;
-                    setTimeout(typeSentence, speed);
+                    terminalElement.scrollTop = terminalElement.scrollHeight;
+                    timerId = setTimeout(typePhrase, speed);
+                    tabIdTimeOut.push(timerId)
                 } else {
 
                     if (progress != 0 && progress < formation.length - 2) {
                         terminalElement.innerHTML += "<br/><br/>";
                     }
                     progress++;
-                    setTimeout(typeText, speed);
+                    timerId = setTimeout(typeText, speed);
+                    tabIdTimeOut.push(timerId)
                 }
             }
-            typeSentence();
+            typePhrase();
+        } else {
+            progEncours.innerHTML = "";
         }
     }
     typeText();
 }
 
 function afficherTailleBloc() {
-    console.log("test")
     const largeurEnPourcentage = (progressionBloc.offsetWidth / (progressionBloc.parentElement.offsetWidth - 15)) * 100;
     pourcentageTxt.innerHTML = largeurEnPourcentage.toFixed(0) + "%";
 }
 
-const progTitre = document.getElementById("progTitre");
-const pourcentageTxt = document.getElementById("pourcentageTxt");
-const progressionBloc = document.getElementById("progression");
-const terminalElement = document.getElementById("terminal");
 // Appeler la fonction initiale pour afficher la taille au chargement de la page
 afficherTailleBloc();
 
@@ -179,3 +194,46 @@ function toggleNomClass() {
 }
 
 setInterval(toggleNomClass, 2000); // Appel de la fonction toutes les 5 secondes (5000 millisecondes)
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+function etiquette() {
+    var feuille = document.getElementsByClassName("feuille")
+    var maxLongueur = feuille[0].offsetWidth;
+    var etiquette = document.getElementsByClassName("etiquette");
+    var distance = 0;
+    var hauteur = 0;
+    for (i = 0; i < etiquette.length; i++) {
+
+        if ((distance + etiquette[i].offsetWidth - 5) > maxLongueur) {
+            distance = 0;
+            hauteur += 34;
+        }
+
+        etiquette[i].style.transform = "translate(" + distance + "px, -34px)";
+        feuille[i].style.transform = "translate(0px, " + hauteur + "px)";
+        distance += etiquette[i].offsetWidth - 5;
+
+    }
+}
+
+var feuille = document.getElementsByClassName("feuille")
+etiquette()
+const observer2 = new ResizeObserver(etiquette);
+observer2.observe(feuille[0]);
+
+projIdVue = -1
+function afficheProj(obj) {
+
+    if (projIdVue != -1) {
+        document.getElementById(projIdVue).style.transform = "translateY(0px)";
+    }
+    if (obj.id != projIdVue) {
+        document.getElementById(obj.id).style.transform = "translateY(-375px)";
+        projIdVue = obj.id;
+    } else {
+        projIdVue = -1;
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
