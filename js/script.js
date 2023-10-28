@@ -217,30 +217,35 @@ function etiquette() {
     }
 
     // pochetteDos
-    document.getElementsByClassName("pochetteDos")[0].style.borderTopWidth = 300 - 20 - hauteur + "px"
+    document.getElementsByClassName("pochetteDos")[0].style.borderTopWidth = 275 - 70 - hauteur + "px"
 }
 
 var feuille = document.getElementsByClassName("feuille")
-var posY = 0
-var pochetteDos = 300 - 10 - 35
 etiquette()
 const observer2 = new ResizeObserver(etiquette);
 observer2.observe(feuille[0]);
 
+var posY = 0
 var projIdVue = -1;      // identifiant du projet précédent
 function afficheProj(obj) {
-    //
+
     // Si un bloc est affiché on le cache
     if (projIdVue != -1) {
-        document.getElementById(projIdVue).style.transform = "translateY(" + posY + "px)";
+        projIdBloc = document.getElementById(projIdVue)
+        projIdBloc.style.transform = "translateY(" + posY + "px)";
+        setTimeout(function () {
+            projIdBloc.getElementsByClassName("projTexte")[0].style.height = "60px"
+        }, 500);
     }
 
     // Si le bloc est différent de celui affiché on l'affiche
     if (obj.id != projIdVue) {
         posY = position(document.getElementById(obj.id).style.transform)
-        document.getElementById(obj.id).style.transform = "translateY(-375px)";
-        projIdVue = obj.id;
+        objIdBloc = document.getElementById(obj.id)
+        objIdBloc.style.transform = "translateY(-375px)";
+        objIdBloc.getElementsByClassName("projTexte")[0].style.height = "260px";
 
+        projIdVue = obj.id;
     } else {
         projIdVue = -1;
     }
@@ -253,7 +258,7 @@ function position(transformString) {
     if (matches) {
         return matches[1];
     } else {
-        return [0, 0]
+        return 0
     }
 }
 
