@@ -201,7 +201,7 @@ function etiquette() {
     var feuille = document.getElementsByClassName("feuille")
     var maxLongueur = feuille[0].offsetWidth;
     var etiquette = document.getElementsByClassName("etiquette");
-    var distance = 0;
+    var distance = -1;
     var hauteur = 0;
     for (i = 0; i < etiquette.length; i++) {
 
@@ -211,28 +211,49 @@ function etiquette() {
         }
 
         etiquette[i].style.transform = "translate(" + distance + "px, -34px)";
-        feuille[i].style.transform = "translate(0px, " + hauteur + "px)";
+        feuille[i].style.transform = "translateY(" + hauteur + "px)";
         distance += etiquette[i].offsetWidth - 5;
 
     }
+
+    // pochetteDos
+    document.getElementsByClassName("pochetteDos")[0].style.borderTopWidth = 300 - 20 - hauteur + "px"
 }
 
 var feuille = document.getElementsByClassName("feuille")
+var posY = 0
+var pochetteDos = 300 - 10 - 35
 etiquette()
 const observer2 = new ResizeObserver(etiquette);
 observer2.observe(feuille[0]);
 
-projIdVue = -1
+var projIdVue = -1;      // identifiant du projet précédent
 function afficheProj(obj) {
 
+    // Si un bloc est affiché on le cache
     if (projIdVue != -1) {
-        document.getElementById(projIdVue).style.transform = "translateY(0px)";
+        document.getElementById(projIdVue).style.transform = "translateY(" + posY + "px)";
     }
+
+    // Si le bloc est différent de celui affiché on l'affiche
     if (obj.id != projIdVue) {
+        posY = position(document.getElementById(obj.id).style.transform)
         document.getElementById(obj.id).style.transform = "translateY(-375px)";
         projIdVue = obj.id;
+
     } else {
         projIdVue = -1;
+    }
+}
+
+function position(transformString) {
+    const regex = /translateY\(([^,]+)px\)/;
+    const matches = transformString.match(regex);
+
+    if (matches) {
+        return matches[1];
+    } else {
+        return [0, 0]
     }
 }
 

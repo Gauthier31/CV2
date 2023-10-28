@@ -742,6 +742,10 @@ h4 {
 }
 
 /* ------------------------------------------- */
+#projet {
+    padding-bottom: 0;
+}
+
 .iphone {
     display: flex;
     justify-content: center;
@@ -804,13 +808,14 @@ h4 {
  * 15 * 2 = 30px
  */
 
-.projEtude {
-    height: 1000px;
+.rowPochette {
+    height: 715px;
 }
 
 .pochette {
     display: flex;
-    width: calc(100dvw / 12 * 9);
+    width: calc(100% / 10 * 9);
+    max-width: 800px;
     height: 350px;
     padding-top: 50px;
     background-color: #f6c906;
@@ -820,10 +825,15 @@ h4 {
 .pochetteDos {
     z-index: 10;
     width: 100%;
+    max-width: calc(800px + (100dvw / 12 * 1));
     border-radius: 20px 20px 0 0;
-    border-top: 275px solid #f6c906;
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
+    border-top: solid #f6c906;
+    border-left: solid transparent;
+    border-right: solid transparent;
+
+    border-right-width: calc(100dvw / 24 * 1);
+    border-left-width: calc(100dvw / 24 * 1);
+
     position: absolute;
     bottom: 0;
     box-shadow: 0px -30px 10px -10px rgb(0 0 0 / 0.2);
@@ -831,7 +841,8 @@ h4 {
 
 .feuille {
     position: absolute;
-    width: calc(100dvw / 12 * 9 - 30px);
+    width: calc(100% / 10 * 9 - 40px);
+    max-width: 760px;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -855,13 +866,16 @@ h4 {
 
 .projTexte {
     margin: 20px;
+    margin-right: 10px;
     max-height: 260px;
     overflow-y: auto;
     text-align: justify;
+    padding-right: 10px;
 }
 
 .projImg {
-    width: 200px;
+    max-width: 45%;
+    max-height: 260px;
     float: left;
     margin-right: 10px;
     border: 1px solid black;
@@ -871,13 +885,16 @@ h4 {
 /* -------------- Footer -------------- */
 
 footer {
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     text-transform: uppercase;
     position: relative;
     z-index: 100;
     background-color: white;
 }
 
+footer>hr {
+    margin-top: 0;
+}
 
 /******************************************/
 
@@ -895,10 +912,10 @@ footer {
 
 /* ---------- Scroll Bar --------- */
 /* Apply custom scrollbar to a specific container with the class "*" */
-/*
+
 * {
     scrollbar-width: thin;
-    scrollbar-color: #2c3250 #ffffff;
+    scrollbar-color: #f6c906 #ffffff;
 }
 
 *::-webkit-scrollbar {
@@ -907,7 +924,7 @@ footer {
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: #2c3250;
+    background-color: #f6c906;
     border-radius: 6px;
 }
 
@@ -916,6 +933,5 @@ footer {
 }
 
 *::-webkit-scrollbar-thumb:hover {
-    background-color: #2c3250;
+    background-color: #f6c906;
 }
-*/
