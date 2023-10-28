@@ -229,7 +229,7 @@ observer2.observe(feuille[0]);
 
 var projIdVue = -1;      // identifiant du projet précédent
 function afficheProj(obj) {
-
+    //
     // Si un bloc est affiché on le cache
     if (projIdVue != -1) {
         document.getElementById(projIdVue).style.transform = "translateY(" + posY + "px)";
