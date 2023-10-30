@@ -865,11 +865,12 @@ h4 {
 .projTexte {
     margin: 20px;
     margin-right: 10px;
-    height: 60px;
+    height: 260px;
     max-height: 260px;
     overflow-y: auto;
     text-align: justify;
     padding-right: 10px;
+    transition: height 0.5s ease-in-out;
 }
 
 .projImg {

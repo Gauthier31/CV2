@@ -1,3 +1,45 @@
+
+const INTRO = [
+    "Bonjour je suis Gauthier BOË--GUIROLA",
+    "Étudiant en 1ère année de Master MIAGE option IDA à l’Université Toulouse Capitole en alternance dans l’ESN SOPRA STERIA en tant que développeur full stack.",
+    "Le développement des domaines informatiques et l'objectif d'anticiper leurs futures synergies, suscitent un fort intérêt pour moi.",
+    "De plus, travailler sur les nouvelles technologies dans des secteurs tels que : la conception et/ou le développement Web, logiciels ou encore dans le Conseil, la Cybersécurité, la Data sont en adéquation avec mon cursus universitaire et mon ambition professionnelle.",
+]
+
+const intro = document.getElementById("intro")
+
+var introPhrase = 0
+var introLettre = 0
+var introSpeed = 0
+
+function TypeTexte2() {
+
+    console.log(introPhrase, introLettre)
+
+    if (introPhrase < INTRO.length) {
+
+        function TypePhrase2() {
+
+            if (introLettre < INTRO[introPhrase].length) {
+                intro.innerHTML += INTRO[introPhrase].charAt(introLettre);
+
+                introLettre++
+                setTimeout(TypePhrase2, introSpeed);
+            } else {
+                introPhrase++
+                introLettre = 0
+                intro.innerHTML += "<br/><br/>"
+                setTimeout(TypeTexte2, introSpeed);
+            }
+        }
+        TypePhrase2()
+
+    }
+}
+TypeTexte2()
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
 const FORMATION = [
     [
         "C:\\User\\Étudiant\\Lycée\\Lycée Stéphanne Hessel>",
@@ -121,7 +163,6 @@ afficherTailleBloc();
 const observer = new ResizeObserver(afficherTailleBloc);
 observer.observe(progressionBloc);
 
-
 /////////////////////////////////////////////////////////////////////////////////////////
 
 function bgCompetenceCategorieAdd(categorie) {
@@ -140,40 +181,6 @@ function bgCompetenceCategorieRemove(categorie) {
         listBgCat[i].classList.remove(categorie);
     }
 }
-
-/////////////////////////////////////////////////////////////////////////////////////////
-var numFormation = -1
-function formationAffiche(num) {
-
-    // Si on clic sur celui qui est déjà ouvert
-    if (num == numFormation) {
-        formationCache(num)
-        numFormation = -1
-        return
-
-        // Si on ouvre un autre et qu'il y en a déjà un d'ouvert
-    } else if (numFormation != -1) {
-        formationCache(numFormation)
-    }
-
-    numFormation = num
-
-    formation = document.getElementsByClassName("formation")
-    max = formation[num].clientHeight
-
-    formationBloc = document.getElementsByClassName("formationBloc")
-    formationBloc[num].style.height = "calc(3.5vw + " + max + "px)"
-    document.getElementById("AnimFormation").style.height = "calc(3.5vw + " + max + "px)"
-    formation[num].style.opacity = 1
-}
-
-function formationCache(num) {
-
-    formationBloc = document.getElementsByClassName("formationBloc")
-    document.getElementById("AnimFormation").style.height = ""
-    formationBloc[num].style.height = ""
-}
-
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
@@ -199,10 +206,12 @@ setInterval(toggleNomClass, 2000); // Appel de la fonction toutes les 5 secondes
 
 function etiquette() {
     var feuille = document.getElementsByClassName("feuille")
+    var projTexte = document.getElementsByClassName("projTexte")
     var maxLongueur = feuille[0].offsetWidth;
     var etiquette = document.getElementsByClassName("etiquette");
     var distance = -1;
     var hauteur = 0;
+    projIdVue = -1
     for (i = 0; i < etiquette.length; i++) {
 
         if ((distance + etiquette[i].offsetWidth - 5) > maxLongueur - 20) {
@@ -212,6 +221,11 @@ function etiquette() {
 
         etiquette[i].style.transform = "translate(" + distance + "px, -34px)";
         feuille[i].style.transform = "translateY(" + hauteur + "px)";
+        if (hauteur > 0) {
+            projTexte[i].style.height = "60px"
+        } else {
+            projTexte[i].style.height = "260px"
+        }
         distance += etiquette[i].offsetWidth - 5;
 
     }
@@ -231,11 +245,11 @@ function afficheProj(obj) {
 
     // Si un bloc est affiché on le cache
     if (projIdVue != -1) {
-        projIdBloc = document.getElementById(projIdVue)
+        const projIdBloc = document.getElementById(projIdVue)
         projIdBloc.style.transform = "translateY(" + posY + "px)";
-        setTimeout(function () {
+        if (posY > 0) {
             projIdBloc.getElementsByClassName("projTexte")[0].style.height = "60px"
-        }, 500);
+        }
     }
 
     // Si le bloc est différent de celui affiché on l'affiche
@@ -245,7 +259,7 @@ function afficheProj(obj) {
         const objIdBloc = document.getElementById(obj.id);
         if (objIdBloc) {
             const projTexte = objIdBloc.getElementsByClassName("projTexte")[0];
-            if (projTexte) {
+            if (projTexte && posY > 0) {
                 projTexte.style.height = "260px";
             }
             setTimeout(function () {
