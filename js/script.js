@@ -241,9 +241,17 @@ function afficheProj(obj) {
     // Si le bloc est différent de celui affiché on l'affiche
     if (obj.id != projIdVue) {
         posY = position(document.getElementById(obj.id).style.transform)
-        objIdBloc = document.getElementById(obj.id)
-        objIdBloc.style.transform = "translateY(-375px)";
-        objIdBloc.getElementsByClassName("projTexte")[0].style.height = "260px";
+
+        const objIdBloc = document.getElementById(obj.id);
+        if (objIdBloc) {
+            const projTexte = objIdBloc.getElementsByClassName("projTexte")[0];
+            if (projTexte) {
+                projTexte.style.height = "260px";
+            }
+            setTimeout(function () {
+                objIdBloc.style.transform = "translateY(-375px)";
+            }, 0);
+        }
 
         projIdVue = obj.id;
     } else {
