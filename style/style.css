@@ -298,7 +298,6 @@ a:hover::before {
     font-weight: bold;
     margin: 0;
     margin-bottom: 5px;
-    display: inline-block;
 }
 
 h2 {
@@ -331,6 +330,12 @@ h4 {
 .divTxt {
     width: calc(100% / 12 * 6);
     font-size: 15px;
+    position: relative;
+}
+
+#introCache {
+    position: absolute;
+    visibility: hidden;
 }
 
 .interet {
@@ -885,6 +890,7 @@ h4 {
 /* -------------- Footer -------------- */
 
 footer {
+    padding: 0 7px;
     padding-bottom: 50px;
     text-transform: uppercase;
     position: relative;
