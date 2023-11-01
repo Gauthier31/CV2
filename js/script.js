@@ -1,8 +1,9 @@
 
 const INTRO = [
-    "Bonjour je suis Gauthier BOË--GUIROLA, étudiant en 1ère année de Master MIAGE option IDA à l’Université Toulouse Capitole en alternance dans l’ESN SOPRA STERIA en tant que développeur full stack.",
+    "Bonjour je suis Gauthier BOË--GUIROLA,",
+    "Étudiant en 1ère année de Master MIAGE option IDA à l’Université Toulouse Capitole en alternance dans l’ESN SOPRA STERIA en tant que développeur full stack.",
     "Le développement des domaines informatiques et l'objectif d'anticiper leurs futures synergies, suscitent un fort intérêt pour moi.",
-    "De plus, travailler sur les nouvelles technologies dans des secteurs tels que : la conception et/ou le développement Web, logiciels ou encore dans le Conseil, la Cybersécurité, la Data sont en adéquation avec mon cursus universitaire et mon ambition professionnelle.",
+    //"De plus, travailler sur les nouvelles technologies dans des secteurs tels que : la conception et/ou le développement Web, logiciels ou encore dans le Conseil, la Cybersécurité, la Data sont en adéquation avec mon cursus universitaire et mon ambition professionnelle.",
 ]
 
 const intro = document.getElementById("intro")
@@ -51,7 +52,7 @@ TypeTexte2()
 // / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / /
 
 var nouveauTexte = intro.innerHTML;
-var delai = 500;
+var delai = 1000;
 var introTransformation = 1;
 
 function addClassIntro() {
@@ -69,18 +70,20 @@ function addClassIntro() {
             intro.innerHTML = intro.innerHTML.replace("SOPRA STERIA", "<a href='#'><b>SOPRA STERIA</b></a>");
             introTransformation += 1;
             break;
-        case 4:
-            intro.innerHTML = intro.innerHTML.replace("Conseil", "<a href='#'><b>Conseil</b></a>");
-            introTransformation += 1;
-            break;
-        case 5:
-            intro.innerHTML = intro.innerHTML.replace("Cybersécurité", "<a href='#'><b>Cybersécurité</b></a>");
-            introTransformation += 1;
-            break;
-        case 6:
-            intro.innerHTML = intro.innerHTML.replace("Data", "<a href='#'><b>Data</b></a>");
-            introTransformation += 1;
-            break;
+        /*
+    case 4:
+        intro.innerHTML = intro.innerHTML.replace("Conseil", "<a href='#'><b>Conseil</b></a>");
+        introTransformation += 1;
+        break;
+    case 5:
+        intro.innerHTML = intro.innerHTML.replace("Cybersécurité", "<a href='#'><b>Cybersécurité</b></a>");
+        introTransformation += 1;
+        break;
+    case 6:
+        intro.innerHTML = intro.innerHTML.replace("Data", "<a href='#'><b>Data</b></a>");
+        introTransformation += 1;
+        break;
+        */
         default:
             introTransformation = -1;
             setInterval(toggleNomClass, 2000);
@@ -96,7 +99,22 @@ function toggleNomClass() {
     document.getElementById("nom").classList.toggle("nom"); // Ajoute ou supprime la classe "nom"
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////
 
+interetBool = false;
+function introInteret(bloc) {
+    interet = document.getElementById("introInteretBloc")
+
+    if (interetBool) {
+        interet.style.maxHeight = "0px"
+        bloc.classList.value = bloc.classList.value.replace("down", "up")
+        interetBool = false
+    } else {
+        interet.style.maxHeight = "250px"
+        bloc.classList.value = bloc.classList.value.replace("up", "down")
+        interetBool = true
+    }
+}
 
 /////////////////////////////////////////////////////////////////////////////////////////
 

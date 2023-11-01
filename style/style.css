@@ -189,7 +189,7 @@ a::before {
     width: 100%;
     height: 10px;
     border-radius: 4px;
-    background-color: #FFFF01;
+    background-color: var(--jaune);
     bottom: -2px;
     left: 0;
     transform-origin: right;
@@ -216,7 +216,7 @@ a:hover::before {
 
 .blanc>ul>li>a:hover::before,
 .blanc>ul>li>a::before {
-    background-color: #1E1E1E !important;
+    background-color: var(--gris_fonce) !important;
 }
 
 .ai-center {
@@ -225,6 +225,10 @@ a:hover::before {
 
 .ta-left {
     text-align: left;
+}
+
+.over-h {
+    overflow: hidden;
 }
 
 /* ---------------- Espace ------------------ */
@@ -262,10 +266,28 @@ a:hover::before {
 }
 
 /* ---------------- Couleur ------------------ */
+:root {
+    --blanc: white;
+    /* 0b0e13 */
+    --bleu: #2C3250;
+    --noir: #0b0e13;
+    --gris_fonce: #161b22;
+    --gris_clair: #30363d;
+    --girs_clair_hover: #484f58;
+    --noir_bordure: #24292f;
+    --vert_neon: #7ee787;
+    --vert_neon2: #427f52;
+    --rose_neon: #c597fd;
+    --violet_neon: #6639ba;
+    --bleu_neon: #a5d6ff;
+    --bleu_fonce_neon: #2f81f7;
+    /* Surligne */
+    --jaune: #FFFF01;
+}
 
 .bgBleu {
-    background-color: #2C3250;
-    color: white;
+    background-color: var(--bleu);
+    color: var(--blanc);
     border-radius: 50px;
     width: 100%;
     padding: 1px calc(100% / 12 * 1);
@@ -273,22 +295,22 @@ a:hover::before {
 }
 
 .bgBlanc {
-    background-color: #ffffff;
-    color: black;
+    background-color: var(--blanc);
+    color: var(--noir);
     width: 100%;
     padding: 1px calc(100% / 12 * 1);
     padding-bottom: 0;
 }
 
 .noir {
-    color: black;
-    border-color: black;
+    color: var(--noir);
+    border-color: var(--noir);
 }
 
 .blanc,
 .blanc>* {
-    color: white !important;
-    border-color: white !important;
+    color: var(--blanc) !important;
+    border-color: var(--blanc) !important;
 }
 
 /* ---------------- Texte ------------------ */
@@ -302,7 +324,7 @@ a:hover::before {
 
 h2 {
     text-transform: uppercase;
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid var(--blanc);
     margin-bottom: 50px;
 }
 
@@ -318,11 +340,11 @@ h4 {
     margin-top: 0;
 }
 
-/* ------------------------------------------- */
+/* ------------- Intro ------------- */
 
 .divPhoto {
     width: calc(100% / 12 * 3);
-    border: 3px solid black;
+    border: 3px solid var(--noir);
     max-height: -webkit-fill-available;
     height: 35dvw;
 }
@@ -338,16 +360,22 @@ h4 {
     visibility: hidden;
 }
 
+#introInteretBloc {
+    max-height: 0;
+    height: auto;
+    transition: max-height 0.5s ease-in-out;
+}
+
 .interet {
     padding: 0.5dvw 3dvw;
     margin: 0.5dvw;
-    border: 1px solid black;
+    border: 1px solid var(--noir);
     border-radius: 100px;
     transition: box-shadow .5s ease-in-out;
 }
 
 .interet:hover {
-    box-shadow: inset 200px 0 0 0 #FFFF01;
+    box-shadow: inset 200px 0 0 0 var(--jaune);
 }
 
 .bloc {
@@ -381,21 +409,21 @@ h4 {
 .vertical-ligne {
     height: 150px;
     width: 0px;
-    border-left: 3px solid black;
+    border-left: 3px solid var(--noir);
     margin-top: 10px;
 }
 
 .reseau {
     width: 4dvw;
     height: 4dvw;
-    border: 1px solid black;
+    border: 1px solid var(--noir);
     border-radius: 4dvw;
     margin-top: 10px;
     transition: box-shadow 1s ease-in-out;
 }
 
 .reseau:hover {
-    box-shadow: inset 200px 0 0 0 #FFFF01;
+    box-shadow: inset 200px 0 0 0 var(--jaune);
 }
 
 .reseau>img {
@@ -409,66 +437,16 @@ h4 {
     width: 100%;
 }
 
-.dessin {
-    position: absolute;
-}
-
-#bonhomme {
-    top: 5dvw;
-    left: 20dvw;
-    height: 7dvw;
-    rotate: 50deg;
-}
-
-#bonhomme2 {
-    top: 2dvw;
-    left: 58dvw;
-    height: 7dvw;
-    rotate: -8deg;
-}
-
-#mouette {
-    top: 0dvw;
-    left: 33dvw;
-    height: 3dvw;
-}
-
-
-.cacheDessin {
-    position: absolute;
-    z-index: 1;
-    width: -webkit-fill-available;
-    height: -webkit-fill-available;
-    background-color: #2C3250;
-    left: 0;
-}
-
-.cacheDessin.anim {
-    transition: left 3s linear;
-    left: 100%
-}
-
 .rondNoir {
     width: 4dvw;
     height: 4dvw;
-    background-color: #1E1E1E;
+    background-color: var(--gris_fonce);
     border-radius: 4dvw;
     margin: 0 auto;
-}
-
-.rondBlanc {
-    width: 3.5dvw;
-    height: 3.5dvw;
-    background-color: rgb(255, 255, 255);
-    border-radius: 4dvw;
-    z-index: 5;
-    position: relative;
-    margin: 0 auto;
-    border: 3px solid #2c3250;
 }
 
 .hrWhite {
-    border: 3px #ffffff dashed;
+    border: 3px var(--blanc) dashed;
     height: 150px;
     width: 0px;
     margin: 0 auto;
@@ -525,7 +503,7 @@ h4 {
 }
 
 .barreProg {
-    border: 3px solid white;
+    border: 3px solid var(--blanc);
     width: 100%;
     height: 50px;
     border-radius: 8px;
@@ -536,20 +514,20 @@ h4 {
     height: 100%;
     width: 0%;
     border-radius: 3px;
-    background: white;
+    background: var(--blanc);
     transition: width 0.5s ease-in-out;
 }
 
 .terminalHead {
-    background-color: white;
-    color: black;
+    background-color: var(--blanc);
+    color: var(--noir);
     padding: 10px 15px;
     width: 100%;
 }
 
 #terminal {
-    background-color: #1E1E1E;
-    color: white;
+    background-color: var(--gris_fonce);
+    color: var(--blanc);
     height: 225px;
     overflow-y: auto;
     line-height: 15px;
@@ -564,7 +542,6 @@ h4 {
     visibility: hidden;
 }
 
-
 .expPro {
     flex: 0 0 auto;
     width: 45%;
@@ -576,7 +553,7 @@ h4 {
 }
 
 .detail {
-    background-color: #1E1E1E;
+    background-color: var(--gris_fonce);
     border-radius: 30px;
     margin-bottom: 50px;
     padding: 20px;
@@ -643,11 +620,13 @@ h4 {
 }
 
 .hrBlack {
-    border: 3px #1E1E1E solid;
+    border: 3px var(--gris_fonce) solid;
     height: 100%;
     width: 0;
     margin: 0 auto;
 }
+
+/* ------------ Langue Informatique ------------ */
 
 .competence {
     display: grid;
@@ -683,15 +662,15 @@ h4 {
 }
 
 .bgDev {
-    background-color: #2C94E080;
+    background-color: var(--violet_neon);
 }
 
 .bgWeb {
-    background-color: #bb73cd80;
+    background-color: var(--bleu_fonce_neon);
 }
 
 .bgBD {
-    background-color: #57CB5480;
+    background-color: var(--vert_neon2);
 }
 
 .bgDevHover.bgDev,
@@ -699,6 +678,23 @@ h4 {
 .bgBDHover.bgBD {
     transition: background-color 1s ease-out;
 }
+
+/* ------------ Test ------------ */
+svg {
+    transform: rotate(-90deg);
+    stroke-dasharray: 251;
+    /* (2PI * 40px) */
+    stroke-dashoffset: 251;
+    animation: offsettozero 5s linear forwards;
+}
+
+@keyframes offsettozero {
+    to {
+        stroke-dashoffset: 100;
+    }
+}
+
+/* ------------ Langue Vivante ------------ */
 
 .langue {
     display: grid;
@@ -753,9 +749,9 @@ h4 {
 .iphone {
     display: flex;
     justify-content: center;
-    background-color: white;
+    background-color: var(--blanc);
     border-radius: 30px;
-    border: 5px solid black;
+    border: 5px solid #24292f;
     height: 400px;
     width: 200px;
     box-shadow: 10px 10px 10px rgb(0 0 0 / 0.2);
@@ -768,7 +764,7 @@ h4 {
 }
 
 .iphoneIsland {
-    background-color: black;
+    background-color: #24292f;
     border-radius: 0 0 20px 20px;
     height: 20px;
     width: 100px;
@@ -782,8 +778,8 @@ h4 {
 }
 
 .ordiEcran {
-    background-color: white;
-    border: 5px solid black;
+    background-color: var(--blanc);
+    border: 5px solid #24292f;
     height: calc(100dvw / 12 * 3.5);
     width: calc(100dvw / 12 * 6);
     box-shadow: 10px 10px 10px rgb(0 0 0 / 0.2);
@@ -791,14 +787,14 @@ h4 {
 }
 
 .ordiCou {
-    background-color: black;
+    background-color: #24292f;
     height: 20px;
     width: 10px;
     box-shadow: 10px 0px 10px rgb(0 0 0 / 0.2);
 }
 
 .ordiPied {
-    background-color: black;
+    background-color: #24292f;
     border-radius: 20px 20px 0 0;
     height: 20px;
     width: 100px;
@@ -852,8 +848,8 @@ h4 {
 
 .papier {
     border-top-right-radius: 15px;
-    border: 1px solid black;
-    background-color: white;
+    border: 1px solid var(--noir);
+    background-color: var(--blanc);
 }
 
 .etiquette {
@@ -862,9 +858,9 @@ h4 {
     height: 35px;
     position: absolute;
     border-radius: 10px 10px 0 0;
-    border: 1px solid black;
+    border: 1px solid var(--noir);
     border-bottom: none;
-    background-color: white
+    background-color: var(--blanc)
 }
 
 .projTexte {
@@ -883,7 +879,7 @@ h4 {
     max-height: 260px;
     float: left;
     margin-right: 10px;
-    border: 1px solid black;
+    border: 1px solid var(--noir);
 }
 
 
@@ -895,7 +891,7 @@ footer {
     text-transform: uppercase;
     position: relative;
     z-index: 100;
-    background-color: white;
+    background-color: var(--blanc);
     box-shadow: 0px -20px 10px -10px rgb(0 0 0 / 0.2);
 }
 
@@ -920,25 +916,25 @@ footer>hr {
 /* ---------- Scroll Bar --------- */
 /* Apply custom scrollbar to a specific container with the class "*" */
 
-* {
+.projTexte {
     scrollbar-width: thin;
     scrollbar-color: #f6c906 #ffffff;
 }
 
-*::-webkit-scrollbar {
+.projTexte::-webkit-scrollbar {
     width: 12px;
     background-color: #ffffff;
 }
 
-*::-webkit-scrollbar-thumb {
+.projTexte::-webkit-scrollbar-thumb {
     background-color: #f6c906;
     border-radius: 6px;
 }
 
-*::-webkit-scrollbar-track {
+.projTexte::-webkit-scrollbar-track {
     border-radius: 6px;
 }
 
-*::-webkit-scrollbar-thumb:hover {
+.projTexte::-webkit-scrollbar-thumb:hover {
     background-color: #f6c906;
 }
