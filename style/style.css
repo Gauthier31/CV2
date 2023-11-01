@@ -59,7 +59,9 @@ nav ul li {
 /* ------------------------------------------- */
 
 #aPropos {
-    height: 90dvh;
+    height: 100dvh;
+    padding-bottom: 10dvh;
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 80%, rgb(44, 50, 80) 100%);
 }
 
 /* -------------- Tools --------------- */
@@ -257,12 +259,16 @@ a:hover::before {
     margin-bottom: 50px !important;
 }
 
+.mb75 {
+    margin-bottom: 75px !important;
+}
+
 .mb100 {
     margin-bottom: 100px !important;
 }
 
 .mb400 {
-    margin-bottom: 100px !important;
+    margin-bottom: 400px !important;
 }
 
 /* ---------------- Couleur ------------------ */
@@ -288,7 +294,6 @@ a:hover::before {
 .bgBleu {
     background-color: var(--bleu);
     color: var(--blanc);
-    border-radius: 50px;
     width: 100%;
     padding: 1px calc(100% / 12 * 1);
     padding-bottom: 0;
@@ -492,6 +497,10 @@ h4 {
 
 /* ----------- Formation -------- */
 
+#formation {
+    padding: 0;
+}
+
 .ProgInfo,
 .ProgInfo>div {
     display: flex;
@@ -554,7 +563,7 @@ h4 {
 
 .detail {
     background-color: var(--gris_fonce);
-    border-radius: 30px;
+    border-radius: 15px;
     margin-bottom: 50px;
     padding: 20px;
     position: relative;
@@ -636,12 +645,11 @@ h4 {
 }
 
 .competenceImg {
-    width: 8dvw;
+    max-width: 100%;
     height: 8dvw;
-    border-radius: 5dvw;
 }
 
-.competenceTxt {
+.competenceNom {
     margin-top: 10px;
     text-align: center;
     text-transform: uppercase;
@@ -677,6 +685,11 @@ h4 {
 .bgWebHover.bgWeb,
 .bgBDHover.bgBD {
     transition: background-color 1s ease-out;
+}
+
+.competenceInfo {
+    position: relative;
+    z-index: 0;
 }
 
 /* ------------ Test ------------ */
