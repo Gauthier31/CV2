@@ -52,38 +52,45 @@ TypeTexte2()
 // / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / /
 
 var nouveauTexte = intro.innerHTML;
-var delai = 1000;
+var delai = 150;
 var introTransformation = 1;
 
 function addClassIntro() {
+    console.log(introTransformation)
 
     switch (introTransformation) {
         case 1:
-            intro.innerHTML = intro.innerHTML.replace("Bonjour je suis Gauthier BOË--GUIROLA,", "<span class='h1'>Bonjour je suis<a class='nom' id='nom'> Gauthier BOË--GUIROLA,</a></span>");
+            intro.innerHTML = intro.innerHTML.replace("Bonjour", "<span class='h1'>Bonjour</span>");
             introTransformation += 1;
             break;
         case 2:
-            intro.innerHTML = intro.innerHTML.replace("l’Université Toulouse Capitole", "<a href='#'><b>l’Université Toulouse Capitole</b></a>");
+            intro.innerHTML = intro.innerHTML.replace("</span> je", " je</span>");
             introTransformation += 1;
             break;
         case 3:
+            intro.innerHTML = intro.innerHTML.replace("</span> suis", " suis</span>");
+            introTransformation += 1;
+            break;
+        case 4:
+            intro.innerHTML = intro.innerHTML.replace("</span> Gauthier", " Gauthier</span>");
+            introTransformation += 1;
+            break;
+        case 5:
+            intro.innerHTML = intro.innerHTML.replace("</span> BOË--GUIROLA,", " BOË--GUIROLA,</span>");
+            introTransformation += 1;
+            break;
+        case 6:
+            intro.innerHTML = intro.innerHTML.replace("Gauthier BOË--GUIROLA,", "<a id='nom'>Gauthier BOË--GUIROLA,</a>");
+            introTransformation += 1;
+            break;
+        case 7:
+            intro.innerHTML = intro.innerHTML.replace("l’Université Toulouse Capitole", "<a href='#'><b>l’Université Toulouse Capitole</b></a>");
+            introTransformation += 1;
+            break;
+        case 8:
             intro.innerHTML = intro.innerHTML.replace("SOPRA STERIA", "<a href='#'><b>SOPRA STERIA</b></a>");
             introTransformation += 1;
             break;
-        /*
-    case 4:
-        intro.innerHTML = intro.innerHTML.replace("Conseil", "<a href='#'><b>Conseil</b></a>");
-        introTransformation += 1;
-        break;
-    case 5:
-        intro.innerHTML = intro.innerHTML.replace("Cybersécurité", "<a href='#'><b>Cybersécurité</b></a>");
-        introTransformation += 1;
-        break;
-    case 6:
-        intro.innerHTML = intro.innerHTML.replace("Data", "<a href='#'><b>Data</b></a>");
-        introTransformation += 1;
-        break;
-        */
         default:
             introTransformation = -1;
             setInterval(toggleNomClass, 2000);
