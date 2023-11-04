@@ -205,7 +205,12 @@ a::before,
     transform: scaleX(1);
 }
 
-#bgBleu a::before {
+*::selection {
+    background-color: var(--jaune);
+}
+
+#bgBleu a::before,
+#bgBleu *::selection {
     background-color: var(--noir);
 }
 
@@ -341,6 +346,7 @@ h2 {
     text-transform: uppercase;
     border-bottom: 3px solid var(--blanc);
     margin-bottom: 50px;
+    margin-top: 0;
 }
 
 h3 {
@@ -412,11 +418,12 @@ h5 {
     width: calc(100% / 12 * 6);
     font-size: 15px;
     position: relative;
+    backdrop-filter: blur(2px);
 }
 
 #pointeur {
-    top: 30%;
-    left: 70%;
+    top: 20%;
+    left: 80%;
     position: absolute;
     width: 10dvw;
 }
