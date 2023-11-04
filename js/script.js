@@ -1,130 +1,7 @@
+// Variable
 
-const INTRO = [
-    "Bonjour je suis Gauthier BOË--GUIROLA,",
-    "Étudiant en 1ère année de Master MIAGE option IDA à l’Université Toulouse Capitole en alternance dans l’ESN SOPRA STERIA en tant que développeur full stack.",
-    "Le développement des domaines informatiques et l'objectif d'anticiper leurs futures synergies, suscitent un fort intérêt pour moi.",
-    //"De plus, travailler sur les nouvelles technologies dans des secteurs tels que : la conception et/ou le développement Web, logiciels ou encore dans le Conseil, la Cybersécurité, la Data sont en adéquation avec mon cursus universitaire et mon ambition professionnelle.",
-]
 
-const intro = document.getElementById("intro")
-const introCache = document.getElementById("introCache")
-
-function introText() {
-    intro.style.height = introCache.offsetHeight + "px"
-}
-introText()
-
-const observer1 = new ResizeObserver(introText);
-observer1.observe(introCache);
-
-var introPhrase = 0
-var introLettre = 0
-var introSpeed = 0
-
-function TypeTexte2() {
-
-    if (introPhrase < INTRO.length) {
-
-        function TypePhrase2() {
-
-            if (introLettre < INTRO[introPhrase].length) {
-                intro.innerHTML += INTRO[introPhrase].charAt(introLettre);
-
-                introLettre++
-                setTimeout(TypePhrase2, introSpeed);
-            } else {
-                introPhrase++
-                introLettre = 0
-                if (introPhrase < INTRO.length) {
-                    intro.innerHTML += "<br/><br/>"
-                }
-                setTimeout(TypeTexte2, introSpeed);
-            }
-        }
-        TypePhrase2()
-
-    } else {
-        addClassIntro()
-    }
-}
-TypeTexte2()
-
-// / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / /
-
-var nouveauTexte = intro.innerHTML;
-var delai = 150;
-var introTransformation = 1;
-
-function addClassIntro() {
-    console.log(introTransformation)
-
-    switch (introTransformation) {
-        case 1:
-            intro.innerHTML = intro.innerHTML.replace("Bonjour", "<span class='h1'>Bonjour</span>");
-            introTransformation += 1;
-            break;
-        case 2:
-            intro.innerHTML = intro.innerHTML.replace("</span> je", " je</span>");
-            introTransformation += 1;
-            break;
-        case 3:
-            intro.innerHTML = intro.innerHTML.replace("</span> suis", " suis</span>");
-            introTransformation += 1;
-            break;
-        case 4:
-            intro.innerHTML = intro.innerHTML.replace("</span> Gauthier", " Gauthier</span>");
-            introTransformation += 1;
-            break;
-        case 5:
-            intro.innerHTML = intro.innerHTML.replace("</span> BOË--GUIROLA,", " BOË--GUIROLA,</span>");
-            introTransformation += 1;
-            break;
-        case 6:
-            intro.innerHTML = intro.innerHTML.replace("Gauthier BOË--GUIROLA,", "<a id='nom'>Gauthier BOË--GUIROLA,</a>");
-            introTransformation += 1;
-            break;
-        case 7:
-            intro.innerHTML = intro.innerHTML.replace("l’Université Toulouse Capitole", "<a href='#'><b>l’Université Toulouse Capitole</b></a>");
-            introTransformation += 1;
-            break;
-        case 8:
-            intro.innerHTML = intro.innerHTML.replace("SOPRA STERIA", "<a href='#'><b>SOPRA STERIA</b></a>");
-            introTransformation += 1;
-            break;
-        default:
-            introTransformation = -1;
-            setInterval(toggleNomClass, 2000);
-            return;
-    }
-
-    if (introTransformation != -1) {
-        setTimeout(addClassIntro, delai);
-    }
-}
-
-function toggleNomClass() {
-    document.getElementById("nom").classList.toggle("nom"); // Ajoute ou supprime la classe "nom"
-}
-
-/////////////////////////////////////////////////////////////////////////////////////////
-
-interetBool = false;
-function introInteret(bloc) {
-    interet = document.getElementById("introInteretBloc")
-
-    if (interetBool) {
-        interet.style.maxHeight = "0px"
-        bloc.classList.value = bloc.classList.value.replace("down", "up")
-        interetBool = false
-    } else {
-        interet.style.maxHeight = "250px"
-        bloc.classList.value = bloc.classList.value.replace("up", "down")
-        interetBool = true
-    }
-}
-
-/////////////////////////////////////////////////////////////////////////////////////////
-
+// afficherTailleBloc
 const FORMATION = [
     [
         "C:\\User\\Étudiant\\Lycée\\Lycée Stéphanne Hessel>",
@@ -164,6 +41,157 @@ const pourcentageTxt = document.getElementById("pourcentageTxt");
 const progressionBloc = document.getElementById("progression");
 const progEncours = document.getElementById("progEncours");
 const terminalElement = document.getElementById("terminal");
+
+// Lancement des fonctions
+introLoad();
+etiquette();
+afficherTailleBloc();
+
+/////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////// Lancement automatique /////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+
+function introLoad() {
+
+    const INTRO = [
+        "Bonjour je suis Gauthier BOË--GUIROLA,",
+        "Étudiant en 1ère année de Master MIAGE option IDA à l’Université Toulouse Capitole en alternance dans l’ESN SOPRA STERIA en tant que développeur full stack.",
+        "Le développement des domaines informatiques et l'objectif d'anticiper leurs futures synergies, suscitent un fort intérêt pour moi.",
+        //"De plus, travailler sur les nouvelles technologies dans des secteurs tels que : la conception et/ou le développement Web, logiciels ou encore dans le Conseil, la Cybersécurité, la Data sont en adéquation avec mon cursus universitaire et mon ambition professionnelle.",
+    ]
+
+    const intro = document.getElementById("intro")
+    const introCache = document.getElementById("introCache")
+
+    function introText() {
+        intro.style.height = introCache.offsetHeight + "px"
+    }
+    introText()
+
+    const observer1 = new ResizeObserver(introText);
+    observer1.observe(introCache);
+
+    var introPhrase = 0
+    var introLettre = 0
+    var introSpeed = 0
+
+    function TypeTexte2() {
+
+        if (introPhrase < INTRO.length) {
+
+            function TypePhrase2() {
+
+                if (introLettre < INTRO[introPhrase].length) {
+                    intro.innerHTML += INTRO[introPhrase].charAt(introLettre);
+
+                    introLettre++
+                    setTimeout(TypePhrase2, introSpeed);
+                } else {
+                    introPhrase++
+                    introLettre = 0
+                    if (introPhrase < INTRO.length) {
+                        intro.innerHTML += "<br/><br/>"
+                    }
+                    setTimeout(TypeTexte2, introSpeed);
+                }
+            }
+            TypePhrase2()
+
+        } else {
+            addClassIntro()
+        }
+    }
+    TypeTexte2()
+
+    // / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / /
+
+    var nouveauTexte = intro.innerHTML;
+    var delai = 150;
+    var introTransformation = 1;
+
+    function addClassIntro() {
+
+        switch (introTransformation) {
+            case 1:
+                intro.innerHTML = intro.innerHTML.replace("Bonjour", "<span class='h1'>Bonjour</span>");
+                introTransformation += 1;
+                break;
+            case 2:
+                intro.innerHTML = intro.innerHTML.replace("</span> je", " je</span>");
+                introTransformation += 1;
+                break;
+            case 3:
+                intro.innerHTML = intro.innerHTML.replace("</span> suis", " suis</span>");
+                introTransformation += 1;
+                break;
+            case 4:
+                intro.innerHTML = intro.innerHTML.replace("</span> Gauthier", " Gauthier</span>");
+                introTransformation += 1;
+                break;
+            case 5:
+                intro.innerHTML = intro.innerHTML.replace("</span> BOË--GUIROLA,", " BOË--GUIROLA,</span>");
+                introTransformation += 1;
+                break;
+            case 6:
+                intro.innerHTML = intro.innerHTML.replace("Gauthier BOË--GUIROLA,", "<a id='nom'>Gauthier BOË--GUIROLA,</a>");
+                introTransformation += 1;
+                break;
+            case 7:
+                intro.innerHTML = intro.innerHTML.replace("l’Université Toulouse Capitole", "<a href='#'><b>l’Université Toulouse Capitole</b></a>");
+                introTransformation += 1;
+                break;
+            case 8:
+                intro.innerHTML = intro.innerHTML.replace("SOPRA STERIA", "<a href='#'><b>SOPRA STERIA</b></a>");
+                introTransformation += 1;
+                break;
+            default:
+                introTransformation = -1;
+                setInterval(toggleNomClass, 2000);
+                return;
+        }
+
+        if (introTransformation != -1) {
+            setTimeout(addClassIntro, delai);
+        }
+    }
+
+    function toggleNomClass() {
+        document.getElementById("nom").classList.toggle("nom"); // Ajoute ou supprime la classe "nom"
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+function afficherTailleBloc() {
+    const largeurEnPourcentage = (progressionBloc.offsetWidth / (progressionBloc.parentElement.offsetWidth - 15)) * 100;
+    pourcentageTxt.innerHTML = largeurEnPourcentage.toFixed(0) + "%";
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////// Lancement automatique FIN ///////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////// Function ///////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+
+var interetBool = false;
+function introInteret(bloc) {
+    interet = document.getElementById("introInteretBloc")
+
+    if (interetBool) {
+        interet.style.maxHeight = "0px"
+        bloc.classList.value = bloc.classList.value.replace("down", "up")
+        interetBool = false
+    } else {
+        interet.style.maxHeight = "250px"
+        bloc.classList.value = bloc.classList.value.replace("up", "down")
+        interetBool = true
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
 
 function progression(val) {
 
@@ -237,17 +265,6 @@ function progression(val) {
     typeText();
 }
 
-function afficherTailleBloc() {
-    const largeurEnPourcentage = (progressionBloc.offsetWidth / (progressionBloc.parentElement.offsetWidth - 15)) * 100;
-    pourcentageTxt.innerHTML = largeurEnPourcentage.toFixed(0) + "%";
-}
-
-// Appeler la fonction initiale pour afficher la taille au chargement de la page
-afficherTailleBloc();
-
-const observer2 = new ResizeObserver(afficherTailleBloc);
-observer2.observe(progressionBloc);
-
 /////////////////////////////////////////////////////////////////////////////////////////
 
 function bgCompetenceCategorieAdd(categorie) {
@@ -309,10 +326,7 @@ function etiquette() {
     document.getElementsByClassName("pochetteDos")[0].style.borderTopWidth = 275 - 70 - hauteur + "px"
 }
 
-var feuille = document.getElementsByClassName("feuille")
-etiquette()
-const observer3 = new ResizeObserver(etiquette);
-observer3.observe(feuille[0]);
+/////////////////////////////////////////////////////////////////////////////////////////
 
 var posY = 0
 var projIdVue = -1;      // identifiant du projet précédent
@@ -348,6 +362,8 @@ function afficheProj(obj) {
     }
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////
+
 function position(transformString) {
     const regex = /translateY\(([^,]+)px\)/;
     const matches = transformString.match(regex);
@@ -359,4 +375,24 @@ function position(transformString) {
     }
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////// Function FIN /////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////// Function Rezise ////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+
+const observer2 = new ResizeObserver(afficherTailleBloc);
+observer2.observe(progressionBloc);
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+var feuille = document.getElementsByClassName("feuille")
+const observer3 = new ResizeObserver(etiquette);
+observer3.observe(feuille[0]);
+
+/////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////// Rezise FIN //////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////

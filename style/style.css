@@ -181,9 +181,11 @@ a {
     position: relative;
     text-decoration: none;
     white-space: nowrap;
+    z-index: 0;
 }
 
-a::before {
+a::before,
+.surligne::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -191,12 +193,16 @@ a::before {
     border-radius: 4px;
     background-color: var(--jaune);
     bottom: -2px;
-    left: 0;
+    left: -1px;
     transform-origin: right;
     transform: scaleX(0);
     transition: transform .5s ease-in-out;
     z-index: -1;
     padding: 0 3px;
+}
+
+.surligne::before {
+    transform: scaleX(1);
 }
 
 #bgBleu a::before {
@@ -291,7 +297,8 @@ a:hover::before {
     --bleu_fonce_neon: #2f81f7;
     /* Surligne */
     --jaune: #FFFF01;
-    --orange: #ffc107
+    --orange_GauMuscu: #ffc107;
+    --bleu_GauMode: #c5e6fa;
 }
 
 .bgBleu {
@@ -368,6 +375,12 @@ h5 {
     position: relative;
 }
 
+.bottomAnim {
+    transform: translateY(50px);
+    opacity: 0;
+    position: relative;
+}
+
 .anim.leftAnim {
     transition: left 1s ease-in-out 0.5s, opacity 1s linear 0.5s !important;
     left: 0 !important;
@@ -377,6 +390,12 @@ h5 {
 .anim.rightAnim {
     transition: right 1s ease-in-out 0.5s, opacity 1s linear 0.5s !important;
     right: 0 !important;
+    opacity: 1 !important;
+}
+
+.anim.bottomAnim {
+    transition: transform 1s ease-in-out 0.5s, opacity 1s linear 0.5s !important;
+    transform: translateY(0) !important;
     opacity: 1 !important;
 }
 
@@ -457,7 +476,7 @@ h5 {
     width: 4dvw;
     height: 4dvw;
     border: 1px solid var(--noir);
-    border-radius: 4dvw;
+    border-radius: 50%;
     margin-top: 10px;
     transition: box-shadow 1s ease-in-out;
 }
@@ -481,7 +500,7 @@ h5 {
     width: 4dvw;
     height: 4dvw;
     background-color: var(--gris_fonce);
-    border-radius: 4dvw;
+    border-radius: 50%;
     margin: 0 auto;
 }
 
@@ -647,11 +666,13 @@ h5 {
     flex: 0 0 auto;
     width: calc(100% / 5);
     padding: 10px;
+    margin-bottom: 20px;
 }
 
 .competenceImg {
     max-width: 100%;
     height: 8dvw;
+    max-height: 70px;
 }
 
 .competenceNom {
@@ -663,6 +684,7 @@ h5 {
 
 .competenceCategorie {
     flex: 0 0 auto;
+    margin-bottom: 20px;
 }
 
 .competenceCategorie>p {
@@ -692,11 +714,6 @@ h5 {
     transition: background-color 1s ease-out;
 }
 
-.competenceInfo {
-    position: relative;
-    z-index: 0;
-}
-
 /* ------------ Test ------------ */
 svg {
     transform: rotate(-90deg);
@@ -722,8 +739,10 @@ svg {
 
 .langueImg {
     width: 13dvw;
+    max-width: 110px;
     height: 13dvw;
-    border-radius: 8dvw;
+    max-height: 110px;
+    border-radius: 50%;
 }
 
 .langueTxt {
@@ -733,6 +752,9 @@ svg {
     text-transform: uppercase;
     font-weight: bold;
 }
+
+
+/* ------------ Projet ------------ */
 
 .line {
     flex: 1;
@@ -747,7 +769,12 @@ svg {
 }
 
 #GauMuscuTitre {
-    color: var(--orange);
+    color: var(--orange_GauMuscu);
+    font-weight: 900;
+}
+
+#GauModeTitre {
+    color: var(--bleu_GauMode);
     font-weight: 900;
 }
 
