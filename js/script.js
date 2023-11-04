@@ -51,6 +51,59 @@ afficherTailleBloc();
 ///////////////////////////////// Lancement automatique /////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
 
+document.onmousemove = function () {
+
+    // Coordonnées des points
+    pointeur = document.getElementById("pointeur")
+
+    const positionTop = pointeur.getBoundingClientRect().top + window.scrollY;
+    const positionLeft = pointeur.getBoundingClientRect().left + window.scrollX;
+
+    x1 = (positionLeft / window.innerWidth - 0.5) * 2;
+    y1 = (positionTop / window.innerHeight - 0.5) * 2;
+    x2 = (positionLeft / window.innerHeight - 0.5) * 2;
+    y2 = 1;
+
+    x3 = (positionLeft / window.innerWidth - 0.5) * 2;
+    y3 = (positionTop / window.innerHeight - 0.5) * 2;
+
+    // x1 = 0
+    // y1 = 0
+    // x2 = 0
+    // y2 = 1;
+
+    // x3 = 0
+    // y3 = 0
+    x4 = (event.clientX / window.innerWidth - 0.5) * 2;
+    y4 = (event.clientY / window.innerHeight - 0.5) * 2;
+
+    // Vecteurs des segments
+    u = { x: x2 - x1, y: y2 - y1 };
+    v = { x: x4 - x3, y: y4 - y3 };
+
+    // Calculez les normes des vecteurs
+    normU = Math.sqrt(u.x * u.x + u.y * u.y);
+    normV = Math.sqrt(v.x * v.x + v.y * v.y);
+
+    // Calculez le produit scalaire des vecteurs
+    dotProduct = u.x * v.x + u.y * v.y;
+
+    // Calculez l'angle en radians
+    angleRadians = Math.acos(dotProduct / (normU * normV));
+
+    crossProduct = u.x * v.y - u.y * v.x;
+
+    // Vérifiez le signe du produit vectoriel pour déterminer l'orientation de l'angle
+    if (crossProduct < 0) {
+        angleRadians = 2 * Math.PI - angleRadians;
+    }
+
+    // Convertissez l'angle en degrés
+    angleDegres = ((angleRadians * 180) / Math.PI - 1) - 180 + 30;
+
+    pointeur.style.transform = "rotate(" + angleDegres + "deg)";
+}
+
 function introLoad() {
 
     const INTRO = [
