@@ -54,10 +54,17 @@ afficherTailleBloc();
 document.onmousemove = function () {
 
     // Coordonnées des points
-    pointeur = document.getElementById("pointeur")
+    pointeur = document.getElementById("pointeur");
 
-    const positionTop = pointeur.getBoundingClientRect().top + window.scrollY;
-    const positionLeft = pointeur.getBoundingClientRect().left + window.scrollX;
+    ajustement = window.innerWidth * 0.05 / 2;
+
+    const positionTop = pointeur.getBoundingClientRect().top + window.scrollY + ajustement;
+    const positionLeft = pointeur.getBoundingClientRect().left + window.scrollX + ajustement;
+
+    // console.log("")
+    // console.log("Ajustement :   ", ajustement)
+    // console.log("Souris :       ", event.clientX, event.clientY)
+    // console.log("Centre image : ", Math.round(positionTop, 0), Math.round(positionLeft, 0))
 
     x1 = (positionLeft / window.innerWidth - 0.5) * 2;
     y1 = (positionTop / window.innerHeight - 0.5) * 2;
@@ -66,14 +73,6 @@ document.onmousemove = function () {
 
     x3 = (positionLeft / window.innerWidth - 0.5) * 2;
     y3 = (positionTop / window.innerHeight - 0.5) * 2;
-
-    // x1 = 0
-    // y1 = 0
-    // x2 = 0
-    // y2 = 1;
-
-    // x3 = 0
-    // y3 = 0
     x4 = (event.clientX / window.innerWidth - 0.5) * 2;
     y4 = (event.clientY / window.innerHeight - 0.5) * 2;
 
@@ -99,10 +98,12 @@ document.onmousemove = function () {
     }
 
     // Convertissez l'angle en degrés
-    angleDegres = ((angleRadians * 180) / Math.PI - 1) - 180 + 30;
+    angleDegres = ((angleRadians * 180) / Math.PI - 1) - 180 + 25;
 
     pointeur.style.transform = "rotate(" + angleDegres + "deg)";
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////
 
 function introLoad() {
 
@@ -120,9 +121,6 @@ function introLoad() {
         intro.style.height = introCache.offsetHeight + "px"
     }
     introText()
-
-    const observer1 = new ResizeObserver(introText);
-    observer1.observe(introCache);
 
     var introPhrase = 0
     var introLettre = 0
@@ -152,13 +150,16 @@ function introLoad() {
 
         } else {
             addClassIntro()
+
+            intro.style.height = "auto"
+            introCache.remove()
         }
     }
     TypeTexte2()
 
+
     // / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / /
 
-    var nouveauTexte = intro.innerHTML;
     var delai = 150;
     var introTransformation = 1;
 

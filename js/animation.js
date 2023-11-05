@@ -1,15 +1,27 @@
 function reveal() {
-    var reveals = document.querySelectorAll(".animation");
+    var reveals_9 = document.querySelectorAll(".animation_9");
 
-    for (var i = 0; i < reveals.length; i++) {
+    for (var i = 0; i < reveals_9.length; i++) {
         var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementTop = reveals_9[i].getBoundingClientRect().top;
 
-        //console.log(i, Math.round(elementTop), windowHeight * 0.8, windowHeight)
         if (elementTop < windowHeight * 0.9) {
-            reveals[i].classList.add("anim");
+            reveals_9[i].classList.add("anim");
         } else if (elementTop > windowHeight) {
-            reveals[i].classList.remove("anim");
+            reveals_9[i].classList.remove("anim");
+        }
+    }
+
+    var reveals_10 = document.querySelectorAll(".animation_10");
+
+    for (var i = 0; i < reveals_10.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals_10[i].getBoundingClientRect().top;
+
+        if (elementTop < windowHeight * 1.05) {
+            reveals_10[i].classList.add("anim");
+        } else if (elementTop > windowHeight) {
+            reveals_10[i].classList.remove("anim");
         }
     }
 }

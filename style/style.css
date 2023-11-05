@@ -24,6 +24,7 @@ nav {
     align-items: center;
     position: fixed;
     width: 100dvw;
+    height: 50px;
     top: 0;
     z-index: 100;
 
@@ -31,25 +32,27 @@ nav {
     backdrop-filter: blur(2px);
 }
 
-nav * {
-    display: flex;
-}
-
 nav ul {
+    display: flex;
     list-style: none;
+    margin: 0;
 }
 
 nav ul li {
     margin-left: 20px;
 }
 
+.navNom {
+    height: 18px;
+}
 
 .navInfo {
     width: 0;
-    height: 18px;
-    overflow: hidden;
+    overflow-x: hidden;
     transition: width 0.5s ease;
     text-align: initial;
+    position: absolute;
+    white-space: nowrap;
 }
 
 .navInfoAffiche {
@@ -425,7 +428,7 @@ h5 {
     top: 20%;
     left: 80%;
     position: absolute;
-    width: 10dvw;
+    width: 5dvw;
 }
 
 #pointeurBloc {
@@ -732,21 +735,6 @@ h5 {
 .bgWebHover.bgWeb,
 .bgBDHover.bgBD {
     transition: background-color 1s ease-out;
-}
-
-/* ------------ Test ------------ */
-svg {
-    transform: rotate(-90deg);
-    stroke-dasharray: 251;
-    /* (2PI * 40px) */
-    stroke-dashoffset: 251;
-    animation: offsettozero 5s linear forwards;
-}
-
-@keyframes offsettozero {
-    to {
-        stroke-dashoffset: 100;
-    }
 }
 
 /* ------------ Langue Vivante ------------ */
