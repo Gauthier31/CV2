@@ -16,7 +16,7 @@
 
 <body>
 
-    <nav id="AnimNav">
+    <nav id="animNav">
         <div onmouseover="navInfoAdd()" onmouseout="navInfoRemove()" class="navNom">
             <p>Gauthier BOË-GUIROLA</p>
             <p class="navInfo" id="navInfoBloc"><code>Etudiant Master MIAGE option IDA</p></code>
@@ -48,72 +48,72 @@
         <img src="image/souris.png" id="pointeur" />
     </div>
 
-    <!-- Présentation -->
-    <section class="row jc-center animation_9" id="aPropos">
+    <section class="bgBlanc">
+        <!-- Présentation -->
+        <section class="row jc-center animationColor" id="aPropos">
 
-        <div class="divPhoto bottom"></div>
-        <div class="col-1"></div>
+            <div class="divPhoto bottom"></div>
+            <div class="col-1"></div>
 
-        <div class="divTxt bottom">
+            <div class="divTxt bottom">
 
-            <p id="introCache">
-                <span class="h1">
-                    Bonjour je suis Gauthier BOË--GUIROLA,
-                </span>
+                <p id="introCache">
+                    <span class="h1">
+                        Bonjour je suis Gauthier BOË--GUIROLA,
+                    </span>
 
-                <br />
-                <br />
+                    <br />
+                    <br />
 
-                Étudiant en 1ère année de Master MIAGE option IDA à
-                <a href="#"><b>l'Université Toulouse Capitole</b></a> en alternance dans
-                l'ESN <a href="#"><b>SOPRA STERIA</b></a> en tant que développeur full stack.
+                    Étudiant en 1ère année de Master MIAGE option IDA à
+                    <a href="#"><b>l'Université Toulouse Capitole</b></a> en alternance dans
+                    l'ESN <a href="#"><b>SOPRA STERIA</b></a> en tant que développeur full stack.
 
-                <br />
-                <br />
+                    <br />
+                    <br />
 
-                Le développement des domaines informatiques et l'objectif d'anticiper leurs futures synergies,
-                suscitent un fort intérêt pour moi.
-            </p>
-
-            <p id="intro">
-
-            </p>
-
-            <br />
-
-            <i onclick="introInteret(this)" class="fa fa-chevron-up"></i>
-
-            <div class="over-h" id="introInteretBloc">
-
-                <p>
-                    De plus, travailler sur les nouvelles technologies dans des secteurs tels que :
-                    la conception et/ou le développement Web, logiciels ou encore dans
-                    le <a href='#'><b>Conseil</b></a>,
-                    la <a href='#'><b>Cybersécurité</b></a>,
-                    la <a href='#'><b>Data</b></a> sont en adéquation avec mon
-                    cursus universitaire et mon ambition professionnelle.
+                    Le développement des domaines informatiques et l'objectif d'anticiper leurs futures synergies,
+                    suscitent un fort intérêt pour moi.
                 </p>
 
+                <p id="intro"></p>
+
                 <br />
 
-                <div class="row jc-evenly">
-                    <div class="interet">Développement</div>
-                    <div class="interet">Volley-Ball</div>
-                    <div class="interet">Piano</div>
-                    <div class="interet">Lecture</div>
-                    <div class="interet">Musculation</div>
-                    <div class="interet">Film</div>
-                    <div class="interet">Dessin</div>
-                    <div class="interet">Bricolage</div>
+                <i onclick="introInteret(this)" class="fa fa-chevron-up"></i>
+
+                <div class="over-h" id="introInteretBloc">
+
+                    <p>
+                        De plus, travailler sur les nouvelles technologies dans des secteurs tels que :
+                        la conception et/ou le développement Web, logiciels ou encore dans
+                        le <a href='#'><b>Conseil</b></a>,
+                        la <a href='#'><b>Cybersécurité</b></a>,
+                        la <a href='#'><b>Data</b></a> sont en adéquation avec mon
+                        cursus universitaire et mon ambition professionnelle.
+                    </p>
+
+                    <br />
+
+                    <div class="row jc-evenly">
+                        <div class="interet">Développement</div>
+                        <div class="interet">Volley-Ball</div>
+                        <div class="interet">Piano</div>
+                        <div class="interet">Lecture</div>
+                        <div class="interet">Musculation</div>
+                        <div class="interet">Film</div>
+                        <div class="interet">Dessin</div>
+                        <div class="interet">Bricolage</div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     </section>
 
-    <section class="bgBleu animation_9" id="bgBleu">
+    <section class="bgBleu" id="bgBleu">
 
         <!-- Formations -->
-        <section class="bloc animation_9" id="formation">
+        <section class="bloc animationColor" id="formation">
             <h2>formations</h2>
 
             <div class="ProgInfo">
@@ -140,7 +140,7 @@
         </section>
 
         <!-- ExpPro -->
-        <section class="bloc animation_9" id="expPro">
+        <section class="bloc" id="expPro">
             <h2>Expériences professionnelles</h2>
 
             <div class="row">
@@ -156,7 +156,7 @@
                 <div class="expPro detail animation_9 rightAnim">
                     <code>
                         <h3 class="expTitre">Data Ingénieur</h3>
-                        <p class="txtBlancSecond mb20">Sopra Steria en alternance, Colomier, 31770</p>
+                        <p class="txtBlancSecond">Sopra Steria en alternance, Colomier, 31770</p>
                         <p class="txtBlancSecond mb20">Extern à Airbus, Blagnac, 31500</p>
                         <p>Gestion des données des pièces d'avions</p>
                         <p class="txtBlancSecond mt20 ta-left">
@@ -270,7 +270,7 @@
         </section>
 
         <!-- Competence -->
-        <section class="bloc animation_9" id="competence">
+        <section class="bloc" id="competence">
             <h2>Compétences</h2>
 
             <div class="row mb20 jc-center">
@@ -309,6 +309,41 @@
                     <p class="competenceNom">PHP</p>
                 </div>
 
+                <div class="competence jc-center bgWebHover">
+                    <div class="row jc-center">
+                        <img class="competenceImg" src="image/laravel.png" />
+                    </div>
+                    <p class="competenceNom">Laravel</p>
+                </div>
+
+                <div class="competence jc-center bgWebHover">
+                    <div class="row jc-center">
+                        <img class="competenceImg" src="image/angular.png" />
+                    </div>
+                    <p class="competenceNom">Angular</p>
+                </div>
+
+                <div class="competence jc-center bgWebHover">
+                    <div class="row jc-center">
+                        <img class="competenceImg" src="image/Spring.png" />
+                    </div>
+                    <p class="competenceNom">Spring</p>
+                </div>
+
+                <div class="competence jc-center bgWebHover">
+                    <div class="row jc-center">
+                        <img class="competenceImg" src="image/bootstrap.png" />
+                    </div>
+                    <p class="competenceNom">Bootstrap</p>
+                </div>
+
+                <div class="competence jc-center bgWebHover">
+                    <div class="row jc-center">
+                        <img class="competenceImg" src="image/bulma.png" />
+                    </div>
+                    <p class="competenceNom">Bulma</p>
+                </div>
+
                 <div class="competence jc-center">
                     <div class="row jc-center">
                         <img class="competenceImg" src="image/shell.jpg" />
@@ -343,16 +378,9 @@
                     </div>
                     <p class="competenceNom">Python</p>
                 </div>
-
-                <div class="competence jc-center bgWebHover">
-                    <div class="row jc-center">
-                        <img class="competenceImg" src="image/bootstrap.png" />
-                    </div>
-                    <p class="competenceNom">bootstrap</p>
-                </div>
             </div>
 
-            <div class="row mb75 jc-evenly">
+            <div class="row mb50 jc-evenly">
                 <div class="competenceCategorie" onmouseover="bgCompetenceCategorieAdd('bgDev')"
                     onmouseout="bgCompetenceCategorieRemove('bgDev')">
                     <p class="bgDev">Développement</p>
@@ -407,16 +435,16 @@
     <section class="bgBlanc">
 
         <!-- Projet -->
-        <section class="bloc" id="projet">
+        <section class="bloc animationColor" id="projet">
             <h2 class="noir" id="projetTitre">Projets</h2>
 
             <div class="row ai-center">
                 <div class="line"></div>
-                <h3 class="animation_9" id="projPerso">Projets persos</h3>
+                <h3 id="projPerso">Projets persos</h3>
                 <div class="line"></div>
             </div>
 
-            <div class="animation_9" id="AnimProjetEtude">
+            <div id="AnimProjetEtude">
 
                 <div class="row mb50">
                     <div class="col-1"></div>
@@ -505,7 +533,7 @@
 
                 <div class="row ai-center">
                     <div class="line"></div>
-                    <h3 class="animation_9" id="projEtude">Projets d'études</h3>
+                    <h3 id="projEtude">Projets d'études</h3>
                     <div class="line"></div>
                 </div>
 

@@ -47,15 +47,25 @@ function reveal() {
     for (var i = 0; i < reveals_color.length; i++) {
         var elementTop = reveals_color[i].getBoundingClientRect().top;
 
-        // 80% de l'écran
-        if (elementTop < windowHeight * 0.8) {
-            add(reveals_color[i].id, ANIMATION_ADD_OUT_TOP_8);
-            remove(reveals_color[i].id, ANIMATION_REMOVE_OUT_TOP_8);
-
-            // Au dessus de l'écran
-        } if (elementTop < 0) {
+        // Au dessus de l'écran
+        if (elementTop < 0) {
             add(reveals_color[i].id, ANIMATION_ADD_OUT_TOP);
             remove(reveals_color[i].id, ANIMATION_REMOVE_OUT_TOP);
+
+            // Dans la première partie de l'écran
+        } else if (elementTop < windowHeight / 2) {
+            add(reveals_color[i].id, ANIMATION_ADD_IN_TOP);
+            remove(reveals_color[i].id, ANIMATION_REMOVE_IN_TOP);
+
+            // Dans la seconde partie de l'écran
+        } else if (elementTop < windowHeight) {
+            add(reveals_color[i].id, ANIMATION_ADD_IN_BOTTOM);
+            remove(reveals_color[i].id, ANIMATION_REMOVE_IN_BOTTOM);
+
+            // En dessous de l'écran
+        } else if (elementTop > windowHeight) {
+            add(reveals_color[i].id, ANIMATION_ADD_OUT_BOTTOM);
+            remove(reveals_color[i].id, ANIMATION_REMOVE_OUT_BOTTOM);
         }
     }
 }
@@ -65,39 +75,58 @@ window.addEventListener("scroll", reveal);
 // Ajoute quand il sort au dessus
 const ANIMATION_ADD_OUT_TOP = {
     "formation": [
-        ["animNav", "blanc"]
+        ["animNav", "blanc"],
+        ["AnimInfoGauche", "blanc"],
+        ["AnimInfoDroite", "blanc"]
     ]
 };
 // Enleve quand il sort au dessus
 const ANIMATION_REMOVE_OUT_TOP = {
     "projet": [
-        ["animNav", "blanc"]
-    ],
-    "aPropos": [
-        ["animNav", "blanc"]
-    ]
-};
-
-// Ajoute quand il sort au dessus
-const ANIMATION_ADD_OUT_TOP_8 = {
-    "formation": [
-        ["AnimInfoGauche", "blanc"],
-        ["AnimInfoDroite", "blanc"]
-    ]
-};
-// Enleve quand il sort au dessus
-const ANIMATION_REMOVE_OUT_TOP_8 = {
-    "projet": [
+        ["animNav", "blanc"],
         ["AnimInfoGauche", "blanc"],
         ["AnimInfoDroite", "blanc"]
     ],
     "aPropos": [
+        ["animNav", "blanc"],
         ["AnimInfoGauche", "blanc"],
         ["AnimInfoDroite", "blanc"]
     ]
 };
 
 ///////////////////////////////////////////////////
+
+// Ajoute quand il apparait au dessus
+const ANIMATION_ADD_IN_TOP = {
+
+};
+// Enleve quand il apparait au dessus
+const ANIMATION_REMOVE_IN_TOP = {
+
+};
+
+///////////////////////////////////////////////////
+
+// Ajoute quand il apparait en dessous
+const ANIMATION_ADD_IN_BOTTOM = {
+
+};
+// Enleve quand il apparait en dessous
+const ANIMATION_REMOVE_IN_BOTTOM = {
+
+};
+
+///////////////////////////////////////////////////
+
+// Ajoute quand il sort en dessous
+const ANIMATION_ADD_OUT_BOTTOM = {
+
+};
+// Enleve quand il sort en dessous
+const ANIMATION_REMOVE_OUT_BOTTOM = {
+
+};
+
 
 function add(id, tab) {
 
@@ -106,6 +135,7 @@ function add(id, tab) {
     }
 
     listTab = tab[id];
+    console.log(listTab)
 
     listTab.forEach(tabIn => {
         document.getElementById(tabIn[0]).classList.add(tabIn[1]);
@@ -121,6 +151,8 @@ function remove(id, tab) {
     }
 
     listTab = tab[id];
+    console.log(listTab)
+
     listTab.forEach(tabIn => {
         document.getElementById(tabIn[0]).classList.remove(tabIn[1]);
     });

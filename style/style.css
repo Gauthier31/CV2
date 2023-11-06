@@ -325,13 +325,14 @@ a:hover::before {
     padding-bottom: 0;
 }
 
-.noir {
+.noir,
+.noir * {
     color: var(--noir);
     border-color: var(--noir);
 }
 
 .blanc,
-.blanc>* {
+.blanc * {
     color: var(--blanc) !important;
     border-color: var(--blanc) !important;
 }
@@ -411,14 +412,14 @@ h5 {
 /* ------------- Intro ------------- */
 
 .divPhoto {
-    width: calc(100% / 12 * 3);
+    width: calc(100% / 12 * 4);
     border: 3px solid var(--noir);
     max-height: -webkit-fill-available;
     height: 35dvw;
 }
 
 .divTxt {
-    width: calc(100% / 12 * 6);
+    width: calc(100% / 12 * 7);
     font-size: 15px;
     position: relative;
     backdrop-filter: blur(2px);
@@ -522,6 +523,10 @@ h5 {
 .rondNoir {
     width: 4dvw;
     height: 4dvw;
+    min-width: 30px;
+    min-height: 30px;
+    max-width: 40px;
+    max-height: 40px;
     background-color: var(--gris_fonce);
     border-radius: 50%;
     margin: 0 auto;
@@ -687,9 +692,9 @@ h5 {
 .competence {
     display: grid;
     flex: 0 0 auto;
-    width: calc(100% / 5);
+    width: calc(100% / 6);
     padding: 10px;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .competenceImg {
