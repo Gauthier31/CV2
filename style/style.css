@@ -29,7 +29,7 @@ nav {
     z-index: 100;
 
     padding: 0px 20px;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(3px);
 }
 
 nav ul {
@@ -213,7 +213,8 @@ a::before,
 }
 
 #bgBleu a::before,
-#bgBleu *::selection {
+#bgBleu *::selection,
+.blanc a::before {
     background-color: var(--noir);
 }
 
@@ -845,6 +846,8 @@ h5 {
     border: 5px solid #24292f;
     height: calc(100dvw / 12 * 3.5);
     width: calc(100dvw / 12 * 6);
+    max-height: 300px;
+    max-width: 500px;
     box-shadow: 10px 10px 10px rgb(0 0 0 / 0.2);
     border-radius: 5px;
 }

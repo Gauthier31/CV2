@@ -50,21 +50,16 @@ afficherTailleBloc();
 /////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////// Lancement automatique /////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
+var ajustement = window.innerWidth * 0.05 / 2;
+
+// Coordonnées des points
+pointeur = document.getElementById("pointeur");
+
+const positionTop = pointeur.getBoundingClientRect().top + window.scrollY + ajustement;
+const positionLeft = pointeur.getBoundingClientRect().left + window.scrollX + ajustement;
+
 
 document.onmousemove = function () {
-
-    // Coordonnées des points
-    pointeur = document.getElementById("pointeur");
-
-    ajustement = window.innerWidth * 0.05 / 2;
-
-    const positionTop = pointeur.getBoundingClientRect().top + window.scrollY + ajustement;
-    const positionLeft = pointeur.getBoundingClientRect().left + window.scrollX + ajustement;
-
-    // console.log("")
-    // console.log("Ajustement :   ", ajustement)
-    // console.log("Souris :       ", event.clientX, event.clientY)
-    // console.log("Centre image : ", Math.round(positionTop, 0), Math.round(positionLeft, 0))
 
     x1 = (positionLeft / window.innerWidth - 0.5) * 2;
     y1 = (positionTop / window.innerHeight - 0.5) * 2;
@@ -99,8 +94,13 @@ document.onmousemove = function () {
 
     // Convertissez l'angle en degrés
     angleDegres = ((angleRadians * 180) / Math.PI - 1) - 180 + 25;
-
     pointeur.style.transform = "rotate(" + angleDegres + "deg)";
+
+    // console.log("")
+    // console.log("Ajustement :   ", ajustement)
+    // console.log("Souris :       ", event.clientX, event.clientY)
+    // console.log("Centre image : ", Math.round(positionTop, 0), Math.round(positionLeft, 0))
+    // console.log("Degre :", angleDegres)
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////

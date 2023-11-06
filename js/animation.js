@@ -48,7 +48,7 @@ function reveal() {
         var elementTop = reveals_color[i].getBoundingClientRect().top;
 
         // 80% de l'écran
-        if (elementTop < windowHeight * 0.8) {
+        if (elementTop < windowHeight * 0.65) {
             add(reveals_color[i].id, ANIMATION_ADD_OUT_TOP_8);
             remove(reveals_color[i].id, ANIMATION_REMOVE_OUT_TOP_8);
 
