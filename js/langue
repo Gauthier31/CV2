@@ -1,0 +1,1025 @@
+const FORMATION = [
+    [
+        "Gauthier BOË-GUIROLA\n",
+        ""
+    ],
+    [
+        "Etudiant Master MIAGE option IDA\n",
+        ""
+    ],
+    [
+        "Formation\n",
+        ""
+    ],
+    [
+        "Experience\n",
+        ""
+    ],
+    [
+        "Compétences\n",
+        ""
+    ],
+    [
+        "Projet\n",
+        ""
+    ],
+    [
+        "boegauthier@gmail.com\n",
+        ""
+    ],
+    [
+        "Bonjour je suis Gauthier BOË--GUIROLA,\n",
+        ""
+    ],
+    [
+        "Étudiant en 1ère année de Master MIAGE option IDA à\n",
+        ""
+    ],
+    [
+        "l'Université Toulouse Capitole en alternance dans\n",
+        ""
+    ],
+    [
+        "l'ESN SOPRA STERIA en tant que développeur full stack.\n\n",
+        ""
+    ],
+    [
+        "Le développement des domaines informatiques et l'objectif d'anticiper leurs futures synergies,\n",
+        ""
+    ],
+    [
+        "suscitent un fort intérêt pour moi.\n",
+        ""
+    ],
+    [
+        "B\n\n",
+        ""
+    ],
+    [
+        "De plus, travailler sur les nouvelles technologies dans des secteurs tels que :\n",
+        ""
+    ],
+    [
+        "la conception et/ou le développement Web, logiciels ou encore dans\n",
+        ""
+    ],
+    [
+        "le Conseil,\n",
+        ""
+    ],
+    [
+        "la Cybersécurité,\n",
+        ""
+    ],
+    [
+        "la Data sont en adéquation avec mon\n",
+        ""
+    ],
+    [
+        "cursus universitaire et mon ambition professionnelle.\n",
+        ""
+    ],
+    [
+        "Développement\n",
+        ""
+    ],
+    [
+        "Volley-Ball\n",
+        ""
+    ],
+    [
+        "Piano\n",
+        ""
+    ],
+    [
+        "Lecture\n",
+        ""
+    ],
+    [
+        "Musculation\n",
+        ""
+    ],
+    [
+        "Film\n",
+        ""
+    ],
+    [
+        "Dessin\n",
+        ""
+    ],
+    [
+        "Bricolage\n",
+        ""
+    ],
+    [
+        "formations\n\n",
+        ""
+    ],
+    [
+        "Invite de commande\n",
+        ""
+    ],
+    [
+        "GauCV [version 68.2]\n",
+        ""
+    ],
+    [
+        "(c) Gau Corporation. Tous droits réservés.",
+        ""
+    ],
+    [
+        "0%\n",
+        ""
+    ],
+    [
+        "Expériences professionnelles\n\n",
+        ""
+    ],
+    [
+        "Septembre 2023 - En cours\n",
+        ""
+    ],
+    [
+        "Data Ingénieur\n",
+        ""
+    ],
+    [
+        "Sopra Steria en alternance, Colomier, 31770\n",
+        ""
+    ],
+    [
+        "Extern à Airbus, Blagnac, 31500\n",
+        ""
+    ],
+    [
+        "Gestion des données des pièces d'avions\n",
+        ""
+    ],
+    [
+        "#Base de données\n",
+        ""
+    ],
+    [
+        "#SQL\n",
+        ""
+    ],
+    [
+        "#Python\n",
+        ""
+    ],
+    [
+        "\n\n\n",
+        ""
+    ],
+    [
+        "Développeur Full Stack\n",
+        ""
+    ],
+    [
+        "Sopra Steria en alternance, Colomier, 31770\n",
+        ""
+    ],
+    [
+        "Développement d'une application pour gérer et assister les techniciens d'Orange\n",
+        ""
+    ],
+    [
+        "lorsqu'ils sont\n",
+        ""
+    ],
+    [
+        "en intervention chez les clients.\n",
+        ""
+    ],
+    [
+        "#Angular CLI\n",
+        ""
+    ],
+    [
+        "#Spring Boot\n",
+        ""
+    ],
+    [
+        "#Maven\n",
+        ""
+    ],
+    [
+        "#DevOps\n",
+        ""
+    ],
+    [
+        "#Agilité\n",
+        ""
+    ],
+    [
+        "Septembre 2022 - Aout 2023\n",
+        ""
+    ],
+    [
+        "\n\n\n",
+        ""
+    ],
+    [
+        "Juin 2022 - Aout 2022\n",
+        ""
+    ],
+    [
+        "Jardinier\n",
+        ""
+    ],
+    [
+        "Camping Eurosol, Vielle-Saint-Girons, 40560\n",
+        ""
+    ],
+    [
+        "Emploi saisonnier en tant que agent d'entretient des espaces verts et\n",
+        ""
+    ],
+    [
+        "aquatique.\n",
+        ""
+    ],
+    [
+        "\n\n\n",
+        ""
+    ],
+    [
+        "Développeur Full Stack\n",
+        ""
+    ],
+    [
+        "Les Comptoirs du Monde, Saint-Alban, 31140\n",
+        ""
+    ],
+    [
+        "Développement d'une application pour gérer et assister les techniciens d'Orange\n",
+        ""
+    ],
+    [
+        "lorsqu'ils sont\n",
+        ""
+    ],
+    [
+        "en intervention chez les clients.\n",
+        ""
+    ],
+    [
+        "#Laravel\n",
+        ""
+    ],
+    [
+        "#SQL\n",
+        ""
+    ],
+    [
+        "Juin 2022 - Aout 2022\n",
+        ""
+    ],
+    [
+        "Juin 2021 - Aout 2021\n",
+        ""
+    ],
+    [
+        "Préparateur de commande\n",
+        ""
+    ],
+    [
+        "Codis Aquitaine, Tarnos, 40312\n",
+        ""
+    ],
+    [
+        "Emploi saisonnier en tant que préparateur de commande dans le but \n",
+        ""
+    ],
+    [
+        "de collecter, organiser et conditionner les articles \n",
+        ""
+    ],
+    [
+        "pour les expéditions.\n",
+        ""
+    ],
+    [
+        "Compétences\n\n",
+        ""
+    ],
+    [
+        "Java\n",
+        ""
+    ],
+    [
+        "Javascript\n",
+        ""
+    ],
+    [
+        "HTML\n",
+        ""
+    ],
+    [
+        "CSS\n",
+        ""
+    ],
+    [
+        "PHP\n",
+        ""
+    ],
+    [
+        "Laravel\n",
+        ""
+    ],
+    [
+        "Angular\n",
+        ""
+    ],
+    [
+        "Spring\n",
+        ""
+    ],
+    [
+        "Bootstrap\n",
+        ""
+    ],
+    [
+        "Bulma\n",
+        ""
+    ],
+    [
+        "Shell\n",
+        ""
+    ],
+    [
+        "C\n",
+        ""
+    ],
+    [
+        "C++\n",
+        ""
+    ],
+    [
+        "Sql\n",
+        ""
+    ],
+    [
+        "Python\n",
+        ""
+    ],
+    [
+        "Développement\n",
+        ""
+    ],
+    [
+        "Web\n",
+        ""
+    ],
+    [
+        "Base de données\n",
+        ""
+    ],
+    [
+        "J'ai l'habitude de travailler sur Windows mais aussi,\n",
+        ""
+    ],
+    [
+        "à moindre échelle, sur Linux grâce à débian.\n\n",
+        ""
+    ],
+    [
+        "Tout au long de mes différentes expériences professionnelles j'ai\n",
+        ""
+    ],
+    [
+        "pu me familiariser avec les outils tels que\n",
+        ""
+    ],
+    [
+        "Visual studio,\n",
+        ""
+    ],
+    [
+        "Eclipse et\n",
+        ""
+    ],
+    [
+        "Intellij IDEA\n",
+        ""
+    ],
+    [
+        "Français\n",
+        ""
+    ],
+    [
+        "Anglais\n",
+        ""
+    ],
+    [
+        "Espagnol\n",
+        ""
+    ],
+    [
+        "Japonais\n",
+        ""
+    ],
+    [
+        "Projets\n\n",
+        ""
+    ],
+    [
+        "Projets persos\n",
+        ""
+    ],
+    [
+        "GauMuscu\n\n",
+        ""
+    ],
+    [
+        "GauMuscu est une application Web pour téléphone pour la remise en forme,\n",
+        ""
+    ],
+    [
+        "Elle répertorie plus de 200 exercices de musculation\n",
+        ""
+    ],
+    [
+        "que vous pouvez organiser autour de programme déjà\n",
+        ""
+    ],
+    [
+        "conçu ou que vous pouvez créer vous même.\n",
+        ""
+    ],
+    [
+        "Cette page Web possède aussi une partie nutrition\n",
+        ""
+    ],
+    [
+        "dans lequel vous pourrez trouver de nombreuse recette pour la prise de masse,\n",
+        ""
+    ],
+    [
+        "ou bien, de petit repas délicieux\n",
+        ""
+    ],
+    [
+        "GauMode\n",
+        ""
+    ],
+    [
+        "GauMode est une application Web pour tous les devices centrées sur la mode du textile,\n",
+        ""
+    ],
+    [
+        "des soins de beauté et des bonnes pratiques.\n",
+        ""
+    ],
+    [
+        "Elle permet de répertorier et de centraliser de nombreux vêtements\n",
+        ""
+    ],
+    [
+        "que vous possèder ainsi que d'autres présent sur des sites de mode\n",
+        ""
+    ],
+    [
+        "tels que Zara ou H&M entre autres.\n",
+        ""
+    ],
+    [
+        "Ainsi sur l'appliquation vous pourriez créer ce nombreuses\n",
+        ""
+    ],
+    [
+        "tenu grâce a l'ensemble des vêtements qui y sont répertoriés\n",
+        ""
+    ],
+    [
+        "Enfin vous pourriez aussi suivre les conseils en terme de\n",
+        ""
+    ],
+    [
+        "nouvels tendances\n",
+        ""
+    ],
+    [
+        "mais aussi des conseils sur l'entretien ou\n",
+        ""
+    ],
+    [
+        "l'utilisation\n",
+        ""
+    ],
+    [
+        "des produits du mileu de la mode (cravate, chaussure)\n",
+        ""
+    ],
+    [
+        "\n\n\n",
+        ""
+    ],
+    [
+        "Projets d'études\n",
+        ""
+    ],
+    [
+        "SkyWise\n",
+        ""
+    ],
+    [
+        "Data engineer\n",
+        ""
+    ],
+    [
+        "Sed (saepe enim redeo ad Scipionem, cuius omnis sermo erat de amicitia) querebatur,\n",
+        ""
+    ],
+    [
+        "quod\n",
+        ""
+    ],
+    [
+        "omnibus in rebus homines diligentiores essent; capras et oves quot quisque haberet,\n",
+        ""
+    ],
+    [
+        "dicere posse, amicos quot haberet, non posse dicere et in illis quidem parandis\n",
+        ""
+    ],
+    [
+        "adhibere\n",
+        ""
+    ],
+    [
+        "curam, in amicis eligendis neglegentis esse nec habere quasi signa quaedam et notas,\n",
+        ""
+    ],
+    [
+        "quibus eos qui ad amicitias essent idonei, iudicarent. Sunt igitur firmi et stabiles\n",
+        ""
+    ],
+    [
+        "et\n",
+        ""
+    ],
+    [
+        "constantes eligendi; cuius generis est magna penuria. Et iudicare difficile est sane\n",
+        ""
+    ],
+    [
+        "nisi expertum; experiendum autem est in ipsa amicitia. Ita praecurrit amicitia\n",
+        ""
+    ],
+    [
+        "iudicium\n",
+        ""
+    ],
+    [
+        "tollitque experiendi potestatem.\n",
+        ""
+    ],
+    [
+        "MOBI\n",
+        ""
+    ],
+    [
+        "Développeur Full stack\n",
+        ""
+    ],
+    [
+        "Sopra Steria, plus particulièrement le département TME, Télécommunications,\n",
+        ""
+    ],
+    [
+        "Multimédias et Divertissement, accompagne Orange, et leur département DSI réseaux,\n",
+        ""
+    ],
+    [
+        "dans de nombreux domaines et notamment dans la gestion des métiers de l'intervention\n",
+        ""
+    ],
+    [
+        "sur le projet MOBI.\n",
+        ""
+    ],
+    [
+        "MOBI est une application très récente, conçue début 2017, qui\n",
+        ""
+    ],
+    [
+        "permet aux techniciens de traiter en autonomie les interventions qui sont affectées\n",
+        ""
+    ],
+    [
+        "dans leur Plan de Charge.\n",
+        ""
+    ],
+    [
+        "Cette application sert de boîte à outils aux techniciens, elle permet entre autres\n",
+        ""
+    ],
+    [
+        "de : faire le planning des ordres de travaux, les aider lors d'intervention\n",
+        ""
+    ],
+    [
+        "concernant la mutation de ligne de cuivre à fibre (qui concerne 38 millions de\n",
+        ""
+    ],
+    [
+        "foyers) et de faire des essais de ligne.\n",
+        ""
+    ],
+    [
+        "Cette application est utilisée sur téléphone par les techniciens d'Orange et par les\n",
+        ""
+    ],
+    [
+        "ETR (technicien sous-traitant d'Orange) sur internet. Au total c'est plus de 23 000\n",
+        ""
+    ],
+    [
+        "personnes qui utilisent l'application régulièrement.\n",
+        ""
+    ],
+    [
+        "Mobi a vu le jour début 2017, aux fils des années son interface\n",
+        ""
+    ],
+    [
+        "a su s'enrichir de multiples applications du SI (modules), chacun répondant à un\n",
+        ""
+    ],
+    [
+        "besoin précis. Ces modules permettant par exemple la consultation du réseau,\n",
+        ""
+    ],
+    [
+        "d'attestation de preuves, de qualité et de sécurité ainsi que l'aide à la relation\n",
+        ""
+    ],
+    [
+        "clients et d'autres outils spécifiques au métiers. C'est plus de 33 modules qui se\n",
+        ""
+    ],
+    [
+        "sont accumulés et qui sont maintenus et développés continuellement dans un contexte\n",
+        ""
+    ],
+    [
+        "DevOps et d'Agilité.\n",
+        ""
+    ],
+    [
+        "SIRH\n",
+        ""
+    ],
+    [
+        "Développeur Web\n",
+        ""
+    ],
+    [
+        "Sed (saepe enim redeo ad Scipionem, cuius omnis sermo erat de amicitia) querebatur,\n",
+        ""
+    ],
+    [
+        "quod\n",
+        ""
+    ],
+    [
+        "omnibus in rebus homines diligentiores essent; capras et oves quot quisque haberet,\n",
+        ""
+    ],
+    [
+        "dicere posse, amicos quot haberet, non posse dicere et in illis quidem parandis\n",
+        ""
+    ],
+    [
+        "adhibere\n",
+        ""
+    ],
+    [
+        "curam, in amicis eligendis neglegentis esse nec habere quasi signa quaedam et notas,\n",
+        ""
+    ],
+    [
+        "quibus eos qui ad amicitias essent idonei, iudicarent. Sunt igitur firmi et stabiles\n",
+        ""
+    ],
+    [
+        "et\n",
+        ""
+    ],
+    [
+        "constantes eligendi; cuius generis est magna penuria. Et iudicare difficile est sane\n",
+        ""
+    ],
+    [
+        "nisi expertum; experiendum autem est in ipsa amicitia. Ita praecurrit amicitia\n",
+        ""
+    ],
+    [
+        "iudicium\n",
+        ""
+    ],
+    [
+        "tollitque experiendi potestatem.\n",
+        ""
+    ],
+    [
+        "SYNDICSAAS\n",
+        ""
+    ],
+    [
+        "Développeur Web\n",
+        ""
+    ],
+    [
+        "Sed (saepe enim redeo ad Scipionem, cuius omnis sermo erat de amicitia) querebatur,\n",
+        ""
+    ],
+    [
+        "quod\n",
+        ""
+    ],
+    [
+        "omnibus in rebus homines diligentiores essent; capras et oves quot quisque haberet,\n",
+        ""
+    ],
+    [
+        "dicere posse, amicos quot haberet, non posse dicere et in illis quidem parandis\n",
+        ""
+    ],
+    [
+        "adhibere\n",
+        ""
+    ],
+    [
+        "curam, in amicis eligendis neglegentis esse nec habere quasi signa quaedam et notas,\n",
+        ""
+    ],
+    [
+        "quibus eos qui ad amicitias essent idonei, iudicarent. Sunt igitur firmi et stabiles\n",
+        ""
+    ],
+    [
+        "et\n",
+        ""
+    ],
+    [
+        "constantes eligendi; cuius generis est magna penuria. Et iudicare difficile est sane\n",
+        ""
+    ],
+    [
+        "nisi expertum; experiendum autem est in ipsa amicitia. Ita praecurrit amicitia\n",
+        ""
+    ],
+    [
+        "iudicium\n",
+        ""
+    ],
+    [
+        "tollitque experiendi potestatem.\n",
+        ""
+    ],
+    [
+        "Flyer\n",
+        ""
+    ],
+    [
+        "Graphiste et chargé de communication\n",
+        ""
+    ],
+    [
+        "Sed (saepe enim redeo ad Scipionem, cuius omnis sermo erat de amicitia) querebatur,\n",
+        ""
+    ],
+    [
+        "quod\n",
+        ""
+    ],
+    [
+        "omnibus in rebus homines diligentiores essent; capras et oves quot quisque haberet,\n",
+        ""
+    ],
+    [
+        "dicere posse, amicos quot haberet, non posse dicere et in illis quidem parandis\n",
+        ""
+    ],
+    [
+        "adhibere\n",
+        ""
+    ],
+    [
+        "curam, in amicis eligendis neglegentis esse nec habere quasi signa quaedam et notas,\n",
+        ""
+    ],
+    [
+        "quibus eos qui ad amicitias essent idonei, iudicarent. Sunt igitur firmi et stabiles\n",
+        ""
+    ],
+    [
+        "et\n",
+        ""
+    ],
+    [
+        "constantes eligendi; cuius generis est magna penuria. Et iudicare difficile est sane\n",
+        ""
+    ],
+    [
+        "nisi expertum; experiendum autem est in ipsa amicitia. Ita praecurrit amicitia\n",
+        ""
+    ],
+    [
+        "iudicium\n",
+        ""
+    ],
+    [
+        "tollitque experiendi potestatem.\n",
+        ""
+    ],
+    [
+        "Le Démineur\n",
+        ""
+    ],
+    [
+        "Développeur Java\n",
+        ""
+    ],
+    [
+        "Sed (saepe enim redeo ad Scipionem, cuius omnis sermo erat de amicitia) querebatur,\n",
+        ""
+    ],
+    [
+        "quod\n",
+        ""
+    ],
+    [
+        "omnibus in rebus homines diligentiores essent; capras et oves quot quisque haberet,\n",
+        ""
+    ],
+    [
+        "dicere posse, amicos quot haberet, non posse dicere et in illis quidem parandis\n",
+        ""
+    ],
+    [
+        "adhibere\n",
+        ""
+    ],
+    [
+        "curam, in amicis eligendis neglegentis esse nec habere quasi signa quaedam et notas,\n",
+        ""
+    ],
+    [
+        "quibus eos qui ad amicitias essent idonei, iudicarent. Sunt igitur firmi et stabiles\n",
+        ""
+    ],
+    [
+        "et\n",
+        ""
+    ],
+    [
+        "constantes eligendi; cuius generis est magna penuria. Et iudicare difficile est sane\n",
+        ""
+    ],
+    [
+        "nisi expertum; experiendum autem est in ipsa amicitia. Ita praecurrit amicitia\n",
+        ""
+    ],
+    [
+        "iudicium\n",
+        ""
+    ],
+    [
+        "tollitque experiendi potestatem.\n",
+        ""
+    ],
+    [
+        "LGCSK\n",
+        ""
+    ],
+    [
+        "Développeur Web\n",
+        ""
+    ],
+    [
+        "Sed (saepe enim redeo ad Scipionem, cuius omnis sermo erat de amicitia) querebatur,\n",
+        ""
+    ],
+    [
+        "quod omnibus in rebus homines diligentiores essent; capras et oves quot quisque\n",
+        ""
+    ],
+    [
+        "haberet,\n",
+        ""
+    ],
+    [
+        "dicere posse, amicos quot haberet, non posse dicere et in illis quidem parandis\n",
+        ""
+    ],
+    [
+        "adhibere curam, in amicis eligendis neglegentis esse nec habere quasi signa quaedam\n",
+        ""
+    ],
+    [
+        "et notas,\n",
+        ""
+    ],
+    [
+        "quibus eos qui ad amicitias essent idonei, iudicarent. Sunt igitur firmi et stabiles\n",
+        ""
+    ],
+    [
+        "et\n",
+        ""
+    ],
+    [
+        "constantes eligendi; cuius generis est magna penuria. Et iudicare difficile est sane\n",
+        ""
+    ],
+    [
+        "nisi expertum; experiendum autem est in ipsa amicitia. Ita praecurrit amicitia\n",
+        ""
+    ],
+    [
+        "iudicium\n",
+        ""
+    ],
+    [
+        "tollitque experiendi potestatem.\n",
+        ""
+    ],
+    [
+        "Bus Time\n",
+        ""
+    ],
+    [
+        "Développeur Java\n",
+        ""
+    ],
+    [
+        "Sed (saepe enim redeo ad Scipionem, cuius omnis sermo erat de amicitia) querebatur,\n",
+        ""
+    ],
+    [
+        "quod\n",
+        ""
+    ],
+    [
+        "omnibus in rebus homines diligentiores essent; capras et oves quot quisque haberet,\n",
+        ""
+    ],
+    [
+        "dicere posse, amicos quot haberet, non posse dicere et in illis quidem parandis\n",
+        ""
+    ],
+    [
+        "adhibere\n",
+        ""
+    ],
+    [
+        "curam, in amicis eligendis neglegentis esse nec habere quasi signa quaedam et notas,\n",
+        ""
+    ],
+    [
+        "quibus eos qui ad amicitias essent idonei, iudicarent. Sunt igitur firmi et stabiles\n",
+        ""
+    ],
+    [
+        "et\n",
+        ""
+    ],
+    [
+        "constantes eligendi; cuius generis est magna penuria. Et iudicare difficile est sane\n",
+        ""
+    ],
+    [
+        "nisi expertum; experiendum autem est in ipsa amicitia. Ita praecurrit amicitia\n",
+        ""
+    ],
+    [
+        "iudicium\n",
+        ""
+    ],
+    [
+        "tollitque experiendi potestatem.\n",
+        ""
+    ],
+    [
+        "Contact\n",
+        ""
+    ],
+    [
+        "boegauthier@gmail.com\n",
+        ""
+    ],
+    [
+        "06.51.67.44.58\n",
+        ""
+    ],
+    [
+        "Copyright©2023\n",
+        ""
+    ],
+    [
+        "GauCV.vercel.app\n"
+    ]
+]

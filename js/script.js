@@ -47,6 +47,19 @@ introLoad();
 etiquette();
 afficherTailleBloc();
 
+changementLangue();
+
+function changementLangue() {
+    tab = document.body.textContent.split("  ")
+
+    var tableauFiltre = tab.filter(function (element) {
+        return !(element === "") && !(element === "\n") && !(element === "\n\n");
+    });
+
+    console.log(tableauFiltre);
+}
+
+
 /////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////// Lancement automatique /////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
