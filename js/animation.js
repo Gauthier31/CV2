@@ -64,34 +64,34 @@ window.addEventListener("scroll", reveal);
 
 // Ajoute quand il sort au dessus
 const ANIMATION_ADD_OUT_TOP = {
-    "formation": [
+    "bgBleu": [
         ["animNav", "blanc"]
     ]
 };
 // Enleve quand il sort au dessus
 const ANIMATION_REMOVE_OUT_TOP = {
-    "projet": [
+    "aPropos": [
         ["animNav", "blanc"]
     ],
-    "aPropos": [
+    "bgBlanc2": [
         ["animNav", "blanc"]
     ]
 };
 
 // Ajoute quand il sort au dessus
 const ANIMATION_ADD_OUT_TOP_8 = {
-    "formation": [
+    "bgBleu": [
         ["AnimInfoGauche", "blanc"],
         ["AnimInfoDroite", "blanc"]
     ]
 };
 // Enleve quand il sort au dessus
 const ANIMATION_REMOVE_OUT_TOP_8 = {
-    "projet": [
+    "aPropos": [
         ["AnimInfoGauche", "blanc"],
         ["AnimInfoDroite", "blanc"]
     ],
-    "aPropos": [
+    "bgBlanc2": [
         ["AnimInfoGauche", "blanc"],
         ["AnimInfoDroite", "blanc"]
     ]

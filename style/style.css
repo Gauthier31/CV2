@@ -314,7 +314,7 @@ a:hover::before {
     background-color: var(--bleu);
     color: var(--blanc);
     width: 100%;
-    padding: 1px calc(100% / 12 * 1);
+    padding: 5px calc(100% / 12 * 1);
     padding-bottom: 0;
 }
 
@@ -322,7 +322,7 @@ a:hover::before {
     background-color: var(--blanc);
     color: var(--noir);
     width: 100%;
-    padding: 1px calc(100% / 12 * 1);
+    padding: 5px calc(100% / 12 * 1);
     padding-bottom: 0;
 }
 
