@@ -33,9 +33,11 @@ const FORMATION = [
     ],
 ]
 
-var numFormation = -1
-var tabIdTimeOut = [-1]
-var timerId
+var numFormation = -1;
+var tabIdTimeOut = [-1];
+var timerId;
+
+var idLangue = 0;
 
 const pourcentageTxt = document.getElementById("pourcentageTxt");
 const progressionBloc = document.getElementById("progression");
@@ -47,9 +49,44 @@ introLoad();
 etiquette();
 afficherTailleBloc();
 
-changementLangue();
 
-function changementLangue() {
+function changementLangue(obj) {
+
+    console.log(idLangue, obj.value)
+
+    var bodyText = document.body.innerHTML;
+    var expReg
+
+    LANGUE.forEach(element => {
+        expReg = new RegExp("\\b" + element[idLangue] + "\\b");
+
+        if (!bodyText.includes(element[idLangue])) {
+            console.log(element[idLangue])
+        }
+        bodyText = bodyText.replace(expReg, element[obj.value]);
+    });
+
+    document.body.innerHTML = bodyText;
+    idLangue = obj.value;
+    console.log(idLangue, obj.value)
+
+    document.getElementById("navListe").selectedIndex = idLangue;
+
+    if (idLangue == 0) {
+        document.getElementById("langueSelect").innerHTML =
+            `<option value='0' selected>Français</option>
+            <option value='1'>Anglais</option>`;
+
+    } else if (idLangue == 1) {
+        document.getElementById("langueSelect").innerHTML =
+            `<option value='0'>French</option>
+            <option value='1' selected>English</option>`;
+    }
+}
+
+
+
+function actualisationLangue() {
     tab = document.body.textContent.split("  ")
 
     var tableauFiltre = tab.filter(function (element) {
@@ -121,8 +158,8 @@ document.onmousemove = function () {
 function introLoad() {
 
     const INTRO = [
-        "Bonjour je suis Gauthier BOË--GUIROLA,",
-        "Étudiant en 1ère année de Master MIAGE option IDA à l’Université Toulouse Capitole en alternance dans l’ESN SOPRA STERIA en tant que développeur full stack.",
+        "Bonjour, je suis Gauthier BOË--GUIROLA,",
+        "Étudiant en 1ère année de Master MIAGE option IDA à l’Université Toulouse Capitole en alternance dans l’ESN SOPRA STERIA en tant que Data Ingénieur.",
         "Le développement des domaines informatiques et l'objectif d'anticiper leurs futures synergies, suscitent un fort intérêt pour moi.",
         //"De plus, travailler sur les nouvelles technologies dans des secteurs tels que : la conception et/ou le développement Web, logiciels ou encore dans le Conseil, la Cybersécurité, la Data sont en adéquation avec mon cursus universitaire et mon ambition professionnelle.",
     ]
@@ -180,7 +217,7 @@ function introLoad() {
 
         switch (introTransformation) {
             case 1:
-                intro.innerHTML = intro.innerHTML.replace("Bonjour", "<span class='h1'>Bonjour</span>");
+                intro.innerHTML = intro.innerHTML.replace("Bonjour,", "<span class='h1'>Bonjour,</span>");
                 introTransformation += 1;
                 break;
             case 2:
@@ -214,6 +251,7 @@ function introLoad() {
             default:
                 introTransformation = -1;
                 setInterval(toggleNomClass, 2000);
+                addLangue();
                 return;
         }
 
@@ -224,6 +262,16 @@ function introLoad() {
 
     function toggleNomClass() {
         document.getElementById("nom").classList.toggle("nom"); // Ajoute ou supprime la classe "nom"
+    }
+
+    function addLangue() {
+        document.getElementById("navListe").innerHTML +=
+            `<li>
+                <select onchange="changementLangue(this)" id="langueSelect" name="langue">
+                    <option value='0'>Français</option>
+                    <option value='1'>Anglais</option>
+                </select>
+            </li>`;
     }
 }
 
