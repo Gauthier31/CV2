@@ -49,7 +49,7 @@ const LANGUE = [
     ],
     [
         "en alternance dans l’ESN",
-        "in sandwich course in the company of the numerical service"
+        "in sandwich courses in the company of the numerical service"
     ],
     [
         "en tant que Data Ingénieur",
@@ -136,18 +136,6 @@ const LANGUE = [
         "Command prompt"
     ],
     [
-        "GauCV [version 68.2]",
-        "GauCV [version 68.2]"
-    ],
-    [
-        "(c) Gau Corporation. Tous droits réservés.",
-        "(c) Gau Corporation. All right reserved."
-    ],
-    [
-        "0%",
-        "0%"
-    ],
-    [
         "Expériences professionnelles",
         "Profesionnal experiences"
     ],
@@ -189,7 +177,7 @@ const LANGUE = [
     ],
     [
         "Sopra Steria en alternance, Colomier, 31770",
-        "Sopra Steria in sandwich course, Colomier 31770"
+        "Sopra Steria in sandwich courses, Colomier 31770"
     ],
     [
         "Développement d'une application pour gérer et assister les techniciens d'Orange",
@@ -324,10 +312,6 @@ const LANGUE = [
         "able to familiarize mysef such as"
     ],
     [
-        "et",
-        "and"
-    ],
-    [
         "Français",
         "French"
     ],
@@ -432,12 +416,8 @@ const LANGUE = [
         "new trends"
     ],
     [
-        "d'entretien",
-        "maintain"
-    ],
-    [
-        "ou",
-        "or"
+        "<a class=\"surligne\">d'entretien</a> ou",
+        "<a class=\"surligne\">maintain</a> or"
     ],
     [
         "l'utilisation",
@@ -512,8 +492,8 @@ const LANGUE = [
         "This application is use on phone by the Orange's technicians and by the"
     ],
     [
-        "ETR (technicien sous-traitant d'Orange) sur internet. Au total c'est plus de 23 000",
-        "ETR (Orange subcontractor technician) on internet. All in all it's more than 23 000"
+        "ETR \(technicien sous-traitant d'Orange\) sur internet. Au total c'est plus de 23 000",
+        "ETR \(Orange subcontractor technician\) on internet. All in all it's more than 23 000"
     ],
     [
         "personnes qui utilisent l'application régulièrement.",
@@ -524,8 +504,8 @@ const LANGUE = [
         "Over the years, its interface"
     ],
     [
-        "a su s'enrichir de multiples applications du SI (modules), chacun répondant à un",
-        "knew how to enrich multiple application of IS (modules), each response has a"
+        "a su s'enrichir de multiples applications du SI \(modules\), chacun répondant à un",
+        "knew how to enrich multiple application of IS \(modules\), each response has a"
     ],
     [
         "besoin précis. Ces modules permettant par exemple la consultation du réseau,",
@@ -558,5 +538,10 @@ const LANGUE = [
     [
         "Horaire de bus",
         "Bus Time"
-    ]
+    ],
+    // Correction
+    [
+        " et ",
+        " and "
+    ],
 ]
