@@ -369,6 +369,7 @@ h3 {
     text-align: center;
     text-decoration: underline;
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 h4 {
@@ -617,6 +618,10 @@ h5 {
     transition: width 0.5s ease-in-out;
 }
 
+#progEncours {
+    visibility: hidden;
+}
+
 .terminalHead {
     background-color: var(--blanc);
     color: var(--noir);
@@ -644,6 +649,7 @@ h5 {
 .expPro {
     flex: 0 0 auto;
     width: 45%;
+    max-width: 400px;
 }
 
 .exProligne {
@@ -689,7 +695,7 @@ h5 {
 }
 
 .date {
-    margin-top: 1dvw;
+    margin-top: 10px;
 }
 
 .hrBlack {

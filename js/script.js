@@ -49,54 +49,6 @@ introLoad();
 etiquette();
 afficherTailleBloc();
 
-
-function changementLangue(obj) {
-
-    console.log(idLangue, obj.value)
-
-    var bodyText = document.body.innerHTML;
-    var expReg
-
-    LANGUE.forEach(element => {
-        expReg = new RegExp("\\b" + element[idLangue] + "\\b");
-
-        if (!bodyText.includes(element[idLangue])) {
-            console.log(element[idLangue])
-        }
-        bodyText = bodyText.replace(expReg, element[obj.value]);
-    });
-
-    document.body.innerHTML = bodyText;
-    idLangue = obj.value;
-    console.log(idLangue, obj.value)
-
-    document.getElementById("navListe").selectedIndex = idLangue;
-
-    if (idLangue == 0) {
-        document.getElementById("langueSelect").innerHTML =
-            `<option value='0' selected>Français</option>
-            <option value='1'>Anglais</option>`;
-
-    } else if (idLangue == 1) {
-        document.getElementById("langueSelect").innerHTML =
-            `<option value='0'>French</option>
-            <option value='1' selected>English</option>`;
-    }
-}
-
-
-
-function actualisationLangue() {
-    tab = document.body.textContent.split("  ")
-
-    var tableauFiltre = tab.filter(function (element) {
-        return !(element === "") && !(element === "\n") && !(element === "\n\n");
-    });
-
-    console.log(tableauFiltre);
-}
-
-
 /////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////// Lancement automatique /////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -333,7 +285,7 @@ function progression(val) {
 
     // Ecriture dans le temrinal
     const formation = FORMATION[numFormation];
-    progEncours.innerHTML = "Progression en cours ...";
+    progEncours.style.visibility = "block";
 
     let progress = 0;
     let speed = 15; // Vitesse de frappe (en millisecondes par caractère)
@@ -374,7 +326,7 @@ function progression(val) {
             }
             typePhrase();
         } else {
-            progEncours.innerHTML = "";
+            progEncours.style.visibility = "hidden";
         }
     }
     typeText();
@@ -488,6 +440,49 @@ function position(transformString) {
     } else {
         return 0
     }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+function changementLangue(obj) {
+
+    var bodyText = document.body.innerHTML;
+    var expReg
+
+    LANGUE.forEach(element => {
+        expReg = new RegExp("\\b" + element[idLangue] + "\\b");
+
+        if (!bodyText.includes(element[idLangue])) {
+            console.log(element[idLangue])
+        }
+        bodyText = bodyText.replace(expReg, element[obj.value]);
+    });
+
+    document.body.innerHTML = bodyText;
+    idLangue = obj.value;
+
+    document.getElementById("navListe").selectedIndex = idLangue;
+
+    if (idLangue == 0) {
+        document.getElementById("langueSelect").innerHTML =
+            `<option value='0' selected>Français</option>
+            <option value='1'>Anglais</option>`;
+
+    } else if (idLangue == 1) {
+        document.getElementById("langueSelect").innerHTML =
+            `<option value='0'>French</option>
+            <option value='1' selected>English</option>`;
+    }
+}
+
+function actualisationLangue() {
+    tab = document.body.textContent.split("  ")
+
+    var tableauFiltre = tab.filter(function (element) {
+        return !(element === "") && !(element === "\n") && !(element === "\n\n");
+    });
+
+    console.log(tableauFiltre);
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////

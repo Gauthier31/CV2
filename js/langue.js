@@ -136,16 +136,12 @@ const LANGUE = [
         "Command prompt"
     ],
     [
-        "GauCV [version 68.2]",
-        "GauCV [version 68.2]"
+        "Tous droits réservés.",
+        "All right reserved."
     ],
     [
-        "(c) Gau Corporation. Tous droits réservés.",
-        "(c) Gau Corporation. All right reserved."
-    ],
-    [
-        "0%",
-        "0%"
+        "Progression en cours ...",
+        "Loading ..."
     ],
     [
         "Expériences professionnelles",
@@ -161,7 +157,7 @@ const LANGUE = [
     ],
     [
         "Sopra Steria en alternance, Colomier, 31770",
-        "Sopra Steria in san"
+        "Sopra Steria in sandiwch course, Colomier, 31770"
     ],
     [
         "Externe à Airbus, Blagnac, 31500",
@@ -465,7 +461,7 @@ const LANGUE = [
     ],
     [
         "accompagne Orange, et leur département DSI réseaux,",
-        "accompagnied Orange, and their department DSI network,"
+        "support Orange, and their department DSI network,"
     ],
     [
         "dans de nombreux domaines et notamment dans la gestion des métiers de l'intervention",
