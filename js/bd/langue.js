@@ -1,9 +1,5 @@
 const LANGUE = [
     [
-        "Gauthier BOË--GUIROLA",
-        "Gauthier BOË--GUIROLA"
-    ],
-    [
         "Etudiant Master MIAGE option IDA",
         "Student in Master's degree MIAGE option IDA"
     ],
@@ -36,7 +32,7 @@ const LANGUE = [
         "Hello, I am"
     ],
     [
-        "Gauthier BOË--GUIROLA,",
+        "Gauthier BOË--GUIROLA",
         "Gauthier BOË-GUIROLA"
     ],
     [
@@ -56,8 +52,8 @@ const LANGUE = [
         "as a Data Engineer"
     ],
     [
-        "Le développement des domaines informatiques et l'objectif d'anticiper leurs futures synergies,",
-        "The development of IT fields and the objective of anticipating their future synergies,"
+        "Le développement des domaines informatiques et l'objectif d'anticiper leurs futures synergies",
+        "The development of IT fields and the objective of anticipating their future synergies"
     ],
     [
         "suscitent un fort intérêt pour moi.",
@@ -88,24 +84,12 @@ const LANGUE = [
         ", the"
     ],
     [
-        "Data",
-        "Data"
-    ],
-    [
         "sont en adéquation avec mon cursus universitaire et mon ambition professionnelle.",
         "are in adequacy whit my university course and my professional ambition"
     ],
     [
         "Développement",
         "Development"
-    ],
-    [
-        "Volley-Ball",
-        "Volley-Ball"
-    ],
-    [
-        "Piano",
-        "Piano"
     ],
     [
         "Lecture",
@@ -136,6 +120,14 @@ const LANGUE = [
         "Command prompt"
     ],
     [
+        "Tous droits réservés",
+        "All right reserved"
+    ],
+    [
+        "Progression en cours ...",
+        "In progress ..."
+    ],
+    [
         "Expériences professionnelles",
         "Profesionnal experiences"
     ],
@@ -164,14 +156,6 @@ const LANGUE = [
         "#Database"
     ],
     [
-        "#SQL",
-        "#SQL"
-    ],
-    [
-        "#Python",
-        "#Python"
-    ],
-    [
         "Développeur Full Stack",
         "Full Stack Developer"
     ],
@@ -186,22 +170,6 @@ const LANGUE = [
     [
         "lorsqu'ils sont en intervention chez les clients.",
         "when the are in intervention at customers"
-    ],
-    [
-        "#Angular CLI",
-        "#Angular CLI"
-    ],
-    [
-        "#Spring Boot",
-        "#Spring Boot"
-    ],
-    [
-        "#Maven",
-        "#Maven"
-    ],
-    [
-        "#DevOps",
-        "#DevOps"
     ],
     [
         "#Agilité",
@@ -244,14 +212,6 @@ const LANGUE = [
         "the absences and the vacations of company's employees"
     ],
     [
-        "#Laravel",
-        "#Laravel"
-    ],
-    [
-        "#SQL",
-        "#SQL"
-    ],
-    [
         "Mai 2022 - Juin 2022",
         "May 2022 - June 2022"
     ],
@@ -288,16 +248,16 @@ const LANGUE = [
         "Development"
     ],
     [
-        "Web",
-        "Web"
-    ],
-    [
         "Base de données",
         "Database"
     ],
     [
         "J'ai l'habitude de travailler sur",
         "I am accustumed to work on"
+    ],
+    [
+        "mais aussi, à moindre échelle, sur",
+        "but also, on"
     ],
     [
         "grâce à Débian.",
@@ -310,6 +270,10 @@ const LANGUE = [
     [
         "pu me familiariser avec les outils tels que",
         "able to familiarize mysef such as"
+    ],
+    [
+        "et",
+        "and"
     ],
     [
         "Français",
@@ -368,10 +332,6 @@ const LANGUE = [
         "or, delicious little meal"
     ],
     [
-        "GauMode",
-        "GauMode"
-    ],
-    [
         "GauMode est une application Web pour tous les devices centrées sur la mode du textile,",
         "GauMode is a Web application for all devices centered on the textile fashion,"
     ],
@@ -412,28 +372,36 @@ const LANGUE = [
         "Finally you could follow the advice in terms of "
     ],
     [
-        "nouvels tendances",
+        "nouvelles tendances",
         "new trends"
     ],
     [
-        "<a class=\"surligne\">d'entretien</a> ou",
-        "<a class=\"surligne\">maintain</a> or"
+        "d'entretien",
+        "maintain"
+    ],
+    [
+        "ou",
+        "or"
     ],
     [
         "l'utilisation",
         "use"
     ],
     [
-        "des produits du mileu de la mode",
-        "of fashion products"
+        "des produits du mileu de la mode \(cravate, chaussure\)",
+        "of fashion products \(tie, shoes\)"
     ],
     [
-        "cravate, chaussure",
-        "tie, shoes"
+        "Cette application est en cours de développement.",
+        "This application is in development"
     ],
     [
         "Projets d'études",
         "School projects"
+    ],
+    [
+        "Application Web",
+        "Web Application"
     ],
     [
         "plus particulièrement le département TME",
@@ -521,11 +489,19 @@ const LANGUE = [
     ],
     [
         "sont accumulés et qui sont maintenus et développés continuellement dans un contexte",
-        "are cumulate and they are maintains et develops continualy in a contexte of"
+        "are cumulate and they are maintains and develops continualy in a contexte of"
     ],
     [
         "DevOps et d'Agilité.",
         "DevOps and Agility."
+    ],
+    [
+        "Site Web",
+        "Web Site"
+    ],
+    [
+        "Site Web",
+        "Web Site"
     ],
     [
         "Graphiste et chargé de communication",
@@ -536,12 +512,79 @@ const LANGUE = [
         "The Minesweeper"
     ],
     [
+        "Jeu en Java",
+        "Java game"
+    ],
+    [
+        "Site Web",
+        "Web Site"
+    ],
+    [
         "Horaire de bus",
         "Bus Time"
     ],
-    // Correction
     [
-        " et ",
-        " and "
+        "Application en Java",
+        "Java application"
     ],
+    [
+        "l'ensemble du site a été conçu et développé par moi même ainsi que sa traduction en anglais",
+        "All of the web site has been designe and develop by myself also his traduction in english"
+    ]
+]
+
+const NO_LANGUE = [
+    "Gauthier BOË--GUIROLA",
+    "boegauthier@gmail.com",
+    "Data",
+    "Volley-Ball",
+    "Piano",
+    "GauCV [version 68.2]",
+    "\(c\) Gau Corporation.",
+    "0%",
+    "#SQL",
+    "#Python",
+    "#Javascript",
+    "#PySpark",
+    "#Slate",
+    "#Foundry",
+    "#Angular CLI",
+    "#Spring Boot",
+    "#Maven",
+    "#DevOps",
+    "#Laravel",
+    "#SQL",
+    "Java",
+    "Javascript",
+    "HTML",
+    "CSS",
+    "PHP",
+    "Laravel",
+    "Angular",
+    "Spring",
+    "Bootstrap",
+    "Bulma",
+    "Shell",
+    "C",
+    "C++",
+    "Sql",
+    "Python",
+    "Web",
+    "Windows",
+    "Linux",
+    "Visual studio,",
+    "Eclipse",
+    "Intellij IDEA",
+    "GauMuscu",
+    "200 exercices",
+    "nutrition",
+    "GauMode",
+    "SkyWise",
+    "MOBI",
+    "SIRH",
+    "Flyer",
+    "Contact",
+    "06.51.67.44.58",
+    "Copyright©2023",
+    "GauCV.vercel.app",
 ]

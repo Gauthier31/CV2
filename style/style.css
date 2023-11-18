@@ -226,7 +226,7 @@ a::before,
 #bgBleu a::before,
 #bgBleu *::selection,
 .blanc a::before {
-    background-color: var(--bleu);
+    background-color: var(--noir);
 }
 
 a:hover::before {
@@ -889,6 +889,13 @@ h5 {
     width: 100px;
     box-shadow: 10px 0px 10px rgb(0 0 0 / 0.2);
 }
+
+.cardProj {
+    width: 100% / 3;
+    border-radius: 12px;
+    border: 1px solid black;
+}
+
 
 /* -------------- Projet -------------- */
 
