@@ -156,6 +156,10 @@ const LANGUE = [
         "#Database"
     ],
     [
+        "#Agilité",
+        "#Agility"
+    ],
+    [
         "Développeur Full Stack",
         "Full Stack Developer"
     ],
@@ -394,6 +398,38 @@ const LANGUE = [
     [
         "Cette application est en cours de développement.",
         "This application is in development"
+    ],
+    [
+        "Métadonnées des photos",
+        ""
+    ],
+    [
+        "Modification du nom des photos par leur date de création et nom d'importation.",
+        ""
+    ],
+    [
+        "Tout ceci en fonction du formats des photos et des données qu'elles contiennent.",
+        ""
+    ],
+    [
+        "Calcul de probabilité",
+        ""
+    ],
+    [
+        "Taux d'obtention d'un objet sur un jeux vidéo concernant ses stats parmis des",
+        ""
+    ],
+    [
+        "catégories de compétences bonus.",
+        ""
+    ],
+    [
+        "Génération de toutes les combinaisons possibiles et trie de celle-ci",
+        ""
+    ],
+    [
+        "en fonction de critère précis.",
+        ""
     ],
     [
         "Projets d'études",

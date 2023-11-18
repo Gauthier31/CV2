@@ -182,7 +182,6 @@ select {
 }
 
 p {
-    text-align: justify;
     margin: 0;
 }
 
@@ -255,6 +254,10 @@ a:hover::before {
 
 .ta-left {
     text-align: left;
+}
+
+.ta-justify {
+    text-align: justify;
 }
 
 .over-h {
@@ -663,6 +666,7 @@ h5 {
     margin-bottom: 50px;
     padding: 20px;
     position: relative;
+    text-align: justify;
 }
 
 .detail>* {
@@ -768,12 +772,34 @@ h5 {
     width: calc(100% / 4);
 }
 
-.langueImg {
+.langueImg,
+.langueInfo {
     width: 13dvw;
     max-width: 110px;
     height: 13dvw;
     max-height: 110px;
     border-radius: 50%;
+    position: absolute;
+}
+
+.langueInfo {
+    background-color: rgb(255 255 255 / 0%);
+    color: rgb(255 255 255 / 0%);
+    position: relative;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.langueInfo>p {
+    width: 100%;
+    font-size: 14px;
+}
+
+.langueInfo:hover {
+    background-color: rgb(255 255 255 / 75%);
+    color: black;
 }
 
 .langueTxt {
@@ -891,7 +917,7 @@ h5 {
 }
 
 .cardProjRow {
-    width: calc(100% / 2);
+    width: calc(100% / 2.5);
 }
 
 .cardProj {
@@ -906,9 +932,8 @@ h5 {
 }
 
 .cardProj:hover {
-    margin: 0px 5px 0 5px;
-    height: 210px;
-    box-shadow: 5px -5px 10px 2px rgb(0 0 0 / 0.2);
+    margin: 0 10px 5px 10px;
+    box-shadow: 5px -5px 10px 3px rgb(0 0 0 / 0.2);
 }
 
 .cardProj>* {
