@@ -200,7 +200,8 @@ a {
 }
 
 a::before,
-.surligne::before {
+.surligne::before,
+.surligneNav {
     content: '';
     position: absolute;
     width: 100%;
@@ -224,8 +225,8 @@ a::before,
     background-color: var(--jaune);
 }
 
-#bgBleu a::before,
-#bgBleu *::selection,
+.bg2 a::before,
+.bg2 *::selection,
 .blanc a::before {
     background-color: var(--noir);
 }
@@ -308,7 +309,8 @@ a:hover::before {
 :root {
     --blanc: white;
     /* 0b0e13 */
-    --bleu: #2C3250;
+    --bleu: #2c3250;
+    /*--bleu: #000000;*/
     --noir: #0b0e13;
     --gris_fonce: #161b22;
     --gris_clair: #30363d;
@@ -326,20 +328,31 @@ a:hover::before {
     --bleu_GauMode: #c5e6fa;
 }
 
-.bgBleu {
-    background-color: var(--bleu);
-    color: var(--blanc);
-    width: 100%;
-    padding: 5px calc(100% / 12 * 1);
-    padding-bottom: 0;
-}
-
-.bgBlanc {
+.bg1 {
     background-color: var(--blanc);
     color: var(--noir);
-    width: 100%;
+}
+
+.bg2 {
+    background-color: var(--bleu);
+    color: var(--blanc);
+}
+
+.bg2 .h2 {
+    border-color: var(--blanc);
+}
+
+.bg2 .line {
+    background-color: var(--blanc);
+}
+
+#sec1,
+#sec2,
+#sec3 {
     padding: 5px calc(100% / 12 * 1);
+    width: 100%;
     padding-bottom: 0;
+    transition: background-color 0.5s;
 }
 
 .noir,
@@ -366,7 +379,7 @@ a:hover::before {
     font-size: 1.5rem;
     font-weight: bold;
     text-transform: uppercase;
-    border-bottom: 3px solid var(--blanc);
+    border-bottom: 3px solid var(--noir);
     margin-bottom: 50px;
 }
 
@@ -409,19 +422,19 @@ a:hover::before {
 }
 
 .anim.leftAnim {
-    transition: left 1s ease-in-out 0.5s, opacity 1s linear 0.5s !important;
+    transition: left 1s ease-in-out 0.3s, opacity 1s linear 0.3s !important;
     left: 0 !important;
     opacity: 1 !important;
 }
 
 .anim.rightAnim {
-    transition: right 1s ease-in-out 0.5s, opacity 1s linear 0.5s !important;
+    transition: right 1s ease-in-out 0.3s, opacity 1s linear 0.3s !important;
     right: 0 !important;
     opacity: 1 !important;
 }
 
 .anim.bottomAnim {
-    transition: transform 1s ease-in-out 0.5s, opacity 1s linear 0.5s !important;
+    transition: transform 1s ease-in-out, opacity 1s linear !important;
     transform: translateY(0) !important;
     opacity: 1 !important;
 }
@@ -631,6 +644,7 @@ a:hover::before {
     color: var(--noir);
     padding: 10px 15px;
     width: 100%;
+    border: 1px solid var(--noir);
 }
 
 #terminal {
@@ -668,6 +682,7 @@ a:hover::before {
     padding: 15px 20px;
     position: relative;
     text-align: justify;
+    color: var(--blanc);
 }
 
 .detail>* {
@@ -682,12 +697,8 @@ a:hover::before {
     text-align: start;
 }
 
-.detailTxt {
-    padding: 20px 0;
-}
-
 .txtBlancSecond {
-    color: rgba(255, 255, 255, 0.8)
+    color: rgba(255, 255, 255, 0.6)
 }
 
 .label {
@@ -799,8 +810,8 @@ a:hover::before {
 }
 
 .langueInfo:hover {
-    background-color: rgb(255 255 255 / 75%);
-    color: black;
+    background-color: rgb(44 50 80 / 75%);
+    color: white;
 }
 
 .langueTxt {
@@ -821,7 +832,7 @@ a:hover::before {
 .line {
     flex: 1;
     height: 1px;
-    background-color: #000;
+    background-color: var(--noir);
     margin: 0 10px;
 }
 
@@ -1045,8 +1056,8 @@ footer>hr {
         display: none;
     }
 
-    .bgBleu,
-    .bgBlanc {
+    .bg2,
+    .bg1 {
         padding: 1px calc(100% / 12 * 0.5);
     }
 }

@@ -33,8 +33,8 @@ var positionLeft = pointeur.getBoundingClientRect().left + window.scrollX + ajus
 introLoad();
 etiquette();
 afficherTailleBloc();
-testFonctionPerformance();
-actualisationLangue();
+//testFonctionPerformance();
+//actualisationLangue();
 
 function redifineVariable() {
     pourcentageTxt = document.getElementById("pourcentageTxt");

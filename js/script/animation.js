@@ -27,7 +27,7 @@ function reveal() {
         var elementTop = reveals_10[i].getBoundingClientRect().top;
 
         // Dans l'écran
-        if (elementTop < windowHeight * 1.05) {
+        if (elementTop < windowHeight) {
             reveals_10[i].classList.add("anim");
 
             // Au dessus de l'écran
@@ -48,9 +48,9 @@ function reveal() {
         var elementTop = reveals_color[i].getBoundingClientRect().top;
 
         // 80% de l'écran
-        if (elementTop < windowHeight * 0.65) {
-            add(reveals_color[i].id, ANIMATION_ADD_OUT_TOP_8);
-            remove(reveals_color[i].id, ANIMATION_REMOVE_OUT_TOP_8);
+        if (elementTop < windowHeight * 0.45) {
+            add(reveals_color[i].id, ANIMATION_ADD_OUT_TOP_6);
+            remove(reveals_color[i].id, ANIMATION_REMOVE_OUT_TOP_6);
 
             // Au dessus de l'écran
         } if (elementTop < 0) {
@@ -64,36 +64,39 @@ window.addEventListener("scroll", reveal);
 
 // Ajoute quand il sort au dessus
 const ANIMATION_ADD_OUT_TOP = {
-    "bgBleu": [
-        ["animNav", "blanc"]
-    ]
 };
 // Enleve quand il sort au dessus
 const ANIMATION_REMOVE_OUT_TOP = {
-    "aPropos": [
-        ["animNav", "blanc"]
-    ],
-    "bgBlanc2": [
-        ["animNav", "blanc"]
-    ]
 };
 
 // Ajoute quand il sort au dessus
-const ANIMATION_ADD_OUT_TOP_8 = {
-    "bgBleu": [
+const ANIMATION_ADD_OUT_TOP_6 = {
+    "sec2": [
+        ["animNav", "blanc"],
         ["AnimInfoGauche", "blanc"],
-        ["AnimInfoDroite", "blanc"]
+        ["AnimInfoDroite", "blanc"],
+        ["sec1", "bg2"],
+        ["sec2", "bg2"],
+        ["sec3", "bg2"]
     ]
 };
 // Enleve quand il sort au dessus
-const ANIMATION_REMOVE_OUT_TOP_8 = {
+const ANIMATION_REMOVE_OUT_TOP_6 = {
     "aPropos": [
+        ["animNav", "blanc"],
         ["AnimInfoGauche", "blanc"],
-        ["AnimInfoDroite", "blanc"]
+        ["AnimInfoDroite", "blanc"],
+        ["sec1", "bg2"],
+        ["sec2", "bg2"],
+        ["sec3", "bg2"]
     ],
-    "bgBlanc2": [
+    "sec3": [
+        ["animNav", "blanc"],
         ["AnimInfoGauche", "blanc"],
-        ["AnimInfoDroite", "blanc"]
+        ["AnimInfoDroite", "blanc"],
+        ["sec1", "bg2"],
+        ["sec2", "bg2"],
+        ["sec3", "bg2"]
     ]
 };
 
