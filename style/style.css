@@ -59,6 +59,8 @@ nav ul li {
     width: 350px;
 }
 
+
+
 /* ------------------------------------------- */
 
 #aPropos {
@@ -342,8 +344,8 @@ a:hover::before {
 
 .noir,
 .noir * {
-    color: var(--noir);
-    border-color: var(--noir);
+    color: var(--noir) !important;
+    border-color: var(--noir) !important;
 }
 
 .blanc,
@@ -355,35 +357,34 @@ a:hover::before {
 /* ---------------- Texte ------------------ */
 
 .h1 {
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: bold;
-    margin: 0;
     margin-bottom: 5px;
 }
 
-h2 {
+.h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
     text-transform: uppercase;
     border-bottom: 3px solid var(--blanc);
     margin-bottom: 50px;
-    margin-top: 0;
 }
 
-h3 {
+.h3 {
+    font-size: 1.15rem;
     text-align: center;
     text-decoration: underline;
-    margin-top: 0;
-    margin-bottom: 0;
 }
 
-h4 {
+.h4 {
     text-align: center;
     text-decoration: underline;
-    margin-top: 0;
+    margin-bottom: 10px;
 }
 
-h5 {
+.h5 {
     font-size: 40px;
-    margin: 0;
+    font-weight: 900;
     margin-bottom: 20px;
 }
 
@@ -664,7 +665,7 @@ h5 {
     background-color: var(--gris_fonce);
     border-radius: 15px;
     margin-bottom: 50px;
-    padding: 20px;
+    padding: 15px 20px;
     position: relative;
     text-align: justify;
 }
@@ -813,6 +814,10 @@ h5 {
 
 /* ------------ Projet ------------ */
 
+#projetTitre {
+    margin-bottom: 25px;
+}
+
 .line {
     flex: 1;
     height: 1px;
@@ -822,7 +827,7 @@ h5 {
 
 #projPerso,
 #projEtude {
-    margin: 10px;
+    margin: 10px 0;
     text-decoration: none;
 }
 
@@ -833,12 +838,10 @@ h5 {
 
 #GauMuscuTitre {
     color: var(--orange_GauMuscu);
-    font-weight: 900;
 }
 
 #GauModeTitre {
     color: var(--bleu_GauMode);
-    font-weight: 900;
 }
 
 .centerImg {
@@ -922,22 +925,17 @@ h5 {
 
 .cardProj {
     height: 200px;
-    padding: 10px;
+    padding: 10px 15px;
     margin: 5px 10px 0 10px;
     border-radius: 12px;
     border: 1px solid black;
-    box-shadow: 2px -2px 10px 0px rgb(0 0 0 / 0.2);
-    display: flex;
+    box-shadow: 2px 2px 10px 0px rgb(0 0 0 / 0.2);
     transition: box-shadow 0.2s, margin 0.2s, height 0.2s;
 }
 
 .cardProj:hover {
     margin: 0 10px 5px 10px;
-    box-shadow: 5px -5px 10px 3px rgb(0 0 0 / 0.2);
-}
-
-.cardProj>* {
-    height: auto;
+    box-shadow: 5px 5px 10px 3px rgb(0 0 0 / 0.2);
 }
 
 
@@ -994,6 +992,7 @@ h5 {
 
 .etiquette {
     width: fit-content;
+    min-width: 75px;
     padding: 10px;
     height: 35px;
     position: absolute;

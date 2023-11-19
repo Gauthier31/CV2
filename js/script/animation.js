@@ -27,7 +27,7 @@ function reveal() {
         var elementTop = reveals_10[i].getBoundingClientRect().top;
 
         // Dans l'écran
-        if (elementTop < windowHeight) {
+        if (elementTop < windowHeight * 1.05) {
             reveals_10[i].classList.add("anim");
 
             // Au dessus de l'écran
