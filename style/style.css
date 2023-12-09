@@ -9,6 +9,7 @@
 body {
     overflow-x: hidden;
     overflow-y: scroll;
+    color: var(--bleu);
     margin: 0;
 }
 
@@ -30,6 +31,7 @@ nav {
 
     padding: 0px 20px;
     backdrop-filter: blur(3px);
+    font-size: 16px;
 }
 
 nav ul {
@@ -43,7 +45,7 @@ nav ul li {
 }
 
 .navNom {
-    height: 18px;
+    font-family: monospace;
 }
 
 .navInfo {
@@ -59,10 +61,12 @@ nav ul li {
     width: 350px;
 }
 
+
+
 /* ------------------------------------------- */
 
 #aPropos {
-    height: 90dvh;
+    height: 92dvh;
 }
 
 /* -------------- Tools --------------- */
@@ -70,7 +74,7 @@ nav ul li {
 select {
     border: none;
     font-family: monospace;
-    font-size: 13px;
+    font-size: 16px;
     background-color: transparent;
 }
 
@@ -181,10 +185,6 @@ select {
     position: absolute;
 }
 
-p {
-    text-align: justify;
-    margin: 0;
-}
 
 .txtGauche {
     text-align: end;
@@ -199,7 +199,8 @@ a {
 }
 
 a::before,
-.surligne::before {
+.surligne::before,
+.surligneNav {
     content: '';
     position: absolute;
     width: 100%;
@@ -223,8 +224,8 @@ a::before,
     background-color: var(--jaune);
 }
 
-#bgBleu a::before,
-#bgBleu *::selection,
+.bg2 a::before,
+.bg2 *::selection,
 .blanc a::before {
     background-color: var(--noir);
 }
@@ -232,6 +233,14 @@ a::before,
 a:hover::before {
     transform-origin: left;
     transform: scaleX(1);
+}
+
+.active::before {
+    transform: scaleX(1);
+}
+
+#nom::before {
+    height: 25px !important;
 }
 
 .nom::before {
@@ -246,7 +255,7 @@ a:hover::before {
 
 .blanc>ul>li>a:hover::before,
 .blanc>ul>li>a::before {
-    background-color: var(--gris_fonce) !important;
+    background-color: var(--grisFonce) !important;
 }
 
 .ai-center {
@@ -255,6 +264,10 @@ a:hover::before {
 
 .ta-left {
     text-align: left;
+}
+
+.ta-justify {
+    text-align: justify;
 }
 
 .over-h {
@@ -299,48 +312,68 @@ a:hover::before {
     margin-bottom: 400px !important;
 }
 
+
 /* ---------------- Couleur ------------------ */
 :root {
     --blanc: white;
-    /* 0b0e13 */
-    --bleu: #2C3250;
+
     --noir: #0b0e13;
-    --gris_fonce: #161b22;
-    --gris_clair: #30363d;
-    --girs_clair_hover: #484f58;
-    --noir_bordure: #24292f;
-    --vert_neon: #7ee787;
-    --vert_neon2: #427f52;
-    --rose_neon: #c597fd;
-    --violet_neon: #6639ba;
-    --bleu_neon: #a5d6ff;
-    --bleu_fonce_neon: #2f81f7;
-    /* Surligne */
+    --noir2: #24292f;
+
+    --bleu: #2c3250;
+    /* GauMode */
+    --bleuClair: #c5e6fa;
+
+    --grisFonce: #161b22;
+    --grisClair: #30363d;
+    --girsClair2: #484f58;
+
     --jaune: #FFFF01;
-    --orange_GauMuscu: #ffc107;
-    --bleu_GauMode: #c5e6fa;
+
+    /* GauMuscu */
+    --orange: #ffc107;
+
+    /* Neon */
+    --neonBleuClair: #a5d6ff;
+    --neonBleuFonce: #2f81f7;
+    --neonRose: #c597fd;
+    --neonViolet: #6639ba;
+    --neonVertClair: #7ee787;
+    --neonVertFonce: #427f52;
 }
 
-.bgBleu {
+.bg2 {
+    /*
+    background: url("../image/Figma/ciel2.jpg");
+    background-size: 100vw auto;
+    */
+
     background-color: var(--bleu);
     color: var(--blanc);
-    width: 100%;
-    padding: 5px calc(100% / 12 * 1);
-    padding-bottom: 0;
+    border-radius: 50px;
+    box-shadow: 0px -15px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
-.bgBlanc {
+.bg2 .h2 {
+    border-color: var(--blanc);
+}
+
+.bg2 .line {
     background-color: var(--blanc);
-    color: var(--noir);
-    width: 100%;
-    padding: 5px calc(100% / 12 * 1);
-    padding-bottom: 0;
 }
 
-.noir,
-.noir * {
-    color: var(--noir);
-    border-color: var(--noir);
+#sec1 {
+    background-image: url("../image/Le Voyageur contemplant une mer de nuages.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#sec1,
+#sec2,
+#sec3 {
+    padding: 5px calc(100% / 12 * 1);
+    width: 100%;
+    padding-bottom: 0;
 }
 
 .blanc,
@@ -351,37 +384,54 @@ a:hover::before {
 
 /* ---------------- Texte ------------------ */
 
+/* 16px = 1rem */
+
 .h1 {
-    font-size: 20px;
+    font-size: 48px;
     font-weight: bold;
-    margin: 0;
     margin-bottom: 5px;
+    line-height: 70px;
 }
 
-h2 {
+.h2 {
+    font-size: 30px;
     text-transform: uppercase;
-    border-bottom: 3px solid var(--blanc);
+    border-bottom: 3px solid var(--bleu);
     margin-bottom: 50px;
-    margin-top: 0;
+    font-family: auto;
 }
 
-h3 {
+.h3 {
+    font-size: 24px;
     text-align: center;
     text-decoration: underline;
-    margin-top: 0;
-    margin-bottom: 0;
 }
 
-h4 {
+.h4 {
     text-align: center;
     text-decoration: underline;
-    margin-top: 0;
+    margin-bottom: 10px;
 }
 
-h5 {
-    font-size: 40px;
+p {
     margin: 0;
-    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.fsNav {
+    font-size: 16px;
+}
+
+.fsIntro {
+    font-size: 24px;
+}
+
+.fsFooter1 {
+    font-size: 14px
+}
+
+.fsFooter2 {
+    font-size: 10px
 }
 
 /* ---------- Animation ----------*/
@@ -405,19 +455,19 @@ h5 {
 }
 
 .anim.leftAnim {
-    transition: left 1s ease-in-out 0.5s, opacity 1s linear 0.5s !important;
+    transition: left 1s ease-in-out 0.3s, opacity 1s linear 0.3s !important;
     left: 0 !important;
     opacity: 1 !important;
 }
 
 .anim.rightAnim {
-    transition: right 1s ease-in-out 0.5s, opacity 1s linear 0.5s !important;
+    transition: right 1s ease-in-out 0.3s, opacity 1s linear 0.3s !important;
     right: 0 !important;
     opacity: 1 !important;
 }
 
 .anim.bottomAnim {
-    transition: transform 1s ease-in-out 0.5s, opacity 1s linear 0.5s !important;
+    transition: transform 1s ease-in-out, opacity 1s linear !important;
     transform: translateY(0) !important;
     opacity: 1 !important;
 }
@@ -426,16 +476,23 @@ h5 {
 
 .divPhoto {
     width: calc(100% / 12 * 4);
-    border: 3px solid var(--noir);
     max-height: -webkit-fill-available;
-    height: 35dvw;
+    display: flex;
+}
+
+.photo {
+    width: 250px;
+
+    display: flex;
+    transform: translate(0, 70px);
 }
 
 .divTxt {
-    width: calc(100% / 12 * 7);
-    font-size: 15px;
+    width: calc(100% / 12 * 8);
+    font-family: Inter;
     position: relative;
     backdrop-filter: blur(2px);
+    font-style: italic;
 }
 
 #pointeur {
@@ -463,9 +520,9 @@ h5 {
 }
 
 .interet {
-    padding: 0.5dvw 3dvw;
-    margin: 0.5dvw;
-    border: 1px solid var(--noir);
+    padding: 5px 20px;
+    margin: 0.5dvw 0;
+    border: 1px solid var(--bleu);
     border-radius: 100px;
     transition: box-shadow .5s ease-in-out;
 }
@@ -475,8 +532,8 @@ h5 {
 }
 
 .bloc {
-    padding-bottom: 50px;
     padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 /* ------------------------------------------- */
@@ -505,14 +562,14 @@ h5 {
 .vertical-ligne {
     height: 150px;
     width: 0px;
-    border-left: 3px solid var(--noir);
+    border-left: 3px solid var(--bleu);
     margin-top: 10px;
 }
 
 .reseau {
     width: 4dvw;
     height: 4dvw;
-    border: 1px solid var(--noir);
+    border: 1px solid var(--bleu);
     border-radius: 50%;
     margin-top: 10px;
     transition: box-shadow 1s ease-in-out;
@@ -540,7 +597,7 @@ h5 {
     min-height: 30px;
     max-width: 40px;
     max-height: 40px;
-    background-color: var(--gris_fonce);
+    background-color: var(--grisFonce);
     border-radius: 50%;
     margin: 0 auto;
 }
@@ -551,28 +608,6 @@ h5 {
     width: 0px;
     margin: 0 auto;
 }
-
-
-#rond1 {
-    top: 2.5dvw;
-    left: -3dvw;
-}
-
-#rond2 {
-    top: 7.5dvw;
-    left: 22dvw;
-}
-
-#rond3 {
-    top: 7dvw;
-    left: 42dvw;
-}
-
-#rond4 {
-    top: 0dvw;
-    left: 60dvw;
-}
-
 
 #AnimFormation {
     transition: height .5s ease-in-out;
@@ -591,6 +626,9 @@ h5 {
 }
 
 /* ----------- Formation -------- */
+#formation {
+    margin-top: 50px
+}
 
 .ProgInfo,
 .ProgInfo>div {
@@ -624,17 +662,19 @@ h5 {
 
 .terminalHead {
     background-color: var(--blanc);
-    color: var(--noir);
+    color: var(--bleu);
     padding: 10px 15px;
     width: 100%;
+    border: 1px solid var(--noir);
 }
 
 #terminal {
-    background-color: var(--gris_fonce);
+    background-color: var(--grisFonce);
     color: var(--blanc);
-    height: 225px;
+    height: 400px;
     overflow-y: auto;
     line-height: 15px;
+    font-size: 16px;
     margin-bottom: 20px;
 }
 
@@ -658,11 +698,13 @@ h5 {
 }
 
 .detail {
-    background-color: var(--gris_fonce);
+    background-color: var(--grisFonce);
     border-radius: 15px;
     margin-bottom: 50px;
-    padding: 20px;
+    padding: 15px 20px;
     position: relative;
+    text-align: justify;
+    color: var(--blanc);
 }
 
 .detail>* {
@@ -677,12 +719,8 @@ h5 {
     text-align: start;
 }
 
-.detailTxt {
-    padding: 20px 0;
-}
-
 .txtBlancSecond {
-    color: rgba(255, 255, 255, 0.8)
+    color: rgba(255, 255, 255, 0.6)
 }
 
 .label {
@@ -699,7 +737,7 @@ h5 {
 }
 
 .hrBlack {
-    border: 3px var(--gris_fonce) solid;
+    border: 3px var(--grisFonce) solid;
     height: 100%;
     width: 0;
     margin: 0 auto;
@@ -713,6 +751,7 @@ h5 {
     width: calc(100% / 6);
     padding: 10px;
     padding-bottom: 20px;
+    font-family: monospace;
 }
 
 .competenceImg {
@@ -743,15 +782,15 @@ h5 {
 }
 
 .bgDev {
-    background-color: var(--violet_neon);
+    background-color: var(--neonViolet);
 }
 
 .bgWeb {
-    background-color: var(--bleu_fonce_neon);
+    background-color: var(--neonBleuFonce);
 }
 
 .bgBD {
-    background-color: var(--vert_neon2);
+    background-color: var(--neonVertFonce);
 }
 
 .bgDevHover.bgDev,
@@ -768,12 +807,34 @@ h5 {
     width: calc(100% / 4);
 }
 
-.langueImg {
+.langueImg,
+.langueInfo {
     width: 13dvw;
     max-width: 110px;
     height: 13dvw;
     max-height: 110px;
     border-radius: 50%;
+    position: absolute;
+}
+
+.langueInfo {
+    background-color: rgb(255 255 255 / 0%);
+    color: rgb(255 255 255 / 0%);
+    position: relative;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.langueInfo>p {
+    width: 100%;
+    font-size: 14px;
+}
+
+.langueInfo:hover {
+    background-color: rgb(44 50 80 / 75%);
+    color: white;
 }
 
 .langueTxt {
@@ -787,16 +848,20 @@ h5 {
 
 /* ------------ Projet ------------ */
 
+#projetTitre {
+    margin-bottom: 25px;
+}
+
 .line {
     flex: 1;
     height: 1px;
-    background-color: #000;
+    background-color: var(--bleu);
     margin: 0 10px;
 }
 
 #projPerso,
 #projEtude {
-    margin: 10px;
+    margin: 10px 0;
     text-decoration: none;
 }
 
@@ -806,13 +871,11 @@ h5 {
 }
 
 #GauMuscuTitre {
-    color: var(--orange_GauMuscu);
-    font-weight: 900;
+    color: var(--orange);
 }
 
 #GauModeTitre {
-    color: var(--bleu_GauMode);
-    font-weight: 900;
+    color: var(--bleuClair);
 }
 
 .centerImg {
@@ -890,10 +953,23 @@ h5 {
     box-shadow: 10px 0px 10px rgb(0 0 0 / 0.2);
 }
 
+.cardProjRow {
+    width: calc(100% / 2.5);
+}
+
 .cardProj {
-    width: 100% / 3;
+    height: 200px;
+    padding: 10px 15px;
+    margin: 5px 10px 0 10px;
     border-radius: 12px;
     border: 1px solid black;
+    box-shadow: 2px 2px 10px 0px rgb(0 0 0 / 0.2);
+    transition: box-shadow 0.2s, margin 0.2s, height 0.2s;
+}
+
+.cardProj:hover {
+    margin: 0 10px 5px 10px;
+    box-shadow: 5px 5px 10px 3px rgb(0 0 0 / 0.2);
 }
 
 
@@ -950,6 +1026,7 @@ h5 {
 
 .etiquette {
     width: fit-content;
+    min-width: 75px;
     padding: 10px;
     height: 35px;
     position: absolute;
@@ -994,19 +1071,6 @@ footer>hr {
     margin-top: 0;
 }
 
-/******************************************/
-
-/* si taille de l'écran inférieur a 720px */
-@media (max-width: 720px) {
-    .vertical-div {
-        display: none;
-    }
-
-    .bgBleu,
-    .bgBlanc {
-        padding: 1px calc(100% / 12 * 0.5);
-    }
-}
 
 /* ---------- Scroll Bar --------- */
 /* Apply custom scrollbar to a specific container with the class "*" */
@@ -1033,3 +1097,36 @@ footer>hr {
 .projTexte::-webkit-scrollbar-thumb:hover {
     background-color: #f6c906;
 }
+
+
+/******************************************/
+
+/* xl */
+@media (max-width: 1200px) {
+    .h1 {
+        font-size: 40px;
+    }
+
+    .fsIntro {
+        font-size: 22px;
+    }
+}
+
+/* lg  */
+@media (max-width: 992px) {}
+
+/* md */
+/* si taille de l'écran inférieur a 768px */
+@media (max-width: 768px) {
+    .vertical-div {
+        display: none;
+    }
+
+    .bg2,
+    .bg1 {
+        padding: 1px calc(100% / 12 * 0.5);
+    }
+}
+
+/* sm */
+@media (max-width: 556px) {}

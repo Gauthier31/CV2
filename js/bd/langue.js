@@ -32,10 +32,6 @@ const LANGUE = [
         "Hello, I am"
     ],
     [
-        "Gauthier BOË--GUIROLA",
-        "Gauthier BOË-GUIROLA"
-    ],
-    [
         "Étudiant en 1ère année de Master MIAGE option IDA à",
         "Student in Master's degree MIAGE option IDA at"
     ],
@@ -52,15 +48,7 @@ const LANGUE = [
         "as a Data Engineer"
     ],
     [
-        "Le développement des domaines informatiques et l'objectif d'anticiper leurs futures synergies",
-        "The development of IT fields and the objective of anticipating their future synergies"
-    ],
-    [
-        "suscitent un fort intérêt pour moi.",
-        "arouse a strong interest for me"
-    ],
-    [
-        "De plus, travailler sur les nouvelles technologies dans des secteurs tels que :",
+        "Travailler sur les nouvelles technologies dans des secteurs tels que :",
         "Moreover, work on the new technologies in the sector such as :"
     ],
     [
@@ -86,10 +74,6 @@ const LANGUE = [
     [
         "sont en adéquation avec mon cursus universitaire et mon ambition professionnelle.",
         "are in adequacy whit my university course and my professional ambition"
-    ],
-    [
-        "Développement",
-        "Development"
     ],
     [
         "Lecture",
@@ -140,8 +124,8 @@ const LANGUE = [
         "Data Engineer"
     ],
     [
-        "Sopra Steria en alternance, Colomier, 31770",
-        "Sopra Steria in sandiwch course, Colomier, 31770"
+        "Sopra Steria en alternance, Colomiers, 31770",
+        "Sopra Steria in sandiwch course, Colomiers, 31770"
     ],
     [
         "Externe à Airbus, Blagnac, 31500",
@@ -156,12 +140,16 @@ const LANGUE = [
         "#Database"
     ],
     [
+        "#Agilité",
+        "#Agility"
+    ],
+    [
         "Développeur Full Stack",
         "Full Stack Developer"
     ],
     [
-        "Sopra Steria en alternance, Colomier, 31770",
-        "Sopra Steria in sandwich courses, Colomier 31770"
+        "Sopra Steria en alternance, Colomiers, 31770",
+        "Sopra Steria in sandwich courses, Colomiers, 31770"
     ],
     [
         "Développement d'une application pour gérer et assister les techniciens d'Orange",
@@ -396,6 +384,38 @@ const LANGUE = [
         "This application is in development"
     ],
     [
+        "Métadonnées des photos",
+        ""
+    ],
+    [
+        "Modification du nom des photos par leur date de création et nom d'importation.",
+        ""
+    ],
+    [
+        "Tout ceci en fonction du formats des photos et des données qu'elles contiennent.",
+        ""
+    ],
+    [
+        "Calcul de probabilité",
+        ""
+    ],
+    [
+        "Taux d'obtention d'un objet sur un jeux vidéo concernant ses stats parmis des",
+        ""
+    ],
+    [
+        "catégories de compétences bonus.",
+        ""
+    ],
+    [
+        "Génération de toutes les combinaisons possibiles et trie de celle-ci",
+        ""
+    ],
+    [
+        "en fonction de critère précis.",
+        ""
+    ],
+    [
         "Projets d'études",
         "School projects"
     ],
@@ -535,6 +555,7 @@ const LANGUE = [
 
 const NO_LANGUE = [
     "Gauthier BOË--GUIROLA",
+    "Gauthier BOË",
     "boegauthier@gmail.com",
     "Data",
     "Volley-Ball",

@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////// Lancement automatique /////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
-
+/*
 document.onmousemove = function () {
 
     x1 = (positionLeft / window.innerWidth - 0.5) * 2;
@@ -45,15 +45,16 @@ document.onmousemove = function () {
     // console.log("Centre image : ", Math.round(positionTop, 0), Math.round(positionLeft, 0))
     // console.log("Degre :", angleDegres)
 }
+*/
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
 function introLoad() {
 
     const INTRO = [
-        "Bonjour, je suis Gauthier BOË--GUIROLA,",
+        "Bonjour, je suis Gauthier BOË,",
         "Étudiant en 1ère année de Master MIAGE option IDA à l’Université Toulouse Capitole en alternance dans l’ESN SOPRA STERIA en tant que Data Ingénieur.",
-        "Le développement des domaines informatiques et l'objectif d'anticiper leurs futures synergies, suscitent un fort intérêt pour moi.",
+        //"Le développement des domaines informatiques et l'objectif d'anticiper leurs futures synergies, suscitent un fort intérêt pour moi.",
         //"De plus, travailler sur les nouvelles technologies dans des secteurs tels que : la conception et/ou le développement Web, logiciels ou encore dans le Conseil, la Cybersécurité, la Data sont en adéquation avec mon cursus universitaire et mon ambition professionnelle.",
     ]
 
@@ -84,7 +85,7 @@ function introLoad() {
                     introPhrase++
                     introLettre = 0
                     if (introPhrase < INTRO.length) {
-                        intro.innerHTML += "<br/><br/>"
+                        intro.innerHTML += "<br/>"
                     }
                     setTimeout(TypeTexte2, introSpeed);
                 }
@@ -126,11 +127,11 @@ function introLoad() {
                 introTransformation += 1;
                 break;
             case 5:
-                intro.innerHTML = intro.innerHTML.replace("</span> BOË--GUIROLA,", " BOË--GUIROLA,</span>");
+                intro.innerHTML = intro.innerHTML.replace("</span> BOË,", " BOË,</span>");
                 introTransformation += 1;
                 break;
             case 6:
-                intro.innerHTML = intro.innerHTML.replace("Gauthier BOË--GUIROLA,", "<a id='nom'>Gauthier BOË--GUIROLA,</a>");
+                intro.innerHTML = intro.innerHTML.replace("Gauthier BOË,", "<a id='nom'>Gauthier BOË,</a>");
                 introTransformation += 1;
                 break;
             case 7:

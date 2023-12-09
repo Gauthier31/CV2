@@ -230,27 +230,7 @@ function changementLangue(obj) {
         }
     });
 
-    terminalTextAvant = "";
-    terminalText = terminalElement.innerHTML;
-    for (i = 0; i < FORMATION.length; i++) {
-        for (j = 0; j < FORMATION[i].length - 1; j++) {
-            index = terminalText.indexOf(FORMATION[i][j][idLangue]);
-
-            if (index != -1) {
-                terminalText = terminalText.replace(FORMATION[i][j][idLangue], FORMATION[i][j][obj.value]);
-
-                indexCoupe = index + FORMATION[i][j][obj.value].length
-
-                terminalTextAvant += terminalText.substring(0, indexCoupe);
-                terminalText = terminalText.substring(indexCoupe);
-            } else {
-                //console.log(FORMATION[i][j][idLangue]);
-            }
-        }
-    }
-
     document.body.innerHTML = bodyTextAvant + bodyText;
-    terminalElement.innerHTML = terminalTextAvant + terminalText;
     idLangue = obj.value;
 
     redifineVariable();
@@ -260,24 +240,26 @@ function changementLangue(obj) {
             `<option value='0' selected>Français</option>
             <option value='1'>Anglais</option>`;
 
-        // terminalElement.innerHTML =
-        //     `GauCV [version 68.2]
-        //     <br/>(c) Gau Corporation. Tous droits réservés.`;
+        terminalElement.innerHTML =
+            `GauCV [version 68.2]
+            <br/>(c) Gau Corporation. Tous droits réservés.`;
 
     } else if (idLangue == 1) {
         document.getElementById("langueSelect").innerHTML =
             `<option value='0'>French</option>
             <option value='1' selected>English</option>`;
 
-        // terminalElement.innerHTML =
-        //     `GauCV [version 68.2]
-        //     <br/>(c) Gau Corporation. All right reserved.`;
+        terminalElement.innerHTML =
+            `GauCV [version 68.2]
+            <br/>(c) Gau Corporation. All right reserved.`;
     }
 
 }
 
 function actualisationLangue() {
     tab = document.body.textContent.split("  ")
+
+    LANGUE_COPIE = LANGUE
 
     tableauFiltre = filtreTab(tab);
     //console.log(tableauFiltre)
@@ -286,18 +268,19 @@ function actualisationLangue() {
         find1 = false
         find2 = false
 
-        for (j = 0; j < LANGUE.length && !find1; j++) {
-            if (tableauFiltre[i].includes(LANGUE[j][0])) {
+        for (j = 0; j < LANGUE_COPIE.length && !find1; j++) {
+            if (tableauFiltre[i].includes(LANGUE_COPIE[j][0])) {
                 find1 = true
-                //console.log("L :", LANGUE[j][0], "==", tableauFiltre[i])
+                //console.log("L :", LANGUE_COPIE[j][0], "==", tableauFiltre[i])
+                delete LANGUE_COPIE[j][0];
             } else {
-                //console.log("L :", LANGUE[j][0], "!=", tableauFiltre[i])
+                //console.log("L :", LANGUE_COPIE[j][0], "!=", tableauFiltre[i])
             }
         }
 
         if (find1) {
             j -= 1;
-            //console.log("L 2 :", LANGUE[j][0], "==", tableauFiltre[i])
+            //console.log("L 2 :", LANGUE_COPIE[j][0], "==", tableauFiltre[i])
 
         } else {
 

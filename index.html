@@ -5,28 +5,28 @@
     <meta charset="utf-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" lang="fr" content="Gauthier GUIROLA--BOË">
+    <meta name="author" lang="fr" content="Gauthier BOË--GUIROLA">
 
-    <title>Gauthier GUIROLA--BOË</title>
+    <title>Gauthier BOË--GUIROLA</title>
 
     <link href="style/style.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
+<body id="body">
 
     <nav id="animNav">
-        <a onmouseover="navInfoAdd()" onmouseout="navInfoRemove()" class="navNom" href="#aPropos">
+        <a onmouseover="navInfoAdd()" onmouseout="navInfoRemove()" class="navNom" href="#sec1">
 
-            <p>Gauthier BOË--GUIROLA</p>
             <code>
-                <p class="navInfo" id="navInfoBloc">Etudiant Master MIAGE option IDA</p>
+            <p class="fsNav">Gauthier BOË--GUIROLA</p>
+                <p class="navInfo fsNav" id="navInfoBloc">Etudiant Master MIAGE option IDA</p>
             </code>
         </a>
 
         <code>
-            <ul id="navListe">
+            <ul id="navListe" class="fsNav">
                 <li><a id="navFormation" href="#formation">Formations</a></li>
                 <li><a id="navExpPro" href="#expPro">Expériences</a></li>
                 <li><a id="navCompetence" href="#competence">Compétences</a></li>
@@ -46,51 +46,50 @@
         <div class="vertical-ligne"></div>
     </div>
 
+    <!--
     <div id="pointeurBloc">
         <img src="image/souris.png" id="pointeur" />
     </div>
+    -->
 
-    <section class="bgBlanc">
+    <section class="" id="sec1">
         <!-- Présentation -->
         <section class="row jc-center animationColor" id="aPropos">
 
-            <div class="divPhoto bottom"></div>
-            <div class="col-1"></div>
+            <!--
+            <div class="divPhoto bottom">
+                <img class="photo" src="image/PP.png" />
+            </div>
+            -->
 
-            <div class="divTxt bottom">
+            <div class="divTxt bottom ta-justify">
 
-                <p id="introCache">
+                <p id="introCache" class="fsIntro">
                     <span class="h1">
                         Bonjour, je suis
                         <a>
-                            Gauthier BOË--GUIROLA,
+                            Gauthier BOË,
                         </a>
                     </span>
 
-                    <br />
                     <br />
 
                     Étudiant en 1ère année de Master MIAGE option IDA à
                     <a href="#"><b>l'Université Toulouse Capitole</b></a> en alternance dans l'ESN
                     <a href="#"><b>SOPRA STERIA</b></a> en tant que Data Ingénieur.
-
-                    <br />
-                    <br />
-
-                    Le développement des domaines informatiques et l'objectif d'anticiper leurs futures synergies,
-                    suscitent un fort intérêt pour moi.
                 </p>
 
-                <p id="intro"></p>
+                <p id="intro" class="fsIntro">
 
+                </p>
                 <br />
 
                 <i onclick="introInteret(this)" class="fa fa-chevron-up"></i>
 
-                <div class="over-h" id="introInteretBloc">
+                <div class="over-h mb20" id="introInteretBloc">
 
-                    <p>
-                        De plus, travailler sur les nouvelles technologies dans des secteurs tels que :
+                    <p class="fsIntro">
+                        Travailler sur les nouvelles technologies dans des secteurs tels que :
                         la conception et/ou le développement Web, logiciels ou encore dans le
                         <a href='#'><b>Conseil</b></a>, la
                         <a href='#'><b>Cybersécurité</b></a>, la
@@ -100,11 +99,14 @@
 
                     <br />
 
-                    <div class="row jc-evenly">
-                        <div class="interet">Développement</div>
+                    <div class="row jc-between fsIntro">
+                        <div class="interet">Art</div>
                         <div class="interet">Volley-Ball</div>
                         <div class="interet">Piano</div>
                         <div class="interet">Lecture</div>
+                    </div>
+
+                    <div class="row jc-between fsIntro">
                         <div class="interet">Musculation</div>
                         <div class="interet">Film</div>
                         <div class="interet">Dessin</div>
@@ -115,42 +117,41 @@
         </section>
     </section>
 
-    <section class="bgBleu animationColor" id="bgBleu">
+    <section class="animationColor bg2" id="sec2">
+        <code>
 
-        <!-- Formations -->
-        <section class="bloc " id="formation">
-            <h2>formations</h2>
+            <!-- Formations -->
+            <section class="bloc " id="formation">
+                <p class="h2">formations</p>
 
-            <div class="ProgInfo">
-                <i onclick="progression(-1)" id="progLeft" class="fa fa-chevron-left"></i>
-                <i onclick="progression(1)" id="progRight" class="fa fa-chevron-right"></i>
-            </div>
-
-            <code>
-                <div class="terminalHead">Invite de commande</div>
-                <div id="terminal">
-                    GauCV [version 68.2]
-                    <br/>(c) Gau Corporation. Tous droits réservés.                      
+                <div class="ProgInfo">
+                    <i onclick="progression(-1)" id="progLeft" class="fa fa-chevron-left"></i>
+                    <i onclick="progression(1)" id="progRight" class="fa fa-chevron-right"></i>
                 </div>
-            </code>
 
-            <div class="ProgInfo jc-between">
-                <p></p>
-                <p id="progEncours">Progression en cours ...</p>
-                <p id="pourcentageTxt">0%</p>
-            </div>
-            <div class="barreProg">
-                <div id="progression"></div>
-            </div>
-        </section>
+                    <div class="terminalHead">Invite de commande</div>
+                    <div id="terminal">
+                        GauCV [version 68.2]
+                        <br/>(c) Gau Corporation. Tous droits réservés.                      
+                    </div>
 
-        <!-- ExpPro -->
-        <section class="bloc" id="expPro">
-            <h2>Expériences professionnelles</h2>
+                <div class="ProgInfo jc-between">
+                    <p></p>
+                    <p id="progEncours">Progression en cours ...</p>
+                    <p id="pourcentageTxt">0%</p>
+                </div>
+                <div class="barreProg">
+                    <div id="progression"></div>
+                </div>
+            </section>
 
-            <div class="row jc-center">
-                <div class="expPro">
-                    <p class="date txtGauche"><code>Septembre 2023 - En cours</code></p>
+            <!-- ExpPro -->
+            <section class="bloc" id="expPro">
+                <p class="h2">Expériences professionnelles</p>
+
+                <div class="row jc-center">
+                    <div class="expPro">
+                        <p class="date txtGauche">Septembre 2023 - En cours</p>
                 </div>
 
                 <div class="exProligne">
@@ -159,299 +160,310 @@
                 </div>
 
                 <div class="expPro detail animation_9 rightAnim">
-                    <code>
-                        <h3 class="expTitre">Data Ingénieur</h3>
-                        <p class="txtBlancSecond">Sopra Steria en alternance, Colomier, 31770</p>
-                        <p class="txtBlancSecond mb20">Externe à Airbus, Blagnac, 31500</p>
-                        <p>Gestion des données des pièces d'avions</p>
-                        <p class="txtBlancSecond mt20 ta-left">
-                            <a href="#" class="label">#Base de données</a>
-                            <a href="#" class="label">#SQL</a>
-                            <a href="#" class="label">#Python</a>
-                            <a href="#" class="label">#Javascript</a>
-                            <a href="#" class="label">#PySpark</a>
-                            <a href="#" class="label">#Slate</a>
-                            <a href="#" class="label">#Foundry</a>
-                            <a href="#" class="label">#Agilité</a>
-                        </p>
-                    </code>
+                                <p class="h3 expTitre">Data Ingénieur</p>
+                                <p class="txtBlancSecond">Sopra Steria en alternance, Colomiers, 31770</p>
+                                <p class="txtBlancSecond mb20">Externe à Airbus, Blagnac, 31500</p>
+                                <p>Gestion des données des pièces d'avions</p>
+                                <p class="txtBlancSecond mt20 ta-left">
+                                    <a href="#" class="label">#Base de données</a>
+                                    <a href="#" class="label">#SQL</a>
+                                    <a href="#" class="label">#Python</a>
+                                    <a href="#" class="label">#Javascript</a>
+                                    <a href="#" class="label">#PySpark</a>
+                                    <a href="#" class="label">#Slate</a>
+                                    <a href="#" class="label">#Foundry</a>
+                                    <a href="#" class="label">#Agilité</a>
+                                </p>
                 </div>
-            </div>
-
-
-            <div class="row jc-center">
-                <div class="expPro detail animation_9 leftAnim">
-                    <code>
-                        <h3 class="expTitre">Développeur Full Stack</h3>
-                        <p class="txtBlancSecond mb20">Sopra Steria en alternance, Colomier, 31770</p>
-                        <p>Développement d'une application pour gérer et assister les techniciens d'Orange
-                            lorsqu'ils sont en intervention chez les clients.</p>
-                        <p class="txtBlancSecond mt20 ta-left">
-                            <a href="#" class="label">#Angular CLI</a>
-                            <a href="#" class="label">#Spring Boot</a>
-                            <a href="#" class="label">#Maven</a>
-                            <a href="#" class="label">#DevOps</a>
-                            <a href="#" class="label">#Agilité</a>
-                        </p>
-                    </code>
                 </div>
 
-                <div class="exProligne">
-                    <div class="rondNoir"></div>
-                    <div class="hrBlack"></div>
-                </div>
 
-                <div class="expPro">
-                    <p class="date"><code>Septembre 2022 - Aout 2023</code></p>
-                </div>
-            </div>
-
-
-            <div class="row jc-center">
-                <div class=" expPro">
-                    <p class="date txtGauche"><code>Juin 2022 - Aout 2022</code></p>
-                </div>
-
-                <div class="exProligne">
-                    <div class="rondNoir"></div>
-                    <div class="hrBlack"></div>
-                </div>
-
-                <div class="expPro detail animation_9 rightAnim">
-                    <code>
-                        <h3 class="expTitre">Jardinier</h3>
-                        <p class="txtBlancSecond mb20">Camping Eurosol, Vielle-Saint-Girons, 40560</p>
-                        <p>Emploi saisonnier en tant qu'agent d'entretient des espaces verts et aquatique.</p>
-                    </code>
-                </div>
-            </div>
-
-
-            <div class="row jc-center">
-                <div class="expPro detail animation_9 leftAnim">
-                    <code>
-                    <h3 class="expTitre">Développeur Full Stack</h3>
-                    <p class="txtBlancSecond mb20">Les Comptoirs du Monde, Saint-Alban, 31140</p>
-                    <p>Développement d'une application SIRH pour gérer 
-                        les absences et les congés des employés de la compagnies</p>
-                    <p class="txtBlancSecond mt20 ta-left">
-                        <a href="#" class="label">#Laravel</a>
-                        <a href="#" class="label">#SQL</a>
-                    </p>
-                </code>
-                </div>
-
-                <div class="exProligne">
-                    <div class="rondNoir"></div>
-                    <div class="hrBlack"></div>
-                </div>
-
-                <div class="expPro">
-                    <p class="date"><code>Mai 2022 - Juin 2022</code></p>
-                </div>
-            </div>
-
-            <div class="row jc-center">
-                <div class="expPro">
-                    <p class="date txtGauche"><code>Juin 2021 - Aout 2021</code></p>
-                </div>
-
-                <div class="exProligne">
-                    <div class="rondNoir"></div>
-                    <div class="hrBlack"></div>
-                </div>
-
-                <div class="expPro mb0 detail animation_9 rightAnim">
-                    <code>
-                        <h3 class="expTitre">Préparateur de commande</h3>
-                        <p class="txtBlancSecond mb20">Codis Aquitaine, Tarnos, 40312</p>
-                        <p>
-                            Emploi saisonnier en tant que préparateur de commande dans le but 
-                            de collecter, organiser et conditionner les articles 
-                            pour les expéditions.
-                        </p>
-                    </code>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- Competence -->
-        <section class="bloc" id="competence">
-            <h2>Compétences</h2>
-
-            <div class="row mb20 jc-center">
-                <div class=" competence jc-center bgDevHover animation_10 bottomAnim">
-                    <div class="row jc-center">
-                        <img class="competenceImg" src="image/java.png" />
+                <div class="row jc-center">
+                    <div class="expPro detail animation_9 leftAnim">
+                                <p class="h3 expTitre">Développeur Full Stack</p>
+                                <p class="txtBlancSecond mb20">Sopra Steria en alternance, Colomiers, 31770</p>
+                                <p>Développement d'une application pour gérer et assister les techniciens d'Orange
+                                    lorsqu'ils sont en intervention chez les clients.</p>
+                                <p class="txtBlancSecond mt20 ta-left">
+                                    <a href="#" class="label">#Angular CLI</a>
+                                    <a href="#" class="label">#Spring Boot</a>
+                                    <a href="#" class="label">#Maven</a>
+                                    <a href="#" class="label">#DevOps</a>
+                                    <a href="#" class="label">#Agilité</a>
+                                </p>
                     </div>
-                    <p class="competenceNom">Java</p>
-                </div>
 
-                <div class="competence jc-center bgDevHover bgWebHover animation_10 bottomAnim">
-                    <div class="row jc-center">
-                        <img class="competenceImg" src="image/javascript.jpg" />
+                    <div class="exProligne">
+                        <div class="rondNoir"></div>
+                        <div class="hrBlack"></div>
                     </div>
-                    <p class="competenceNom">Javascript</p>
-                </div>
 
-                <div class="competence jc-center bgWebHover animation_10 bottomAnim">
-                    <div class="row jc-center">
-                        <img class="competenceImg" src="image/HTML.jpg" />
+                    <div class="expPro">
+                        <p class="date">Septembre 2022 - Aout 2023</p>
                     </div>
-                    <p class="competenceNom">HTML</p>
                 </div>
 
-                <div class="competence jc-center bgWebHover animation_10 bottomAnim">
-                    <div class="row jc-center">
-                        <img class="competenceImg" src="image/css.jpg" />
+
+                <div class="row jc-center">
+                    <div class=" expPro">
+                        <p class="date txtGauche">Juin 2022 - Aout 2022</p>
                     </div>
-                    <p class="competenceNom">CSS</p>
-                </div>
 
-                <div class="competence jc-center bgWebHover animation_10 bottomAnim">
-                    <div class="row jc-center">
-                        <img class="competenceImg" src="image/php.png" />
+                    <div class="exProligne">
+                        <div class="rondNoir"></div>
+                        <div class="hrBlack"></div>
                     </div>
-                    <p class="competenceNom">PHP</p>
+
+                    <div class="expPro detail animation_9 rightAnim">
+                                <p class="h3 expTitre">Jardinier</p>
+                                <p class="txtBlancSecond mb20">Camping Eurosol, Vielle-Saint-Girons, 40560</p>
+                                <p>Emploi saisonnier en tant qu'agent d'entretient des espaces verts et aquatique.</p>
+                </div>
                 </div>
 
-                <div class="competence jc-center bgWebHover animation_10 bottomAnim">
-                    <div class="row jc-center">
-                        <img class="competenceImg" src="image/laravel.png" />
+
+                <div class="row jc-center">
+                    <div class="expPro detail animation_9 leftAnim">
+                            <p class="h3 expTitre">Développeur Full Stack</p>
+                            <p class="txtBlancSecond mb20">Les Comptoirs du Monde, Saint-Alban, 31140</p>
+                            <p>Développement d'une application SIRH pour gérer 
+                                les absences et les congés des employés de la compagnies</p>
+                            <p class="txtBlancSecond mt20 ta-left">
+                                <a href="#" class="label">#Laravel</a>
+                                <a href="#" class="label">#SQL</a>
+                            </p>
                     </div>
-                    <p class="competenceNom">Laravel</p>
-                </div>
 
-                <div class="competence jc-center bgWebHover animation_10 bottomAnim">
-                    <div class="row jc-center">
-                        <img class="competenceImg" src="image/angular.png" />
+                    <div class="exProligne">
+                        <div class="rondNoir"></div>
+                        <div class="hrBlack"></div>
                     </div>
-                    <p class="competenceNom">Angular</p>
-                </div>
 
-                <div class="competence jc-center bgWebHover animation_10 bottomAnim">
-                    <div class="row jc-center">
-                        <img class="competenceImg" src="image/Spring.png" />
+                    <div class="expPro">
+                        <p class="date">Mai 2022 - Juin 2022</p>
                     </div>
-                    <p class="competenceNom">Spring</p>
                 </div>
 
-                <div class="competence jc-center bgWebHover animation_10 bottomAnim">
-                    <div class="row jc-center">
-                        <img class="competenceImg" src="image/bootstrap.png" />
+                <div class="row jc-center">
+                    <div class="expPro">
+                        <p class="date txtGauche">Juin 2021 - Aout 2021</p>
                     </div>
-                    <p class="competenceNom">Bootstrap</p>
-                </div>
 
-                <div class="competence jc-center bgWebHover animation_10 bottomAnim">
-                    <div class="row jc-center">
-                        <img class="competenceImg" src="image/bulma.png" />
+                    <div class="exProligne">
+                        <div class="rondNoir"></div>
+                        <div class="hrBlack"></div>
                     </div>
-                    <p class="competenceNom">Bulma</p>
+
+                    <div class="expPro mb0 detail animation_9 rightAnim">
+                                <p class="h3 expTitre">Préparateur de commande</p>
+                                <p class="txtBlancSecond mb20">Codis Aquitaine, Tarnos, 40312</p>
+                                <p>
+                                    Emploi saisonnier en tant que préparateur de commande dans le but 
+                                    de collecter, organiser et conditionner les articles 
+                                    pour les expéditions.
+                                </p>
+                </div>
                 </div>
 
-                <div class="competence jc-center animation_10 bottomAnim">
-                    <div class="row jc-center">
-                        <img class="competenceImg" src="image/shell.jpg" />
+            </section>
+
+            <!-- Competence -->
+            <section class="bloc" id="competence">
+                <p class="h2">Compétences</p>
+
+                <div class="row mb20 jc-center">
+                    <div class=" competence jc-center bgDevHover animation_10 bottomAnim">
+                        <div class="row jc-center">
+                            <img class="competenceImg" src="image/java.png" />
+                        </div>
+                        <p class="competenceNom">Java</p>
                     </div>
-                    <p class="competenceNom">Shell</p>
-                </div>
 
-                <div class="competence jc-center animation_10 bottomAnim">
-                    <div class="row jc-center">
-                        <img class="competenceImg" src="image/c.png" />
+                    <div class="competence jc-center bgDevHover bgWebHover animation_10 bottomAnim">
+                        <div class="row jc-center">
+                            <img class="competenceImg" src="image/javascript.jpg" />
+                        </div>
+                        <p class="competenceNom">Javascript</p>
                     </div>
-                    <p class="competenceNom">C</p>
-                </div>
 
-                <div class="competence jc-center bgBDHover animation_10 bottomAnim">
-                    <div class="row jc-center">
-                        <img class="competenceImg" src="image/c++.png" />
+                    <div class="competence jc-center bgWebHover animation_10 bottomAnim">
+                        <div class="row jc-center">
+                            <img class="competenceImg" src="image/HTML.jpg" />
+                        </div>
+                        <p class="competenceNom">HTML</p>
                     </div>
-                    <p class="competenceNom">C++</p>
-                </div>
 
-                <div class="competence jc-center bgBDHover animation_10 bottomAnim">
-                    <div class="row jc-center">
-                        <img class="competenceImg" src="image/sql.jpg" />
+                    <div class="competence jc-center bgWebHover animation_10 bottomAnim">
+                        <div class="row jc-center">
+                            <img class="competenceImg" src="image/css.jpg" />
+                        </div>
+                        <p class="competenceNom">CSS</p>
                     </div>
-                    <p class="competenceNom">Sql</p>
-                </div>
 
-                <div class="competence jc-center bgBDHover animation_10 bottomAnim">
-                    <div class="row jc-center">
-                        <img class="competenceImg" src="image/python.png" />
+                    <div class="competence jc-center bgWebHover animation_10 bottomAnim">
+                        <div class="row jc-center">
+                            <img class="competenceImg" src="image/php.png" />
+                        </div>
+                        <p class="competenceNom">PHP</p>
                     </div>
-                    <p class="competenceNom">Python</p>
-                </div>
-            </div>
 
-            <div class="row mb50 jc-evenly animation_10 bottomAnim">
-                <div class="competenceCategorie" onmouseover="bgCompetenceCategorieAdd('bgDev')"
-                    onmouseout="bgCompetenceCategorieRemove('bgDev')">
-                    <p class="bgDev">Développement</p>
-                </div>
-                <div class="competenceCategorie" onmouseover="bgCompetenceCategorieAdd('bgWeb')"
-                    onmouseout="bgCompetenceCategorieRemove('bgWeb')">
-                    <p class="bgWeb">Web</p>
-                </div>
-                <div class="competenceCategorie" onmouseover="bgCompetenceCategorieAdd('bgBD')"
-                    onmouseout="bgCompetenceCategorieRemove('bgBD')">
-                    <p class="bgBD">Base de données</p>
-                </div>
-            </div>
+                    <div class="competence jc-center bgWebHover animation_10 bottomAnim">
+                        <div class="row jc-center">
+                            <img class="competenceImg" src="image/laravel.png" />
+                        </div>
+                        <p class="competenceNom">Laravel</p>
+                    </div>
 
-            <p class="competenceInfo mb75 animation_10 bottomAnim">
-                J'ai l'habitude de travailler sur
-                <a href="#"><b>Windows</b></a>
-                mais aussi, à moindre échelle, sur
-                <a href="#"><b>Linux</b></a>
-                grâce à Débian.
+                    <div class="competence jc-center bgWebHover animation_10 bottomAnim">
+                        <div class="row jc-center">
+                            <img class="competenceImg" src="image/angular.png" />
+                        </div>
+                        <p class="competenceNom">Angular</p>
+                    </div>
 
-                <br /><br />
+                    <div class="competence jc-center bgWebHover animation_10 bottomAnim">
+                        <div class="row jc-center">
+                            <img class="competenceImg" src="image/Spring.png" />
+                        </div>
+                        <p class="competenceNom">Spring</p>
+                    </div>
 
-                Tout au long de mes différentes expériences professionnelles j'ai
-                pu me familiariser avec les outils tels que
-                <a href="#"><b>Visual studio</b></a>,
-                <a href="#"><b>Eclipse</b></a>
-                et
-                <a href="#"><b>Intellij IDEA</b></a>
-            </p>
+                    <div class="competence jc-center bgWebHover animation_10 bottomAnim">
+                        <div class="row jc-center">
+                            <img class="competenceImg" src="image/bootstrap.png" />
+                        </div>
+                        <p class="competenceNom">Bootstrap</p>
+                    </div>
 
-            <div class="row animation_10 bottomAnim">
-                <div class="langue jc-center">
-                    <img class="langueImg" src="image/France.png" />
-                    <p class="langueTxt">Français</p>
+                    <div class="competence jc-center bgWebHover animation_10 bottomAnim">
+                        <div class="row jc-center">
+                            <img class="competenceImg" src="image/bulma.png" />
+                        </div>
+                        <p class="competenceNom">Bulma</p>
+                    </div>
+
+                    <div class="competence jc-center animation_10 bottomAnim">
+                        <div class="row jc-center">
+                            <img class="competenceImg" src="image/shell.jpg" />
+                        </div>
+                        <p class="competenceNom">Shell</p>
+                    </div>
+
+                    <div class="competence jc-center animation_10 bottomAnim">
+                        <div class="row jc-center">
+                            <img class="competenceImg" src="image/c.png" />
+                        </div>
+                        <p class="competenceNom">C</p>
+                    </div>
+
+                    <div class="competence jc-center bgBDHover animation_10 bottomAnim">
+                        <div class="row jc-center">
+                            <img class="competenceImg" src="image/c++.png" />
+                        </div>
+                        <p class="competenceNom">C++</p>
+                    </div>
+
+                    <div class="competence jc-center bgBDHover animation_10 bottomAnim">
+                        <div class="row jc-center">
+                            <img class="competenceImg" src="image/sql.jpg" />
+                        </div>
+                        <p class="competenceNom">Sql</p>
+                    </div>
+
+                    <div class="competence jc-center bgBDHover animation_10 bottomAnim">
+                        <div class="row jc-center">
+                            <img class="competenceImg" src="image/python.png" />
+                        </div>
+                        <p class="competenceNom">Python</p>
+                    </div>
                 </div>
 
-                <div class="langue jc-center">
-                    <img class="langueImg" src="image/Angleterre.png" />
-                    <p class="langueTxt">Anglais</p>
+                <div class="row mb50 jc-evenly animation_10 bottomAnim">
+                    <div class="competenceCategorie" onmouseover="bgCompetenceCategorieAdd('bgDev')"
+                        onmouseout="bgCompetenceCategorieRemove('bgDev')">
+                        <p class="bgDev">Développement</p>
+                    </div>
+                    <div class="competenceCategorie" onmouseover="bgCompetenceCategorieAdd('bgWeb')"
+                        onmouseout="bgCompetenceCategorieRemove('bgWeb')">
+                        <p class="bgWeb">Web</p>
+                    </div>
+                    <div class="competenceCategorie" onmouseover="bgCompetenceCategorieAdd('bgBD')"
+                        onmouseout="bgCompetenceCategorieRemove('bgBD')">
+                        <p class="bgBD">Base de données</p>
+                    </div>
                 </div>
 
-                <div class="langue jc-center">
-                    <img class="langueImg" src="image/Espagne.jpg" />
-                    <p class="langueTxt">Espagnol</p>
-                </div>
+                <p class="competenceInfo mb75 animation_10 bottomAnim">
+                    J'ai l'habitude de travailler sur
+                    <a href="#"><b>Windows</b></a>
+                    mais aussi, à moindre échelle, sur
+                    <a href="#"><b>Linux</b></a>
+                    grâce à Débian.
 
-                <div class="langue jc-center">
-                    <img class="langueImg" src="image/Japon.png" />
-                    <p class="langueTxt">Japonais</p>
+                    <br /><br />
+
+                    Tout au long de mes différentes expériences professionnelles j'ai
+                    pu me familiariser avec les outils tels que
+                    <a href="#"><b>Visual studio</b></a>,
+                    <a href="#"><b>Eclipse</b></a>
+                    et
+                    <a href="#"><b>Intellij IDEA</b></a>
+                </p>
+
+                <div class="row animation_10 bottomAnim">
+                    <div class="langue jc-center">
+                        <div>
+                            <img class="langueImg" src="image/France.png" />
+                            <div class="langueInfo">
+                                <p>Langue maternelle</p>
+                            </div>
+                        </div>
+                        <p class="langueTxt">Français</p>
+                    </div>
+
+                    <div class="langue jc-center">
+                        <div>
+                            <img class="langueImg" src="image/Angleterre.png" />
+                            <div class="langueInfo">
+                                <p>Niveau A1</p>
+                            </div>
+                        </div>
+                        <p class="langueTxt">Anglais</p>
+                    </div>
+
+                    <div class="langue jc-center">
+                        <div>
+                            <img class="langueImg" src="image/Espagne.jpg" />
+                            <div class="langueInfo">
+                                <p>Niveau B2</p>
+                            </div>
+                        </div>
+                        <p class="langueTxt">Espagnol</p>
+                    </div>
+
+                    <div class="langue jc-center">
+                        <div>
+                            <img class="langueImg" src="image/Japon.png" />
+                            <div class="langueInfo">
+                                <p>En cours d'apprentissage</p>
+                            </div>
+                        </div>
+                        <p class="langueTxt">Japonais</p>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </code>
     </section>
 
-    <section class="bgBlanc animationColor" id="bgBlanc2">
+    <section class="animationColor" id="sec3">
 
         <!-- Projet -->
         <section class="bloc " id="projet">
-            <h2 class="noir" id="projetTitre">Projets</h2>
+            <p class="h2" id="projetTitre">Projets</p>
 
             <div class="row ai-center">
                 <div class="line"></div>
-                <h3 id="projPerso">Projets persos</h3>
+                <p class="h3" id="projPerso">Projets persos</p>
                 <div class="line"></div>
             </div>
 
@@ -461,7 +473,7 @@
                     <div class="col-1"></div>
                     <div class="col-6 verticalAlign">
                         <div>
-                            <h5 class="animation_10 leftAnim" id="GauMuscuTitre">GauMuscu</h5>
+                            <p class="h1 animation_10 leftAnim" id="GauMuscuTitre">GauMuscu</p>
 
                             <p class="animation_10 leftAnim">
                                 GauMuscu est une application Web pour téléphone pour la remise en forme,
@@ -512,13 +524,12 @@
                     </div>
                     <div class="col-4 verticalAlign">
                         <div>
-                            <h5 class="animation_9 rightAnim" id="GauModeTitre">GauMode</h5>
+                            <p class="h1 animation_9 rightAnim" id="GauModeTitre">GauMode</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="mb50">
-
                     <p class="animation_10 bottomAnim">
                         GauMode est une application Web pour tous les devices centrées sur la mode du textile,
                         des soins de beauté et des bonnes pratiques.
@@ -551,21 +562,42 @@
                     </p>
                 </div>
 
+                <div class="row mb20">
+
+                    <div class="col-1"></div>
+                    <div class="col-4">
+                        <p class="h1">GauPiano</p>
+                    </div>
+                    <div class="col-7">
+                    </div>
+                </div>
+
                 <div class="row jc-center mb50">
 
-                    <div class="cardProj">
-                        Modification des Metadonnées de photo
-                        <br /><br />
-                        L'importation des photos sur mon ordinateur depuis mon téléphone
-                        posait des problèmes concernant le trie de ces photos une fois importé.
+                    <div class="cardProjRow animation_10 bottomAnim">
+                        <div class="cardProj">
+                            <p class="h4">Métadonnées des photos</p>
+                            Modification du nom des photos par leur date de création et nom d'importation.
+                            <br />
+                            Tout ceci en fonction du formats des photos et des données qu'elles contiennent.
+                        </div>
+                    </div>
 
+                    <div class="cardProjRow animation_10 bottomAnim">
+                        <div class="cardProj">
+                            <p class="h4">Calcul de probabilité</p>
+                            Taux d'obtention d'un objet sur un jeux vidéo concernant ses stats parmis des
+                            catégories de compétences bonus.
+                            Génération de toutes les combinaisons possibiles et trie de celle-ci
+                            en fonction de critère précis.
+                        </div>
                     </div>
                 </div>
 
 
                 <div class="row ai-center">
                     <div class="line"></div>
-                    <h3 id="projEtude">Projets d'études</h3>
+                    <p class="h3" id="projEtude">Projets d'études</p>
                     <div class="line"></div>
                 </div>
 
@@ -573,101 +605,125 @@
                     <div class="pochette jc-center bottom">
                         <div class="feuille" onclick="afficheProj(this)" id="proj1">
                             <div class="papier">
-                                <div class="etiquette">SkyWise</div>
+                                <div class="etiquette">
+                                    <p>SkyWise</p>
+                                </div>
                                 <div class="projTexte">
                                     <img class="projImg" src="image/skywise.jpg">
-                                    <h4></h4>
+                                    <p class="h4"></p>
                                 </div>
                             </div>
                         </div>
                         <div class="feuille" onclick="afficheProj(this)" id="proj2">
                             <div class="papier">
-                                <div class="etiquette">MOBI</div>
+                                <div class="etiquette">
+                                    <p>MOBI</p>
+                                </div>
                                 <div class="projTexte">
                                     <img class="projImg" src="image/Mobi.png">
-                                    <h4>Application Web</h4>
+                                    <p class="h4">Application Web</p>
                                     Sopra Steria, plus particulièrement le département TME
                                     (Télécommunications, Multimédias et Divertissement),
                                     accompagne Orange, et leur département DSI réseaux,
-                                    dans de nombreux domaines et notamment dans la gestion des métiers de l'intervention
+                                    dans de nombreux domaines et notamment dans la gestion des métiers de
+                                    l'intervention
                                     sur le projet MOBI.
                                     <br />
                                     MOBI est une application très récente, conçue début 2017, qui
-                                    permet aux techniciens de traiter en autonomie les interventions qui sont affectées
+                                    permet aux techniciens de traiter en autonomie les interventions qui sont
+                                    affectées
                                     dans leur Plan de Charge.
                                     <br />
-                                    Cette application sert de boîte à outils aux techniciens, elle permet entre autres
+                                    Cette application sert de boîte à outils aux techniciens, elle permet entre
+                                    autres
                                     de : faire le planning des ordres de travaux, les aider lors d'intervention
                                     concernant la mutation de ligne de cuivre à fibre
                                     (qui concerne 38 millions de foyers) et de faire des essais de ligne.
                                     <br /><br />
-                                    Cette application est utilisée sur téléphone par les techniciens d'Orange et par les
-                                    ETR (technicien sous-traitant d'Orange) sur internet. Au total c'est plus de 23 000
+                                    Cette application est utilisée sur téléphone par les techniciens d'Orange et par
+                                    les
+                                    ETR (technicien sous-traitant d'Orange) sur internet. Au total c'est plus de 23
+                                    000
                                     personnes qui utilisent l'application régulièrement.
                                     <br />
                                     Aux fils des années son interface
                                     a su s'enrichir de multiples applications du SI (modules), chacun répondant à un
                                     besoin précis. Ces modules permettant par exemple la consultation du réseau,
-                                    d'attestation de preuves, de qualité et de sécurité ainsi que l'aide à la relation
-                                    clients et d'autres outils spécifiques au métiers. C'est plus de 33 modules qui se
-                                    sont accumulés et qui sont maintenus et développés continuellement dans un contexte
+                                    d'attestation de preuves, de qualité et de sécurité ainsi que l'aide à la
+                                    relation
+                                    clients et d'autres outils spécifiques au métiers. C'est plus de 33 modules qui
+                                    se
+                                    sont accumulés et qui sont maintenus et développés continuellement dans un
+                                    contexte
                                     DevOps et d'Agilité.
                                 </div>
                             </div>
                         </div>
                         <div class="feuille" onclick="afficheProj(this)" id="proj3">
                             <div class="papier">
-                                <div class="etiquette">SIRH</div>
+                                <div class="etiquette">
+                                    <p>SIRH</p>
+                                </div>
                                 <div class="projTexte">
                                     <img class="projImg" src="image/projet.JPG">
-                                    <h4>Site Web</h4>
+                                    <p class="h4">Site Web</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="feuille" onclick="afficheProj(this)" id="proj4">
                             <div class="papier">
-                                <div class="etiquette">SYNDICSAAS</div>
+                                <div class="etiquette">
+                                    <p>SYNDICSAAS</p>
+                                </div>
                                 <div class="projTexte">
                                     <img class="projImg" src="image/Syndic.PNG">
-                                    <h4>Site Web</h4>
+                                    <p class="h4">Site Web</p>
                                 </div>
                             </div>
                         </div>
                         <div class="feuille" onclick="afficheProj(this)" id="proj5">
                             <div class="papier">
-                                <div class="etiquette">Flyer</div>
+                                <div class="etiquette">
+                                    <p>Flyer</p>
+                                </div>
                                 <div class="projTexte">
                                     <img class="projImg" src="image/Flyer.PNG">
-                                    <h4>Graphiste et chargé de communication</h4>
+                                    <p class="h4">Graphiste et chargé de communication</p>
                                 </div>
                             </div>
                         </div>
                         <div class="feuille" onclick="afficheProj(this)" id="proj6">
                             <div class="papier">
-                                <div class="etiquette">Le Démineur</div>
+                                <div class="etiquette">
+                                    <p>Le Démineur</p>
+                                </div>
                                 <div class="projTexte">
                                     <img class="projImg" src="image/Demineur.PNG">
-                                    <h4>Jeu en Java</h4>
+                                    <p class="h4">Jeu en Java</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="feuille" onclick="afficheProj(this)" id="proj7">
                             <div class="papier">
-                                <div class="etiquette">LGCSK</div>
+                                <div class="etiquette">
+                                    <p>LGCSK</p>
+                                </div>
                                 <div class="projTexte">
                                     <img class="projImg" src="image/LGCSK.PNG">
-                                    <h4>Site Web</h4>
+                                    <p class="h4">Site Web</p>
                                 </div>
                             </div>
                         </div>
                         <div class="feuille" onclick="afficheProj(this)" id="proj8">
                             <div class="papier">
-                                <div class="etiquette">Horaire de bus</div>
+                                <div class="etiquette">
+                                    <p>Horaire de bus</p>
+                                </div>
                                 <div class="projTexte">
                                     <img class="projImg" src="image/horaireBus.PNG">
-                                    <h4>Application en Java</h4>
+                                    <p class="h4">Application en Java</p>
                                 </div>
                             </div>
                         </div>
@@ -679,18 +735,16 @@
 
         <footer>
             <hr />
-            <code class="row jc-between">
+            <code class="row jc-between mb20">
                 <div>
-                    <p style="font-size: 0.6rem;">Contact</p>
-                    <a href="mailto:boegauthier@gmail.com">boegauthier@gmail.com</a>
-                    <p>06.51.67.44.58</p>
+                    <p class="fsFooter2">Contact</p>
+                    <p class="fsFooter1"><a href="mailto:boegauthier@gmail.com">boegauthier@gmail.com</a></p>
+                    <p class="fsFooter1">06.51.67.44.58</p>
                 </div>
-                <p>Copyright©2023</p>
-                <p><a>GauCV.vercel.app</a></p>
+                <p class="fsFooter1">Copyright©2023</p>
+                <p class="fsFooter1"><a>GauCV.vercel.app</a></p>
             </code>
-            <br />
-            <br />
-            <code style="font-size: 0.6rem;">
+            <code class="fsFooter2">
                 l'ensemble du site a été conçu et développé par moi même ainsi que sa traduction en anglais
             </code>
         </footer>

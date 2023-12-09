@@ -2,7 +2,7 @@ const FORMATION = [
     [
         [
             "C:\\User\\Étudiant\\Lycée\\Lycée Stéphanne HESSEL>",
-            "C:\\User\\Stydent\\College\\College Stéphanne HESSEL>",
+            "C:\\User\\Student\\College\\College Stéphanne HESSEL>",
         ],
         [
             "BAC S, option Science de l'ingénieur.",

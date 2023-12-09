@@ -22,19 +22,20 @@ var projIdVue = -1;
 var feuille = document.getElementsByClassName("feuille")
 
 // Pointeur
+/*
 var ajustement = window.innerWidth * 0.05 / 2;  // moitié de la taille du bloc
 var pointeur = document.getElementById("pointeur");
 
 var positionTop = pointeur.getBoundingClientRect().top + window.scrollY + ajustement;
 var positionLeft = pointeur.getBoundingClientRect().left + window.scrollX + ajustement;
-
+*/
 
 // Lancement des fonctions
 introLoad();
 etiquette();
 afficherTailleBloc();
-testFonctionPerformance();
-actualisationLangue();
+//testFonctionPerformance();
+//actualisationLangue();
 
 function redifineVariable() {
     pourcentageTxt = document.getElementById("pourcentageTxt");
@@ -45,8 +46,8 @@ function redifineVariable() {
     // Observer n°3 etique
     feuille = document.getElementsByClassName("feuille")
 
-    pointeur = document.getElementById("pointeur");
+    // pointeur = document.getElementById("pointeur");
 
-    positionTop = pointeur.getBoundingClientRect().top + window.scrollY + ajustement;
-    positionLeft = pointeur.getBoundingClientRect().left + window.scrollX + ajustement;
+    // positionTop = pointeur.getBoundingClientRect().top + window.scrollY + ajustement;
+    // positionLeft = pointeur.getBoundingClientRect().left + window.scrollX + ajustement;
 }

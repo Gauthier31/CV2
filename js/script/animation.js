@@ -48,9 +48,9 @@ function reveal() {
         var elementTop = reveals_color[i].getBoundingClientRect().top;
 
         // 80% de l'écran
-        if (elementTop < windowHeight * 0.65) {
-            add(reveals_color[i].id, ANIMATION_ADD_OUT_TOP_8);
-            remove(reveals_color[i].id, ANIMATION_REMOVE_OUT_TOP_8);
+        if (elementTop < windowHeight * 0.7) {
+            add(reveals_color[i].id, ANIMATION_ADD_OUT_TOP_6);
+            remove(reveals_color[i].id, ANIMATION_REMOVE_OUT_TOP_6);
 
             // Au dessus de l'écran
         } if (elementTop < 0) {
@@ -64,36 +64,44 @@ window.addEventListener("scroll", reveal);
 
 // Ajoute quand il sort au dessus
 const ANIMATION_ADD_OUT_TOP = {
-    "bgBleu": [
+    "sec2": [
         ["animNav", "blanc"]
     ]
 };
 // Enleve quand il sort au dessus
 const ANIMATION_REMOVE_OUT_TOP = {
     "aPropos": [
-        ["animNav", "blanc"]
-    ],
-    "bgBlanc2": [
-        ["animNav", "blanc"]
+        ["animNav", "blanc"],
+    ], "sec3": [
+        ["animNav", "blanc"],
     ]
 };
 
 // Ajoute quand il sort au dessus
-const ANIMATION_ADD_OUT_TOP_8 = {
-    "bgBleu": [
+const ANIMATION_ADD_OUT_TOP_6 = {
+    "sec2": [
         ["AnimInfoGauche", "blanc"],
-        ["AnimInfoDroite", "blanc"]
+        ["AnimInfoDroite", "blanc"],
+        //["body", "bg2"]
+    ],
+    "formation": [
+        ["navFormation", "active"]
     ]
 };
 // Enleve quand il sort au dessus
-const ANIMATION_REMOVE_OUT_TOP_8 = {
+const ANIMATION_REMOVE_OUT_TOP_6 = {
     "aPropos": [
         ["AnimInfoGauche", "blanc"],
-        ["AnimInfoDroite", "blanc"]
+        ["AnimInfoDroite", "blanc"],
+        //["body", "bg2"]
     ],
-    "bgBlanc2": [
+    "sec3": [
         ["AnimInfoGauche", "blanc"],
-        ["AnimInfoDroite", "blanc"]
+        ["AnimInfoDroite", "blanc"],
+        //["body", "bg2"]
+    ],
+    "formation": [
+        ["navFormation", "active"]
     ]
 };
 
