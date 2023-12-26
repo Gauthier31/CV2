@@ -9,12 +9,12 @@ function reveal() {
         if (elementTop < windowHeight * 0.9) {
             reveals_9[i].classList.add("anim");
 
-            // Au dessus de l'écran
-        } else if (elementTop > windowHeight) {
+            // Au dessous de l'écran
+        } else if (elementTop < 0) {
             reveals_9[i].classList.remove("anim");
 
-            // En dessous de l'écran
-        } else if (elementTop < 0) {
+            // En dessus de l'écran
+        } else if (elementTop > windowHeight) {
             reveals_9[i].classList.remove("anim");
         }
     }
@@ -30,14 +30,15 @@ function reveal() {
         if (elementTop < windowHeight) {
             reveals_10[i].classList.add("anim");
 
-            // Au dessus de l'écran
-        } else if (elementTop > windowHeight) {
-            reveals_10[i].classList.remove("anim");
-
-            // En dessous de l'écran
+            // AU dessous de l'écran
         } else if (elementTop < 0) {
             reveals_10[i].classList.remove("anim");
+
+            // En dessus de l'écran
+        } else if (elementTop > windowHeight) {
+            reveals_10[i].classList.remove("anim");
         }
+
     }
 
     // / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / /
@@ -47,15 +48,15 @@ function reveal() {
     for (var i = 0; i < reveals_color.length; i++) {
         var elementTop = reveals_color[i].getBoundingClientRect().top;
 
-        // 80% de l'écran
-        if (elementTop < windowHeight * 0.7) {
-            add(reveals_color[i].id, ANIMATION_ADD_OUT_TOP_6);
-            remove(reveals_color[i].id, ANIMATION_REMOVE_OUT_TOP_6);
+        // 45% de l'écran au dessus
+        if (elementTop < windowHeight * 0.45) {
+            add(reveals_color[i].id, ANIMATION_ADD_OUT_TOP_MID);
+            remove(reveals_color[i].id, ANIMATION_REMOVE_OUT_TOP_MID);
 
-            // Au dessus de l'écran
-        } if (elementTop < 0) {
-            add(reveals_color[i].id, ANIMATION_ADD_OUT_TOP);
-            remove(reveals_color[i].id, ANIMATION_REMOVE_OUT_TOP);
+            // en dessous
+        } else {
+            add(reveals_color[i].id, ANIMATION_ADD_OUT_BOTTOM);
+            remove(reveals_color[i].id, ANIMATION_REMOVE_OUT_BOTTOM);
         }
     }
 }
@@ -64,44 +65,67 @@ window.addEventListener("scroll", reveal);
 
 // Ajoute quand il sort au dessus
 const ANIMATION_ADD_OUT_TOP = {
-    "sec2": [
-        ["animNav", "blanc"]
-    ]
+
 };
 // Enleve quand il sort au dessus
 const ANIMATION_REMOVE_OUT_TOP = {
-    "aPropos": [
-        ["animNav", "blanc"],
-    ], "sec3": [
-        ["animNav", "blanc"],
+
+};
+
+// Ajoute quand il est au dessus
+const ANIMATION_ADD_OUT_TOP_MID = {
+    "sec1": [
+        ["navAPropos", "active"]
+    ],
+    "formation": [
+        ["navFormation", "active"]
+    ],
+    "expPro": [
+        ["navExpPro", "active"]
+    ],
+    "competence": [
+        ["navCompetence", "active"]
+    ],
+    "projet": [
+        ["navProjet", "active"]
+    ]
+};
+// Enleve quand il est au dessus
+const ANIMATION_REMOVE_OUT_TOP_MID = {
+    "formation": [
+        ["navAPropos", "active"]
+    ],
+    "expPro": [
+        ["navFormation", "active"]
+    ],
+    "competence": [
+        ["navExpPro", "active"]
+    ],
+    "projet": [
+        ["navCompetence", "active"]
     ]
 };
 
 // Ajoute quand il sort au dessus
-const ANIMATION_ADD_OUT_TOP_6 = {
-    "sec2": [
-        ["AnimInfoGauche", "blanc"],
-        ["AnimInfoDroite", "blanc"],
-        //["body", "bg2"]
-    ],
-    "formation": [
-        ["navFormation", "active"]
-    ]
+const ANIMATION_ADD_OUT_BOTTOM = {
+
 };
 // Enleve quand il sort au dessus
-const ANIMATION_REMOVE_OUT_TOP_6 = {
-    "aPropos": [
-        ["AnimInfoGauche", "blanc"],
-        ["AnimInfoDroite", "blanc"],
-        //["body", "bg2"]
-    ],
-    "sec3": [
-        ["AnimInfoGauche", "blanc"],
-        ["AnimInfoDroite", "blanc"],
-        //["body", "bg2"]
+const ANIMATION_REMOVE_OUT_BOTTOM = {
+    "sec1": [
+        ["navAPropos", "active"]
     ],
     "formation": [
         ["navFormation", "active"]
+    ],
+    "expPro": [
+        ["navExpPro", "active"]
+    ],
+    "competence": [
+        ["navCompetence", "active"]
+    ],
+    "projet": [
+        ["navProjet", "active"]
     ]
 };
 

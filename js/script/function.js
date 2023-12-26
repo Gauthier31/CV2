@@ -2,22 +2,6 @@
 /////////////////////////////////////// Function ///////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
 
-function introInteret(bloc) {
-    interet = document.getElementById("introInteretBloc")
-
-    if (interetBool) {
-        interet.style.maxHeight = "0px"
-        bloc.classList.value = bloc.classList.value.replace("down", "up")
-        interetBool = false
-    } else {
-        interet.style.maxHeight = "250px"
-        bloc.classList.value = bloc.classList.value.replace("up", "down")
-        interetBool = true
-    }
-}
-
-/////////////////////////////////////////////////////////////////////////////////////////
-
 function progression(val) {
 
     // Barre de progressio
@@ -315,6 +299,23 @@ function filtreTab(tab) {
     }
 
     return newTab;
+}
+
+function carousel(num) {
+    carouselBloc = document.getElementsByClassName("carousel");
+    carouselTitre = document.getElementsByClassName("carouselTitre");
+
+    for (i = 0; i < carouselBloc.length; i++) {
+        carouselBloc[i].classList.remove("anim");
+        carouselTitre[i].classList.remove("active");
+    }
+
+    carouselBloc[num].style.position = "relative";
+    document.getElementById("carousels").style.height = carouselBloc[num].offsetHeight + 50 + "px";
+    carouselBloc[num].style.position = "absolute";
+
+    carouselBloc[num].classList.add("anim");
+    carouselTitre[num].classList.add("active");
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////

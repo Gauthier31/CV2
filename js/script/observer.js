@@ -20,5 +20,24 @@ function heightTerminal() {
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////
+
+window.addEventListener('scroll', function () {
+    // Récupérez la position de défilement
+    var scrollPosition = window.scrollY;
+
+    // Convertissez la position de défilement en opacité (par exemple)
+    var opacity = scrollPosition / 500; // Ajustez le dénominateur selon vos besoins
+
+    // Limitez l'opacité entre 0 et 1
+    opacity = Math.min(1, Math.max(0, opacity));
+    opacity = (opacity > 0.1) ? opacity : 0.1
+
+    // Calculez la couleur en fonction de l'opacité
+    var color = '#ffffff' + Math.round(opacity * 255).toString(16).padStart(2, '0');
+
+    // Appliquez la couleur de fond à la page
+    document.getElementById("bg2").style.backgroundColor = color;
+});
+/////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////// Rezise FIN //////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////

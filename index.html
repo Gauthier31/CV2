@@ -10,29 +10,30 @@
     <title>Gauthier BOË--GUIROLA</title>
 
     <link href="style/style.css" rel="stylesheet">
+    <link href="style/GauCss.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body id="body">
 
-    <nav id="animNav">
-        <a onmouseover="navInfoAdd()" onmouseout="navInfoRemove()" class="navNom" href="#sec1">
+    <!-- background -->
+    <img class="bg1" src="image/Le Voyageur contemplant une mer de nuages.png" />
+    <div id="bg2" style="background-color: rgba(255, 255, 255, 0.1);"></div>
 
-            <code>
+    <nav id="animNav">
+        <a id="navAPropos" onmouseover="navInfoAdd()" onmouseout="navInfoRemove()" href="#sec1">
+
             <p class="fsNav">Gauthier BOË--GUIROLA</p>
-                <p class="navInfo fsNav" id="navInfoBloc">Etudiant Master MIAGE option IDA</p>
-            </code>
+            <p class="navInfo fsNav" id="navInfoBloc">Etudiant Master MIAGE option IDA</p>
         </a>
 
-        <code>
-            <ul id="navListe" class="fsNav">
-                <li><a id="navFormation" href="#formation">Formations</a></li>
-                <li><a id="navExpPro" href="#expPro">Expériences</a></li>
-                <li><a id="navCompetence" href="#competence">Compétences</a></li>
-                <li><a id="navProjet" href="#projet">Projets</a></li>
-            </ul>
-        </code>
+        <ul id="navListe" class="fsNav">
+            <li><a id="navFormation" href="#formation">Formations</a></li>
+            <li><a id="navExpPro" href="#expPro">Expériences</a></li>
+            <li><a id="navCompetence" href="#competence">Compétences</a></li>
+            <li><a id="navProjet" href="#projet">Projets</a></li>
+        </ul>
     </nav>
 
     <div class="vertical-div v-Gauche" id="AnimInfoGauche">
@@ -46,125 +47,102 @@
         <div class="vertical-ligne"></div>
     </div>
 
-    <!--
-    <div id="pointeurBloc">
-        <img src="image/souris.png" id="pointeur" />
-    </div>
-    -->
 
-    <section class="" id="sec1">
+    <section id="sec1" class="row jc_end animationColor verticalAlign">
         <!-- Présentation -->
-        <section class="row jc-center animationColor" id="aPropos">
 
-            <!--
-            <div class="divPhoto bottom">
-                <img class="photo" src="image/PP.png" />
+        <div class="divTxt bottom">
+
+            <p class="h1">Bonjour, je suis <a id="nom">Gauthier BOË,</a></p>
+            <p class="fsIntro1 ta_justify"> Étudiant en 1ère année de Master MIAGE</p>
+            <p class="fsIntro2 ta_justify">
+                option IDA à
+                <a href="#"><b>l'Université Toulouse Capitole</b></a> en alternance dans l'ESN
+                <a href="#"><b>SOPRA STERIA</b></a> en tant que Data Ingénieur.
+
+                <br /><br />
+
+                Travailler sur les nouvelles technologies dans des secteurs tels que :
+                la conception et/ou le développement Web, logiciels ou encore dans le
+                <a href='#'><b>Conseil</b></a>, la
+                <a href='#'><b>Cybersécurité</b></a>, la
+                <a href='#'><b>Data</b></a>
+                sont en adéquation avec mon cursus universitaire et mon ambition professionnelle.
+            </p>
+
+            <br />
+
+            <div class="row jc_between fsIntro2">
+                <div class="interet">Art</div>
+                <div class="interet">Volley-Ball</div>
+                <div class="interet">Piano</div>
+                <div class="interet">Lecture</div>
             </div>
-            -->
 
-            <div class="divTxt bottom ta-justify">
-
-                <p id="introCache" class="fsIntro">
-                    <span class="h1">
-                        Bonjour, je suis
-                        <a>
-                            Gauthier BOË,
-                        </a>
-                    </span>
-
-                    <br />
-
-                    Étudiant en 1ère année de Master MIAGE option IDA à
-                    <a href="#"><b>l'Université Toulouse Capitole</b></a> en alternance dans l'ESN
-                    <a href="#"><b>SOPRA STERIA</b></a> en tant que Data Ingénieur.
-                </p>
-
-                <p id="intro" class="fsIntro">
-
-                </p>
-                <br />
-
-                <i onclick="introInteret(this)" class="fa fa-chevron-up"></i>
-
-                <div class="over-h mb20" id="introInteretBloc">
-
-                    <p class="fsIntro">
-                        Travailler sur les nouvelles technologies dans des secteurs tels que :
-                        la conception et/ou le développement Web, logiciels ou encore dans le
-                        <a href='#'><b>Conseil</b></a>, la
-                        <a href='#'><b>Cybersécurité</b></a>, la
-                        <a href='#'><b>Data</b></a>
-                        sont en adéquation avec mon cursus universitaire et mon ambition professionnelle.
-                    </p>
-
-                    <br />
-
-                    <div class="row jc-between fsIntro">
-                        <div class="interet">Art</div>
-                        <div class="interet">Volley-Ball</div>
-                        <div class="interet">Piano</div>
-                        <div class="interet">Lecture</div>
-                    </div>
-
-                    <div class="row jc-between fsIntro">
-                        <div class="interet">Musculation</div>
-                        <div class="interet">Film</div>
-                        <div class="interet">Dessin</div>
-                        <div class="interet">Bricolage</div>
-                    </div>
-                </div>
+            <div class="row jc_between fsIntro2">
+                <div class="interet">Musculation</div>
+                <div class="interet">Film</div>
+                <div class="interet">Dessin</div>
+                <div class="interet">Bricolage</div>
             </div>
-        </section>
+        </div>
     </section>
 
-    <section class="animationColor bg2" id="sec2">
+    <section id="sec2">
         <code>
 
             <!-- Formations -->
-            <section class="bloc " id="formation">
+            <section class="bloc animationColor" id="formation">
                 <p class="h2">formations</p>
 
-                <div class="ProgInfo">
-                    <i onclick="progression(-1)" id="progLeft" class="fa fa-chevron-left"></i>
-                    <i onclick="progression(1)" id="progRight" class="fa fa-chevron-right"></i>
-                </div>
-
-                    <div class="terminalHead">Invite de commande</div>
-                    <div id="terminal">
-                        GauCV [version 68.2]
-                        <br/>(c) Gau Corporation. Tous droits réservés.                      
+                <div class="row jc_center">
+                    <div class="terminalBloc">
+                        <div class="row mb5">
+                            <i onclick="progression(-1)" id="progLeft" class="fa fa-chevron-left"></i>
+                            <i onclick="progression(1)" id="progRight" class="fa fa-chevron-right"></i>
+                        </div>
+        
+                            <div class="terminalHead">Invite de commande</div>
+                            <div id="terminal">
+                                GauCV [version 68.2]
+                                <br/>(c) Gau Corporation. Tous droits réservés.                      
+                            </div>
+        
+                        <div class="row jc_between">
+                            <p></p>
+                            <p id="progEncours">Progression en cours ...</p>
+                            <p id="pourcentageTxt">0%</p>
+                        </div>
+                        <div class="barreProg">
+                            <div id="progression"></div>
+                        </div>
                     </div>
+                </div>
 
-                <div class="ProgInfo jc-between">
-                    <p></p>
-                    <p id="progEncours">Progression en cours ...</p>
-                    <p id="pourcentageTxt">0%</p>
-                </div>
-                <div class="barreProg">
-                    <div id="progression"></div>
-                </div>
+                
             </section>
 
             <!-- ExpPro -->
-            <section class="bloc" id="expPro">
+            <section class="bloc animationColor" id="expPro">
                 <p class="h2">Expériences professionnelles</p>
 
-                <div class="row jc-center">
+                <div class="row jc_center">
                     <div class="expPro">
-                        <p class="date txtGauche">Septembre 2023 - En cours</p>
+                        <p class="date right">Septembre 2023 - En cours</p>
                 </div>
 
                 <div class="exProligne">
-                    <div class="rondNoir"></div>
+                    <div class="cercleNoir" title="Base de Données" style="background-color: var(--neonVertClair)">
+                </div>
                     <div class="hrBlack"></div>
                 </div>
 
                 <div class="expPro detail animation_9 rightAnim">
                                 <p class="h3 expTitre">Data Ingénieur</p>
-                                <p class="txtBlancSecond">Sopra Steria en alternance, Colomiers, 31770</p>
-                                <p class="txtBlancSecond mb20">Externe à Airbus, Blagnac, 31500</p>
+                                <p class="txtNoirSecond">Sopra Steria en alternance, Colomiers, 31770</p>
+                                <p class="txtNoirSecond mb20">Externe à Airbus, Blagnac, 31500</p>
                                 <p>Gestion des données des pièces d'avions</p>
-                                <p class="txtBlancSecond mt20 ta-left">
+                                <p class="txtNoirSecond mt20 ta_left">
                                     <a href="#" class="label">#Base de données</a>
                                     <a href="#" class="label">#SQL</a>
                                     <a href="#" class="label">#Python</a>
@@ -178,13 +156,13 @@
                 </div>
 
 
-                <div class="row jc-center">
+                <div class="row jc_center">
                     <div class="expPro detail animation_9 leftAnim">
                                 <p class="h3 expTitre">Développeur Full Stack</p>
-                                <p class="txtBlancSecond mb20">Sopra Steria en alternance, Colomiers, 31770</p>
+                                <p class="txtNoirSecond mb20">Sopra Steria en alternance, Colomiers, 31770</p>
                                 <p>Développement d'une application pour gérer et assister les techniciens d'Orange
                                     lorsqu'ils sont en intervention chez les clients.</p>
-                                <p class="txtBlancSecond mt20 ta-left">
+                                <p class="txtNoirSecond mt20 ta_left">
                                     <a href="#" class="label">#Angular CLI</a>
                                     <a href="#" class="label">#Spring Boot</a>
                                     <a href="#" class="label">#Maven</a>
@@ -194,7 +172,7 @@
                     </div>
 
                     <div class="exProligne">
-                        <div class="rondNoir"></div>
+                        <div class="cercleNoir" title="Développement Web" style="background-color: var(--neonBleuClair)"></div>
                         <div class="hrBlack"></div>
                     </div>
 
@@ -204,38 +182,38 @@
                 </div>
 
 
-                <div class="row jc-center">
+                <div class="row jc_center">
                     <div class=" expPro">
-                        <p class="date txtGauche">Juin 2022 - Aout 2022</p>
+                        <p class="date dashedBt right">Juin 2022 - Aout 2022</p>
                     </div>
 
                     <div class="exProligne">
-                        <div class="rondNoir"></div>
+                        <div class="cercleNoir" title="Emploi Saisonnier"></div>
                         <div class="hrBlack"></div>
                     </div>
 
-                    <div class="expPro detail animation_9 rightAnim">
-                                <p class="h3 expTitre">Jardinier</p>
-                                <p class="txtBlancSecond mb20">Camping Eurosol, Vielle-Saint-Girons, 40560</p>
+                    <div class="expPro detail bs_dashed animation_9 rightAnim">
+                                <p class="h3 expTitre">Agent des espaces verts</p>
+                                <p class="txtNoirSecond mb20">Camping Eurosol, Vielle-Saint-Girons, 40560</p>
                                 <p>Emploi saisonnier en tant qu'agent d'entretient des espaces verts et aquatique.</p>
                 </div>
                 </div>
 
 
-                <div class="row jc-center">
+                <div class="row jc_center">
                     <div class="expPro detail animation_9 leftAnim">
                             <p class="h3 expTitre">Développeur Full Stack</p>
-                            <p class="txtBlancSecond mb20">Les Comptoirs du Monde, Saint-Alban, 31140</p>
+                            <p class="txtNoirSecond mb20">Les Comptoirs du Monde, Saint-Alban, 31140</p>
                             <p>Développement d'une application SIRH pour gérer 
                                 les absences et les congés des employés de la compagnies</p>
-                            <p class="txtBlancSecond mt20 ta-left">
+                            <p class="txtNoirSecond mt20 ta_left">
                                 <a href="#" class="label">#Laravel</a>
                                 <a href="#" class="label">#SQL</a>
                             </p>
                     </div>
 
                     <div class="exProligne">
-                        <div class="rondNoir"></div>
+                        <div class="cercleNoir" title="Développement Web" style="background-color: var(--neonBleuClair)"></div>
                         <div class="hrBlack"></div>
                     </div>
 
@@ -244,19 +222,19 @@
                     </div>
                 </div>
 
-                <div class="row jc-center">
+                <div class="row jc_center">
                     <div class="expPro">
-                        <p class="date txtGauche">Juin 2021 - Aout 2021</p>
+                        <p class="date dashedBt right">Juin 2021 - Aout 2021</p>
                     </div>
 
                     <div class="exProligne">
-                        <div class="rondNoir"></div>
+                        <div class="cercleNoir" title="Emploi Saisonnier"></div>
                         <div class="hrBlack"></div>
                     </div>
 
-                    <div class="expPro mb0 detail animation_9 rightAnim">
+                    <div class="expPro mb0 detail bs_dashed animation_9 rightAnim">
                                 <p class="h3 expTitre">Préparateur de commande</p>
-                                <p class="txtBlancSecond mb20">Codis Aquitaine, Tarnos, 40312</p>
+                                <p class="txtNoirSecond mb20">Codis Aquitaine, Tarnos, 40312</p>
                                 <p>
                                     Emploi saisonnier en tant que préparateur de commande dans le but 
                                     de collecter, organiser et conditionner les articles 
@@ -268,117 +246,117 @@
             </section>
 
             <!-- Competence -->
-            <section class="bloc" id="competence">
+            <section class="bloc animationColor" id="competence">
                 <p class="h2">Compétences</p>
 
-                <div class="row mb20 jc-center">
-                    <div class=" competence jc-center bgDevHover animation_10 bottomAnim">
-                        <div class="row jc-center">
+                <div class="row mb20 jc_center">
+                    <div class=" competence jc_center bgDevHover animation_10 bottomAnim">
+                        <div class="row jc_center">
                             <img class="competenceImg" src="image/java.png" />
                         </div>
                         <p class="competenceNom">Java</p>
                     </div>
 
-                    <div class="competence jc-center bgDevHover bgWebHover animation_10 bottomAnim">
-                        <div class="row jc-center">
+                    <div class="competence jc_center bgDevHover bgWebHover animation_10 bottomAnim">
+                        <div class="row jc_center">
                             <img class="competenceImg" src="image/javascript.jpg" />
                         </div>
                         <p class="competenceNom">Javascript</p>
                     </div>
 
-                    <div class="competence jc-center bgWebHover animation_10 bottomAnim">
-                        <div class="row jc-center">
+                    <div class="competence jc_center bgWebHover animation_10 bottomAnim">
+                        <div class="row jc_center">
                             <img class="competenceImg" src="image/HTML.jpg" />
                         </div>
                         <p class="competenceNom">HTML</p>
                     </div>
 
-                    <div class="competence jc-center bgWebHover animation_10 bottomAnim">
-                        <div class="row jc-center">
+                    <div class="competence jc_center bgWebHover animation_10 bottomAnim">
+                        <div class="row jc_center">
                             <img class="competenceImg" src="image/css.jpg" />
                         </div>
                         <p class="competenceNom">CSS</p>
                     </div>
 
-                    <div class="competence jc-center bgWebHover animation_10 bottomAnim">
-                        <div class="row jc-center">
+                    <div class="competence jc_center bgWebHover animation_10 bottomAnim">
+                        <div class="row jc_center">
                             <img class="competenceImg" src="image/php.png" />
                         </div>
                         <p class="competenceNom">PHP</p>
                     </div>
 
-                    <div class="competence jc-center bgWebHover animation_10 bottomAnim">
-                        <div class="row jc-center">
+                    <div class="competence jc_center bgWebHover animation_10 bottomAnim">
+                        <div class="row jc_center">
                             <img class="competenceImg" src="image/laravel.png" />
                         </div>
                         <p class="competenceNom">Laravel</p>
                     </div>
 
-                    <div class="competence jc-center bgWebHover animation_10 bottomAnim">
-                        <div class="row jc-center">
+                    <div class="competence jc_center bgWebHover animation_10 bottomAnim">
+                        <div class="row jc_center">
                             <img class="competenceImg" src="image/angular.png" />
                         </div>
                         <p class="competenceNom">Angular</p>
                     </div>
 
-                    <div class="competence jc-center bgWebHover animation_10 bottomAnim">
-                        <div class="row jc-center">
+                    <div class="competence jc_center bgWebHover animation_10 bottomAnim">
+                        <div class="row jc_center">
                             <img class="competenceImg" src="image/Spring.png" />
                         </div>
                         <p class="competenceNom">Spring</p>
                     </div>
 
-                    <div class="competence jc-center bgWebHover animation_10 bottomAnim">
-                        <div class="row jc-center">
+                    <div class="competence jc_center bgWebHover animation_10 bottomAnim">
+                        <div class="row jc_center">
                             <img class="competenceImg" src="image/bootstrap.png" />
                         </div>
                         <p class="competenceNom">Bootstrap</p>
                     </div>
 
-                    <div class="competence jc-center bgWebHover animation_10 bottomAnim">
-                        <div class="row jc-center">
+                    <div class="competence jc_center bgWebHover animation_10 bottomAnim">
+                        <div class="row jc_center">
                             <img class="competenceImg" src="image/bulma.png" />
                         </div>
                         <p class="competenceNom">Bulma</p>
                     </div>
 
-                    <div class="competence jc-center animation_10 bottomAnim">
-                        <div class="row jc-center">
+                    <div class="competence jc_center animation_10 bottomAnim">
+                        <div class="row jc_center">
                             <img class="competenceImg" src="image/shell.jpg" />
                         </div>
                         <p class="competenceNom">Shell</p>
                     </div>
 
-                    <div class="competence jc-center animation_10 bottomAnim">
-                        <div class="row jc-center">
+                    <div class="competence jc_center animation_10 bottomAnim">
+                        <div class="row jc_center">
                             <img class="competenceImg" src="image/c.png" />
                         </div>
                         <p class="competenceNom">C</p>
                     </div>
 
-                    <div class="competence jc-center bgBDHover animation_10 bottomAnim">
-                        <div class="row jc-center">
+                    <div class="competence jc_center bgBDHover animation_10 bottomAnim">
+                        <div class="row jc_center">
                             <img class="competenceImg" src="image/c++.png" />
                         </div>
                         <p class="competenceNom">C++</p>
                     </div>
 
-                    <div class="competence jc-center bgBDHover animation_10 bottomAnim">
-                        <div class="row jc-center">
+                    <div class="competence jc_center bgBDHover animation_10 bottomAnim">
+                        <div class="row jc_center">
                             <img class="competenceImg" src="image/sql.jpg" />
                         </div>
                         <p class="competenceNom">Sql</p>
                     </div>
 
-                    <div class="competence jc-center bgBDHover animation_10 bottomAnim">
-                        <div class="row jc-center">
+                    <div class="competence jc_center bgBDHover animation_10 bottomAnim">
+                        <div class="row jc_center">
                             <img class="competenceImg" src="image/python.png" />
                         </div>
                         <p class="competenceNom">Python</p>
                     </div>
                 </div>
 
-                <div class="row mb50 jc-evenly animation_10 bottomAnim">
+                <div class="row mb50 jc_evenly animation_10 bottomAnim">
                     <div class="competenceCategorie" onmouseover="bgCompetenceCategorieAdd('bgDev')"
                         onmouseout="bgCompetenceCategorieRemove('bgDev')">
                         <p class="bgDev">Développement</p>
@@ -411,7 +389,7 @@
                 </p>
 
                 <div class="row animation_10 bottomAnim">
-                    <div class="langue jc-center">
+                    <div class="langue jc_center">
                         <div>
                             <img class="langueImg" src="image/France.png" />
                             <div class="langueInfo">
@@ -421,7 +399,7 @@
                         <p class="langueTxt">Français</p>
                     </div>
 
-                    <div class="langue jc-center">
+                    <div class="langue jc_center">
                         <div>
                             <img class="langueImg" src="image/Angleterre.png" />
                             <div class="langueInfo">
@@ -431,7 +409,7 @@
                         <p class="langueTxt">Anglais</p>
                     </div>
 
-                    <div class="langue jc-center">
+                    <div class="langue jc_center">
                         <div>
                             <img class="langueImg" src="image/Espagne.jpg" />
                             <div class="langueInfo">
@@ -441,7 +419,7 @@
                         <p class="langueTxt">Espagnol</p>
                     </div>
 
-                    <div class="langue jc-center">
+                    <div class="langue jc_center">
                         <div>
                             <img class="langueImg" src="image/Japon.png" />
                             <div class="langueInfo">
@@ -455,287 +433,329 @@
         </code>
     </section>
 
-    <section class="animationColor" id="sec3">
+    <section id="sec3">
 
         <!-- Projet -->
-        <section class="bloc " id="projet">
+        <section class="bloc animationColor" id="projet">
             <p class="h2" id="projetTitre">Projets</p>
 
-            <div class="row ai-center">
+            <div class="row ai_center">
                 <div class="line"></div>
                 <p class="h3" id="projPerso">Projets persos</p>
                 <div class="line"></div>
             </div>
 
-            <div id="AnimProjetEtude">
+            <div class="row jc_evenly mt20 mb50">
+                <p onmouseover="carousel(0)"><a class="carouselTitre">GauMuscu</a></p>
+                <p onmouseover="carousel(1)"><a class="carouselTitre">GauMode</a></p>
+                <p onmouseover="carousel(2)"><a class="carouselTitre">GauPiano</a></p>
+                <p onmouseover="carousel(3)"><a class="carouselTitre">GauLab</a></p>
+            </div>
 
-                <div class="row mb50">
-                    <div class="col-1"></div>
-                    <div class="col-6 verticalAlign">
-                        <div>
-                            <p class="h1 animation_10 leftAnim" id="GauMuscuTitre">GauMuscu</p>
+            <div id="carousels">
+                <div class="carousel">
+                    <div class="row mb50">
+                        <div class="col_1"></div>
+                        <div class="col_6 verticalAlign">
+                            <div>
+                                <p class="h1 " id="GauMuscuTitre">GauMuscu</p>
 
-                            <p class="animation_10 leftAnim">
-                                GauMuscu est une application Web pour téléphone pour la remise en forme,
-                            </p>
-                            <br />
-                            <p class="animation_10 leftAnim">
-                                Elle répertorie plus de
-                                <a class="surligne">200 exercices</a>
-                                de musculation que vous pouvez organiser autour de
-                                <a class="surligne">programme</a>
-                                déjà conçu ou que vous pouvez créer vous même.
-                            </p class="animation_10 leftAnim">
-                            <br />
-                            <p class="animation_10 leftAnim">
-                                Cette page Web possède aussi une partie
-                                <a class="surligne">nutrition</a>
-                                dans lequel vous pourrez trouver de nombreuse recette pour la prise de masse,
-                                ou bien, de petit repas délicieux
-                            </p>
+                                <p>
+                                    GauMuscu est une application Web pour téléphone pour la remise en forme,
+                                </p>
+                                <br />
+                                <p>
+                                    Elle répertorie plus de
+                                    <a class="surligne">200 exercices</a>
+                                    de musculation que vous pouvez organiser autour de
+                                    <a class="surligne">programme</a>
+                                    déjà conçu ou que vous pouvez créer vous même.
+                                </p>
+                                <br />
+                                <p>
+                                    Cette page Web possède aussi une partie
+                                    <a class="surligne">nutrition</a>
+                                    dans lequel vous pourrez trouver de nombreuse recette pour la prise de masse,
+                                    ou bien, de petit repas délicieux
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-1"></div>
-                    <div class="col-4">
-                        <div class="iphone">
-                            <div class="iphoneIsland"></div>
-                            <!--
-                            <iframe src="https://muscu-app.vercel.app/" width="200" height="400"
-                                frameborder="0"></iframe>
-                            -->
-
+                        <div class="col_1"></div>
+                        <div class="col_4">
+                            <div class="iphone">
+                                <div class="iphoneIsland"></div>
+                                <!-- <iframe src="https://muscu-app.vercel.app/" width="200" height="400" frameborder="0"></iframe> -->
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="row mb20">
-                    <div class="col-8">
-                        <div class="ordi">
-                            <div class="ordiEcran"></div>
-                        </div>
+                <div class="carousel">
+                    <div class="row mb20">
+                        <div class="col_8">
+                            <div class="ordi">
+                                <div class="ordiEcran"></div>
+                            </div>
 
-                        <div class="ordi">
-                            <div class="ordiCou"></div>
-                        </div>
+                            <div class="ordi">
+                                <div class="ordiCou"></div>
+                            </div>
 
-                        <div class="ordi">
-                            <div class="ordiPied"></div>
+                            <div class="ordi">
+                                <div class="ordiPied"></div>
+                            </div>
+                        </div>
+                        <div class="col_4 verticalAlign">
+                            <div>
+                                <p class="h1" id="GauModeTitre">GauMode</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-4 verticalAlign">
-                        <div>
-                            <p class="h1 animation_9 rightAnim" id="GauModeTitre">GauMode</p>
+
+                    <div class="mb50">
+                        <p>
+                            GauMode est une application Web pour tous les devices centrées sur la mode du textile,
+                            des soins de beauté et des bonnes pratiques.
+                        </p>
+                        <br />
+                        <p>
+                            Elle permet de répertorier et de
+                            <a class="surligne">centraliser</a>
+                            de nombreux vêtements que vous possèder ainsi que d'autres
+                            présent sur des sites de mode tels que Zara ou HM entre autres.
+                        </p>
+                        <br />
+                        <p>
+                            Ainsi sur l'appliquation vous pourriez
+                            <a class="surligne">créer de nombreuses</a>
+                            tenu grâce a l'ensemble des vêtements qui y sont répertoriés.
+                        </p>
+                        <br />
+                        <p>
+                            Enfin vous pourriez aussi suivre les conseils en terme de
+                            <a class="surligne">nouvelles tendances,</a>
+                            <a class="surligne">d'entretien</a>
+                            ou
+                            <a class="surligne">l'utilisation</a>
+                            des produits du mileu de la mode (cravate, chaussure).
+                        </p>
+                        <br />
+                        <p>
+                            Cette application est en cours de développement.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="carousel">
+                    <div class="row mb20">
+                        <div class="col_4">
+                            <p class="h1 ta_center mb20">GauPiano</p>
+
+                            <p>GauPiano est un site Web permettant de joueur du piano avec les touches du clavier</p>
+                        </div>
+                        <div class="col_8">
+                            <img id="GauModeImage" src="image/GauPiano.JPG">
                         </div>
                     </div>
                 </div>
 
-                <div class="mb50">
-                    <p class="animation_10 bottomAnim">
-                        GauMode est une application Web pour tous les devices centrées sur la mode du textile,
-                        des soins de beauté et des bonnes pratiques.
-                    </p>
-                    <br />
-                    <p class="animation_10 bottomAnim">
-                        Elle permet de répertorier et de
-                        <a class="surligne">centraliser</a>
-                        de nombreux vêtements que vous possèder ainsi que d'autres
-                        présent sur des sites de mode tels que Zara ou HM entre autres.
-                    </p>
-                    <br />
-                    <p class="animation_10 bottomAnim">
-                        Ainsi sur l'appliquation vous pourriez
-                        <a class="surligne">créer de nombreuses</a>
-                        tenu grâce a l'ensemble des vêtements qui y sont répertoriés.
-                    </p>
-                    <br />
-                    <p class="animation_10 bottomAnim">
-                        Enfin vous pourriez aussi suivre les conseils en terme de
-                        <a class="surligne">nouvelles tendances,</a>
-                        <a class="surligne">d'entretien</a>
-                        ou
-                        <a class="surligne">l'utilisation</a>
-                        des produits du mileu de la mode (cravate, chaussure).
-                    </p>
-                    <br />
-                    <p class="animation_10 bottomAnim">
-                        Cette application est en cours de développement.
-                    </p>
-                </div>
+                <div class="carousel">
+                    <div class="row jc_center mb50">
 
-                <div class="row mb20">
-
-                    <div class="col-1"></div>
-                    <div class="col-4">
-                        <p class="h1">GauPiano</p>
-                    </div>
-                    <div class="col-7">
-                    </div>
-                </div>
-
-                <div class="row jc-center mb50">
-
-                    <div class="cardProjRow animation_10 bottomAnim">
-                        <div class="cardProj">
-                            <p class="h4">Métadonnées des photos</p>
-                            Modification du nom des photos par leur date de création et nom d'importation.
-                            <br />
-                            Tout ceci en fonction du formats des photos et des données qu'elles contiennent.
-                        </div>
-                    </div>
-
-                    <div class="cardProjRow animation_10 bottomAnim">
-                        <div class="cardProj">
-                            <p class="h4">Calcul de probabilité</p>
-                            Taux d'obtention d'un objet sur un jeux vidéo concernant ses stats parmis des
-                            catégories de compétences bonus.
-                            Génération de toutes les combinaisons possibiles et trie de celle-ci
-                            en fonction de critère précis.
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="row ai-center">
-                    <div class="line"></div>
-                    <p class="h3" id="projEtude">Projets d'études</p>
-                    <div class="line"></div>
-                </div>
-
-                <div class="row po-relative jc-center rowPochette">
-                    <div class="pochette jc-center bottom">
-                        <div class="feuille" onclick="afficheProj(this)" id="proj1">
-                            <div class="papier">
-                                <div class="etiquette">
-                                    <p>SkyWise</p>
-                                </div>
-                                <div class="projTexte">
-                                    <img class="projImg" src="image/skywise.jpg">
-                                    <p class="h4"></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feuille" onclick="afficheProj(this)" id="proj2">
-                            <div class="papier">
-                                <div class="etiquette">
-                                    <p>MOBI</p>
-                                </div>
-                                <div class="projTexte">
-                                    <img class="projImg" src="image/Mobi.png">
-                                    <p class="h4">Application Web</p>
-                                    Sopra Steria, plus particulièrement le département TME
-                                    (Télécommunications, Multimédias et Divertissement),
-                                    accompagne Orange, et leur département DSI réseaux,
-                                    dans de nombreux domaines et notamment dans la gestion des métiers de
-                                    l'intervention
-                                    sur le projet MOBI.
-                                    <br />
-                                    MOBI est une application très récente, conçue début 2017, qui
-                                    permet aux techniciens de traiter en autonomie les interventions qui sont
-                                    affectées
-                                    dans leur Plan de Charge.
-                                    <br />
-                                    Cette application sert de boîte à outils aux techniciens, elle permet entre
-                                    autres
-                                    de : faire le planning des ordres de travaux, les aider lors d'intervention
-                                    concernant la mutation de ligne de cuivre à fibre
-                                    (qui concerne 38 millions de foyers) et de faire des essais de ligne.
-                                    <br /><br />
-                                    Cette application est utilisée sur téléphone par les techniciens d'Orange et par
-                                    les
-                                    ETR (technicien sous-traitant d'Orange) sur internet. Au total c'est plus de 23
-                                    000
-                                    personnes qui utilisent l'application régulièrement.
-                                    <br />
-                                    Aux fils des années son interface
-                                    a su s'enrichir de multiples applications du SI (modules), chacun répondant à un
-                                    besoin précis. Ces modules permettant par exemple la consultation du réseau,
-                                    d'attestation de preuves, de qualité et de sécurité ainsi que l'aide à la
-                                    relation
-                                    clients et d'autres outils spécifiques au métiers. C'est plus de 33 modules qui
-                                    se
-                                    sont accumulés et qui sont maintenus et développés continuellement dans un
-                                    contexte
-                                    DevOps et d'Agilité.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feuille" onclick="afficheProj(this)" id="proj3">
-                            <div class="papier">
-                                <div class="etiquette">
-                                    <p>SIRH</p>
-                                </div>
-                                <div class="projTexte">
-                                    <img class="projImg" src="image/projet.JPG">
-                                    <p class="h4">Site Web</p>
-                                </div>
+                        <div class="cardProjRow">
+                            <div class="cardProj">
+                                <p class="h4">Métadonnées des photos</p>
+                                Modification du nom des photos par leur date de création et nom d'importation.
+                                <br />
+                                Tout ceci en fonction du formats des photos et des données qu'elles contiennent.
                             </div>
                         </div>
 
-                        <div class="feuille" onclick="afficheProj(this)" id="proj4">
-                            <div class="papier">
-                                <div class="etiquette">
-                                    <p>SYNDICSAAS</p>
-                                </div>
-                                <div class="projTexte">
-                                    <img class="projImg" src="image/Syndic.PNG">
-                                    <p class="h4">Site Web</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feuille" onclick="afficheProj(this)" id="proj5">
-                            <div class="papier">
-                                <div class="etiquette">
-                                    <p>Flyer</p>
-                                </div>
-                                <div class="projTexte">
-                                    <img class="projImg" src="image/Flyer.PNG">
-                                    <p class="h4">Graphiste et chargé de communication</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feuille" onclick="afficheProj(this)" id="proj6">
-                            <div class="papier">
-                                <div class="etiquette">
-                                    <p>Le Démineur</p>
-                                </div>
-                                <div class="projTexte">
-                                    <img class="projImg" src="image/Demineur.PNG">
-                                    <p class="h4">Jeu en Java</p>
-                                </div>
+                        <div class="cardProjRow">
+                            <div class="cardProj">
+                                <p class="h4">Calcul de probabilité</p>
+                                Taux d'obtention d'un objet sur un jeux vidéo concernant ses stats parmis des
+                                catégories de compétences bonus.
+                                Génération de toutes les combinaisons possibiles et trie de celle-ci
+                                en fonction de critère précis.
                             </div>
                         </div>
 
-                        <div class="feuille" onclick="afficheProj(this)" id="proj7">
-                            <div class="papier">
-                                <div class="etiquette">
-                                    <p>LGCSK</p>
-                                </div>
-                                <div class="projTexte">
-                                    <img class="projImg" src="image/LGCSK.PNG">
-                                    <p class="h4">Site Web</p>
-                                </div>
+                        <div class="cardProjRow">
+                            <div class="cardProj">
+                                <p class="h4">Calcul de probabilité</p>
+                                Taux d'obtention d'un objet sur un jeux vidéo concernant ses stats parmis des
+                                catégories de compétences bonus.
+                                Génération de toutes les combinaisons possibiles et trie de celle-ci
+                                en fonction de critère précis.
                             </div>
                         </div>
-                        <div class="feuille" onclick="afficheProj(this)" id="proj8">
-                            <div class="papier">
-                                <div class="etiquette">
-                                    <p>Horaire de bus</p>
-                                </div>
-                                <div class="projTexte">
-                                    <img class="projImg" src="image/horaireBus.PNG">
-                                    <p class="h4">Application en Java</p>
-                                </div>
+
+                        <div class="cardProjRow">
+                            <div class="cardProj">
+                                <p class="h4">Calcul de probabilité</p>
+                                Taux d'obtention d'un objet sur un jeux vidéo concernant ses stats parmis des
+                                catégories de compétences bonus.
+                                Génération de toutes les combinaisons possibiles et trie de celle-ci
+                                en fonction de critère précis.
+                            </div>
+                        </div>
+
+                        <div class="cardProjRow">
+                            <div class="cardProj">
+                                <p class="h4">Calcul de probabilité</p>
+                                Taux d'obtention d'un objet sur un jeux vidéo concernant ses stats parmis des
+                                catégories de compétences bonus.
+                                Génération de toutes les combinaisons possibiles et trie de celle-ci
+                                en fonction de critère précis.
                             </div>
                         </div>
                     </div>
-                    <div class="pochetteDos"></div>
                 </div>
+            </div>
+
+
+            <div class="row ai_center">
+                <div class="line"></div>
+                <p class="h3" id="projEtude">Projets d'études</p>
+                <div class="line"></div>
+            </div>
+
+            <div class="row po_relative jc_center rowPochette">
+                <div class="pochette jc_center bottom">
+                    <div class="feuille" onclick="afficheProj(this)" id="proj1">
+                        <div class="papier">
+                            <div class="etiquette">
+                                <p>SkyWise</p>
+                            </div>
+                            <div class="projTexte">
+                                <img class="projImg" src="image/skywise.jpg">
+                                <p class="h4"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feuille" onclick="afficheProj(this)" id="proj2">
+                        <div class="papier">
+                            <div class="etiquette">
+                                <p>MOBI</p>
+                            </div>
+                            <div class="projTexte">
+                                <img class="projImg" src="image/Mobi.png">
+                                <p class="h4">Application Web</p>
+                                Sopra Steria, plus particulièrement le département TME
+                                (Télécommunications, Multimédias et Divertissement),
+                                accompagne Orange, et leur département DSI réseaux,
+                                dans de nombreux domaines et notamment dans la gestion des métiers de
+                                l'intervention
+                                sur le projet MOBI.
+                                <br />
+                                MOBI est une application très récente, conçue début 2017, qui
+                                permet aux techniciens de traiter en autonomie les interventions qui sont
+                                affectées
+                                dans leur Plan de Charge.
+                                <br />
+                                Cette application sert de boîte à outils aux techniciens, elle permet entre
+                                autres
+                                de : faire le planning des ordres de travaux, les aider lors d'intervention
+                                concernant la mutation de ligne de cuivre à fibre
+                                (qui concerne 38 millions de foyers) et de faire des essais de ligne.
+                                <br /><br />
+                                Cette application est utilisée sur téléphone par les techniciens d'Orange et par
+                                les
+                                ETR (technicien sous-traitant d'Orange) sur internet. Au total c'est plus de 23
+                                000
+                                personnes qui utilisent l'application régulièrement.
+                                <br />
+                                Aux fils des années son interface
+                                a su s'enrichir de multiples applications du SI (modules), chacun répondant à un
+                                besoin précis. Ces modules permettant par exemple la consultation du réseau,
+                                d'attestation de preuves, de qualité et de sécurité ainsi que l'aide à la
+                                relation
+                                clients et d'autres outils spécifiques au métiers. C'est plus de 33 modules qui
+                                se
+                                sont accumulés et qui sont maintenus et développés continuellement dans un
+                                contexte
+                                DevOps et d'Agilité.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feuille" onclick="afficheProj(this)" id="proj3">
+                        <div class="papier">
+                            <div class="etiquette">
+                                <p>SIRH</p>
+                            </div>
+                            <div class="projTexte">
+                                <img class="projImg" src="image/projet.JPG">
+                                <p class="h4">Site Web</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feuille" onclick="afficheProj(this)" id="proj4">
+                        <div class="papier">
+                            <div class="etiquette">
+                                <p>SYNDICSAAS</p>
+                            </div>
+                            <div class="projTexte">
+                                <img class="projImg" src="image/Syndic.PNG">
+                                <p class="h4">Site Web</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feuille" onclick="afficheProj(this)" id="proj5">
+                        <div class="papier">
+                            <div class="etiquette">
+                                <p>Flyer</p>
+                            </div>
+                            <div class="projTexte">
+                                <img class="projImg" src="image/Flyer.PNG">
+                                <p class="h4">Graphiste et chargé de communication</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feuille" onclick="afficheProj(this)" id="proj6">
+                        <div class="papier">
+                            <div class="etiquette">
+                                <p>Le Démineur</p>
+                            </div>
+                            <div class="projTexte">
+                                <img class="projImg" src="image/Demineur.PNG">
+                                <p class="h4">Jeu en Java</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feuille" onclick="afficheProj(this)" id="proj7">
+                        <div class="papier">
+                            <div class="etiquette">
+                                <p>LGCSK</p>
+                            </div>
+                            <div class="projTexte">
+                                <img class="projImg" src="image/LGCSK.PNG">
+                                <p class="h4">Site Web</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feuille" onclick="afficheProj(this)" id="proj8">
+                        <div class="papier">
+                            <div class="etiquette">
+                                <p>Horaire de bus</p>
+                            </div>
+                            <div class="projTexte">
+                                <img class="projImg" src="image/horaireBus.PNG">
+                                <p class="h4">Application en Java</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pochetteDos"></div>
             </div>
         </section>
 
         <footer>
             <hr />
-            <code class="row jc-between mb20">
+            <code class="row jc_between mb20">
                 <div>
                     <p class="fsFooter2">Contact</p>
                     <p class="fsFooter1"><a href="mailto:boegauthier@gmail.com">boegauthier@gmail.com</a></p>

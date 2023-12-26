@@ -37,7 +37,6 @@ document.onmousemove = function () {
 
     // Convertissez l'angle en degrés
     angleDegres = ((angleRadians * 180) / Math.PI - 1) - 180 + 25;
-    pointeur.style.transform = "rotate(" + angleDegres + "deg)";
 
     // console.log("")
     // console.log("Ajustement :   ", ajustement)
